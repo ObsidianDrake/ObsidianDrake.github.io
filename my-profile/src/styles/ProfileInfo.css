@@ -1,0 +1,119 @@
+.container {
+  margin: 20px auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.detail-container {
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .detail-container {
+    width: 33%;
+  }
+}
+
+.detail {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  .detail {
+    width: 250px;
+  }
+}
+
+.item {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.key {
+  background-color: #111a2e;
+  color: white;
+  width: 100px;
+  margin-right: 10px;
+  line-height: 20px;
+}
+
+.img-container {
+  margin: 0 auto;
+}
+
+@media (min-width: 1080px) {
+  .img-container {
+    margin: 0 20px;
+  }
+}
+
+.img-container img {
+  width: 200px;
+  height: 200px;
+  max-height: 200px;
+  margin: auto;
+  display: block;
+}
+
+.content-container {
+  width: 100%;
+}
+
+@media (min-width: 1080px) {
+  .content-container {
+    width: 30%;
+  }
+}
+
+.about-container {
+  width: 100% !important;
+}
+
+@media (min-width: 1200px) {
+  .about-container {
+    width: 30% !important;
+  }
+}
+
+.about {
+  text-align: left;
+}
+
+.about h2,
+.about h3 {
+  text-align: left;
+  color: #888;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.fb-like {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .fb-like {
+    margin-top: 40px;
+  }
+}
+
+.section-head h1 {
+  font-size: 2em;
+}
+
+.section-head p {
+  font-style: italic;
+}

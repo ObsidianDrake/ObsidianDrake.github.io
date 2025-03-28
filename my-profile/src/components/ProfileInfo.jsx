@@ -1,20 +1,76 @@
-import React from "react";
-import SocialLinks from "./SocialLinks";
+import React from 'react';
+import '/src/styles/ProfileInfo.css';
+import obsidianImage from '/src/assets/images/obsidian_angry.png';
 
-function ProfileInfo() {
-  const birthDate = new Date("2019-09-27"); // 這裡改成你的生日
-  const age = new Date().getFullYear() - birthDate.getFullYear();
+const ProfileInfo = () => {
+  const year = new Date().getFullYear();
+  const age = year - 2019;
+
+  const details = {
+    Name: 'Obsidian',
+    Age: `${age} years`,
+    Location: 'Hsinchu, Taiwan',
+    Education: 'Master degree',
+  };
 
   return (
-    <section className="my-8">
-      <h2 className="text-2xl font-bold text-red-400">關於我</h2>
-      <p className="text-lg mt-2">姓名: 黑曜石</p>
-      <p className="text-lg">生日: 2019年9月27日 (現年 {age} 歲)</p>
-      <p className="text-lg">個性: (~~~~~ 前端學習中 Learning front-end ~~~~)</p>
-      <p className="text-lg">興趣: Coding、聽音樂、唱歌、網球、羽毛球</p>
-      <SocialLinks />
-    </section>
+    <div className="intro">
+      <div className="container">
+        <SectionHead
+          title="Profile"
+          lead="“Difficulties mastered are opportunities won.”"
+        />
+        <div className="content">
+          <div className="content-container detail-container">
+            {Object.entries(details).map(([key, value], index) => (
+              <div className="detail" key={key}>
+                <div
+                  className="item"
+                  data-aos="fade-right"
+                  data-aos-delay={100 * (index + 1)}
+                  data-aos-offset="100"
+                >
+                  <strong className="key">{key}</strong>
+                  <div className="value">{value}</div>
+                </div>
+              </div>
+            ))}
+            <div
+              className="fb-like"
+              data-href="https://bennolin.com"
+              data-width=""
+              data-layout="button_count"
+              data-action="like"
+              data-size="small"
+              data-share="true"
+            ></div>
+          </div>
+          <div className="img-container">
+            <img src={obsidianImage} alt="Obsidian Angry" />
+          </div>
+          <div className="content-container about-container">
+            <div className="about">
+              <h2 data-aos="fade-left" data-aos-delay="100" data-aos-offset="120">
+                About me
+              </h2>
+              <p data-aos="fade-left" data-aos-delay="200" data-aos-offset="120">
+                Hi, I'm Obsidian.
+                <br />
+                I am looking forward to get in touch with you!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-}
-   
+};
+
+const SectionHead = ({ title, lead }) => (
+  <div className="section-head">
+    <h1>{title}</h1>
+    <p>{lead}</p>
+  </div>
+);
+
 export default ProfileInfo;

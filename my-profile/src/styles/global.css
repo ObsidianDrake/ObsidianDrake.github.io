@@ -1,122 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Menu */
+.menu {
+  height: 50px;
+  width: 150px;
+  background-color: white;
+}
 
-* {
+/* Profile */
+.profile-image {
+  width: 250px;
+  height: 250px;
+}
+
+/* Font Sizes */
+.title {
+  font-size: 54px;
+}
+
+.title-mobile {
+  font-size: 48px;
+}
+
+.subtitle {
+  font-size: 24px;
+}
+
+.subtitle-mobile {
+  font-size: 18px;
+}
+
+/* Page Colors */
+.page-odd {
+  background-color: #F7F9FB;
+}
+
+.page-even {
+  background-color: rgba(230, 228, 222, 0.8);
+}
+
+/* Tabs */
+.tab-body.odd {
+  background-color: rgb(255, 255, 255);
+}
+
+.tab-body.even {
+  background-color: rgb(255, 255, 255);
+}
+
+.tab-body.trigger {
+  background-color: rgb(49, 51, 66) !important;
+  color: white;
+}
+
+.tab-body.trigger strong {
+  color: inherit;
+}
+
+.tab-body:hover {
+  color: rgb(121, 140, 158);
+}
+
+/* Tags */
+.tag {
+  background-color: rgb(55, 133, 179);
+  color: #DFE0E0;
+}
+
+/* Scores */
+.score.off {
+  color: #DFE0E0;
+}
+
+.score.on {
+  color: rgb(158, 136, 97);
+}
+
+/* Skills */
+.skill:hover {
+  background-color: #DFE0E0;
+}
+
+/* Typography */
+.cover-title {
+  color: rgb(27, 55, 107);
+}
+
+.title-color {
+  color: rgb(85, 126, 179);
+}
+
+.subtitle-color {
+  color: rgb(85, 126, 179);
+}
+
+.subheading {
+  color: rgb(45, 168, 177);
+}
+
+.text {
+  color: #434242;
+}
+
+.page {
+  display: inline-block;
+  overflow: hidden;
+  width: 80%;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .page {
+    width: 70vw;
+  }
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background-color: #000;
-  color: #fff;
-  line-height: 1.6;
-}
-
-h2 {
-  margin-bottom: 10px;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  color: #ff4c4c;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #ff6666;
-}
-
-/* Header Banner */
-.header-banner {
-  background: #4d89d3;
-  background-image: url('/src/assets/images/banner.png'); /* Change this to your actual image path */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 250px; /* Adjust the height as needed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-/* Navigation Styling */
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-link {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 10px 20px;
-  transition: 0.3s;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  text-decoration: underline;
-}
-
-/* Sections */
-section {
-  padding: 20px;
-  margin-bottom: 20px;
-  background: #111;
-  border-radius: 8px;
-}
-
-/* Social Links */
-
-
-/* Events & Portfolio */
-.grid {
-  display: grid;
-  gap: 10px;
-}
-
-.grid img {
-  border-radius: 8px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.grid img:hover {
-  transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-  background: #ff4c4c;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  font-size: 14px;
-  margin-top: auto;
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  border: 0;
+  vertical-align: baseline;
+  font-family: 'Open Sans', sans-serif;
+  color: #434242; /* replace this with your actual text color */
 }
