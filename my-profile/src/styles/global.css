@@ -1,103 +1,40 @@
-/* Menu */
-.menu {
-  height: 50px;
-  width: 150px;
-  background-color: white;
-}
+:root {
+  /* Menu */
+  --menu-height: 50px;
+  --menu-width: 150px;
 
-/* Profile */
-.profile-image {
-  width: 250px;
-  height: 250px;
-}
+  /* Profile */
+  --profile-image-size: 250px;
 
-/* Font Sizes */
-.title {
-  font-size: 54px;
-}
+  /* Size */
+  --title-size-mobile: 48px;
+  --title-size: 54px;
+  --subtitle-size: 24px;
+  --subtitle-size-mobile: 18px;
 
-.title-mobile {
-  font-size: 48px;
-}
+  /* Colors */
+  --even-page-color: rgba(230, 228, 222, 0.8);
+  --odd-page-color: #F7F9FB;
 
-.subtitle {
-  font-size: 24px;
-}
+  --menu-color: white;
+  --odd-tab-color: rgb(255, 255, 255);
+  --even-tab-color: rgb(255, 255, 255);
+  --trigger-tab-color: rgb(49, 51, 66);
+  --trigger-font-color: white;
+  --tab-hover-color: rgb(121, 140, 158);
 
-.subtitle-mobile {
-  font-size: 18px;
-}
+  --tag-color: rgb(55, 133, 179);
+  --tag-font-color: #DFE0E0;
 
-/* Page Colors */
-.page-odd {
-  background-color: #F7F9FB;
-}
+  --score-off: #DFE0E0;
+  --score-on: rgb(158, 136, 97);
+  --skill-hover: #DFE0E0;
 
-.page-even {
-  background-color: rgba(230, 228, 222, 0.8);
-}
-
-/* Tabs */
-.tab-body.odd {
-  background-color: rgb(255, 255, 255);
-}
-
-.tab-body.even {
-  background-color: rgb(255, 255, 255);
-}
-
-.tab-body.trigger {
-  background-color: rgb(49, 51, 66) !important;
-  color: white;
-}
-
-.tab-body.trigger strong {
-  color: inherit;
-}
-
-.tab-body:hover {
-  color: rgb(121, 140, 158);
-}
-
-/* Tags */
-.tag {
-  background-color: rgb(55, 133, 179);
-  color: #DFE0E0;
-}
-
-/* Scores */
-.score.off {
-  color: #DFE0E0;
-}
-
-.score.on {
-  color: rgb(158, 136, 97);
-}
-
-/* Skills */
-.skill:hover {
-  background-color: #DFE0E0;
-}
-
-/* Typography */
-.cover-title {
-  color: rgb(27, 55, 107);
-}
-
-.title-color {
-  color: rgb(85, 126, 179);
-}
-
-.subtitle-color {
-  color: rgb(85, 126, 179);
-}
-
-.subheading {
-  color: rgb(45, 168, 177);
-}
-
-.text {
-  color: #434242;
+  --cover-title-color: rgb(27, 55, 107);
+  --title-color: rgb(85, 126, 179);
+  --subtitle-color: var(--title-color);
+  --subheading-color: rgb(45, 168, 177);
+  --text-color: #434242;
 }
 
 .page {
@@ -116,7 +53,7 @@
   }
 }
 
-
+/* Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -135,5 +72,5 @@ time, mark, audio, video {
   border: 0;
   vertical-align: baseline;
   font-family: 'Open Sans', sans-serif;
-  color: #434242; /* replace this with your actual text color */
+  color: var(--text-color);
 }

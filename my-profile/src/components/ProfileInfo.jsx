@@ -1,17 +1,16 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import '/src/styles/ProfileInfo.css';
+import SectionHead from '/src/components/SectionHead'; // You need to create/import this component
 import obsidianImage from '/src/assets/images/obsidian_angry.png';
 
 const ProfileInfo = () => {
-  const year = new Date().getFullYear();
-  const age = year - 2019;
-
-  const details = {
+  const age = useMemo(() => new Date().getFullYear() - 2019, []);
+  const details = useMemo(() => ({
     Name: 'Obsidian',
     Age: `${age} years`,
     Location: 'Hsinchu, Taiwan',
-    Education: 'Master degree',
-  };
+    Education: 'Master degree'
+  }), [age]);
 
   return (
     <div className="intro">
@@ -45,8 +44,8 @@ const ProfileInfo = () => {
               data-share="true"
             ></div>
           </div>
-          <div className="img-container">
-            <img src={obsidianImage} alt="Obsidian Angry" />
+          <div className="img-container-profile">
+            <img src={obsidianImage} alt="Obsidian" />
           </div>
           <div className="content-container about-container">
             <div className="about">
@@ -54,7 +53,7 @@ const ProfileInfo = () => {
                 About me
               </h2>
               <p data-aos="fade-left" data-aos-delay="200" data-aos-offset="120">
-                Hi, I'm Obsidian.
+                Hi, I am Obsidian.
                 <br />
                 I am looking forward to get in touch with you!
               </p>
@@ -65,12 +64,5 @@ const ProfileInfo = () => {
     </div>
   );
 };
-
-const SectionHead = ({ title, lead }) => (
-  <div className="section-head">
-    <h1>{title}</h1>
-    <p>{lead}</p>
-  </div>
-);
 
 export default ProfileInfo;

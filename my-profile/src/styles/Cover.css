@@ -1,18 +1,22 @@
+/* .cover {
+  position: relative;
+} */
+
+.img-container-cover {
+  overflow: hidden;
+}
+
 .title {
   position: relative;
   left: 0;
   top: -90vh;
   text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
   font-size: 72px;
-  color: rgb(27, 55, 107);
+  color: var(--cover-title-color);
 }
 
 @media (min-width: 768px) {
   .title {
     top: -80vh;
   }
-}
-
-.img-container {
-  overflow: hidden;
 }

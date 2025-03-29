@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Parallax } from 'react-parallax';
 import desktopImage from '/src/assets/images/banner.png';
 import mobileImage from '/src/assets/images/banner.png';
@@ -14,9 +14,8 @@ const Cover = () => {
   };
 
   useEffect(() => {
+    detectMobile();
     window.addEventListener('resize', detectMobile);
-    detectMobile(); // initial check
-
     return () => {
       window.removeEventListener('resize', detectMobile);
     };
@@ -26,16 +25,14 @@ const Cover = () => {
     <div className="cover">
       <Parallax
         bgImage={isMobile ? mobileImage : desktopImage}
-        className="img-container"
+        className="img-container-cover"
         style={{ height: '100vh' }}
         strength={300} // adjust strength as desired
       >
         {/* The inner div is needed to set the height */}
         <div style={{ height: '100vh' }} />
       </Parallax>
-      <h1 className="title" ref={titleRef}>
-        Hi, I'm Obsidian!
-      </h1>
+      <h1 className="title" ref={titleRef}>Hi, I'm Obsidian!</h1>
     </div>
   );
 };
