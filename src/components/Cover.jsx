@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Parallax } from 'react-parallax';
 import desktopImage from '/src/assets/images/banner.png';
-import mobileImage from '/src/assets/images/banner.png';
+import mobileImage from '/src/assets/images/banner_mobile.png';
 import '/src/styles/Cover.css';
 
 const Cover = () => {

@@ -1,5 +1,8 @@
 .container {
-  margin: 20px auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .content {
@@ -9,13 +12,20 @@
   justify-content: center;
 }
 
+@media (min-width: 1080px) {
+  .content {
+    /* margin-right: 100px; */
+    /* max-width: 30vw; */
+  }
+}
+
 .detail-container {
   display: flex;
   flex-shrink: 1;
   flex-direction: column;
-  align-items: center;
+  vertical-align: middle;
   margin-top: 20px;
-  width: 100%;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
@@ -24,51 +34,60 @@
   }
 }
 
-.detail {
+.detail-container .detail {
   display: flex;
   flex-direction: row;
   width: 80%;
 }
 
 @media (min-width: 768px) {
-  .detail {
+  .detail-container .detail {
     width: 250px;
   }
 }
 
-.item {
+.detail-container .detail .item {
   display: flex;
   margin-bottom: 10px;
 }
 
-.key {
-  background-color: var(--tag-color);
+.detail-container .detail .key {
+  background-color: var(--tag-color); /* Replace with actual color if needed */
   width: 100px;
   margin-right: 10px;
+  vertical-align: middle;
   line-height: 20px;
-  color: var(--tag-font-color);
+  color: var(--tag-font-color); /* Replace with actual color if needed */
 }
 
 .img-container-profile {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 1080px) {
   .img-container-profile {
-    margin: 0 20px;
-  }
-
-  .img-container-profile img {
-    margin: auto;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
 .img-container-profile img {
-  width: var(--profile-image-size);
+  margin-top: auto;
+  margin-bottom: auto;
+  width: var(--profile-image-size);     /* Replace with actual size if needed */
   height: var(--profile-image-size);
   max-height: var(--profile-image-size);
-  display: block;
-  margin: auto;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1080px) {
+  .img-container-profile img {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 .content-container {
@@ -91,16 +110,16 @@
   }
 }
 
-.about {
+.about-container .about {
   text-align: left;
 }
 
-.about h2,
-.about h3 {
-  color: var(--subtitle-color);
+.about-container .about h2,
+.about-container .about h3 {
+  text-align: left;
+  color: var(--subtitle-color); /* Replace with actual color */
   margin-bottom: 20px;
   font-size: 28px;
-  text-align: left;
 }
 
 .fb-like {

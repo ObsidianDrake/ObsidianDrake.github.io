@@ -1,7 +1,11 @@
 import React, { useMemo } from 'react';
 import '/src/styles/ProfileInfo.css';
-import SectionHead from '/src/components/SectionHead'; // You need to create/import this component
+import SectionHead from '/src/components/SectionHead';
 import obsidianImage from '/src/assets/images/obsidian_angry.png';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+AOS.init()
 
 const ProfileInfo = () => {
   const age = useMemo(() => new Date().getFullYear() - 2019, []);
@@ -34,15 +38,6 @@ const ProfileInfo = () => {
                 </div>
               </div>
             ))}
-            <div
-              className="fb-like"
-              data-href="https://bennolin.com"
-              data-width=""
-              data-layout="button_count"
-              data-action="like"
-              data-size="small"
-              data-share="true"
-            ></div>
           </div>
           <div className="img-container-profile">
             <img src={obsidianImage} alt="Obsidian" />
