@@ -21,7 +21,7 @@ const ProfileInfo = () => {
       <div className="container">
         <SectionHead
           title="Profile"
-          lead="“Difficulties mastered are opportunities won.”"
+          lead="“Front-end is very difficult to learn!”"
         />
         <div className="content">
           <div className="content-container detail-container">

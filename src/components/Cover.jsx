@@ -1,33 +1,43 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Parallax } from 'react-parallax';
-import desktopImage from '/src/assets/images/banner.png';
+import wideImage from '/src/assets/images/banner_wide.png';
+import desktopImage from '/src/assets/images/banner_ori.png';
 import mobileImage from '/src/assets/images/banner_mobile.png';
 import '/src/styles/Cover.css';
 
 const Cover = () => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [bgImage, setBgImage] = useState(false);
   const titleRef = useRef(null);
 
-  const detectMobile = () => {
+  const detectDevice = () => {
     const width = document.documentElement.clientWidth;
-    setIsMobile(width <= 768);
+    const height = document.documentElement.clientHeight;
+    const ratio = width / height;
+
+    if (width <= 768) {
+      setBgImage(mobileImage);
+    } else if (ratio >= 2.5) {
+      setBgImage(wideImage);
+    } else {
+      setBgImage(desktopImage);
+    }
   };
 
   useEffect(() => {
-    detectMobile();
-    window.addEventListener('resize', detectMobile);
+    detectDevice();
+    window.addEventListener('resize', detectDevice);
     return () => {
-      window.removeEventListener('resize', detectMobile);
+      window.removeEventListener('resize', detectDevice);
     };
   }, []);
 
   return (
     <div className="cover">
       <Parallax
-        bgImage={isMobile ? mobileImage : desktopImage}
+        bgImage={bgImage}
         className="img-container-cover"
         style={{ height: '100vh' }}
-        strength={300} // adjust strength as desired
+        strength={200} // adjust strength as desired
       >
         {/* The inner div is needed to set the height */}
         <div style={{ height: '100vh' }} />
