@@ -24,7 +24,7 @@ const ProfileInfo = () => {
           lead="“Front-end is very difficult to learn!”"
         />
         <div className="content">
-          <div className="content-container detail-container">
+          <div className="detail-container">
             {Object.entries(details).map(([key, value], index) => (
               <div className="detail" key={key}>
                 <div
@@ -42,14 +42,14 @@ const ProfileInfo = () => {
           <div className="img-container-profile">
             <img src={obsidianImage} alt="Obsidian" />
           </div>
-          <div className="content-container about-container">
+          <div className="about-container">
             <div className="about">
               <h2 data-aos="fade-left" data-aos-delay="100" data-aos-offset="120">
                 About me
               </h2>
               <p data-aos="fade-left" data-aos-delay="200" data-aos-offset="120">
                 Hi, I am Obsidian.
-                <br />
+                <br/>
                 I am looking forward to get in touch with you!
               </p>
             </div>

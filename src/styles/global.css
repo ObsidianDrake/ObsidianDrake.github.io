@@ -37,6 +37,11 @@
   --text-color: #434242;
 }
 
+.home {
+  height: 100%;
+  width: 100%;
+}
+
 .page {
   display: inline-block;
   overflow: hidden;
@@ -45,6 +50,14 @@
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.odd {
+  background-color: var(--odd-page-color);
+}
+
+.even {
+  background-color: var(--even-page-color);
 }
 
 @media (min-width: 768px) {

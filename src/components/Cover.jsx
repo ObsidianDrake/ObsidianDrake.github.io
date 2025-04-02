@@ -41,8 +41,8 @@ const Cover = () => {
       >
         {/* The inner div is needed to set the height */}
         <div style={{ height: '100vh' }} />
+        <h1 className="title" ref={titleRef}>Hi, I'm Obsidian!</h1>
       </Parallax>
-      <h1 className="title" ref={titleRef}>Hi, I'm Obsidian!</h1>
     </div>
   );
 };
