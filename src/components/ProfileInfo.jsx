@@ -23,7 +23,7 @@ const ProfileInfo = () => {
           title="Profile"
           lead="“Front-end is very difficult to learn!”"
         />
-        <div className="content">
+        <div className="profile-content">
           <div className="detail-container">
             {Object.entries(details).map(([key, value], index) => (
               <div className="detail" key={key}>
