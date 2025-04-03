@@ -1,9 +1,22 @@
 import React from "react";
 import "/src/styles/SocialLinks.css";
 import SectionHead from '/src/components/SectionHead';
-import 'font-awesome/css/font-awesome.min.css';
+import { useInView } from "react-intersection-observer";
 
-function SocialLinks() {
+const SocialLinks = () => {
+  const medias = [
+    ["facebook.png", "https://www.facebook.com/obsidiandrakee"],
+    ["twitter-x.png", "https://x.com/obsidiandrakee"],
+    ["discord.png", "https://discordapp.com/users/622288266951131137"],
+    ["bluesky.png", "https://bsky.app/profile/obsidiandrake.bsky.social"],
+    ["github.png", "https://github.com/ObsidianDrake"],
+  ];
+
+  const { ref, inView } = useInView({
+    // triggerOnce: true, // 動畫只觸發一次
+    threshold: 0.2,     // 占容器 20% 高度就觸發
+  });
+
   return (
     <div className="social">
       <div className="container">
@@ -11,24 +24,21 @@ function SocialLinks() {
           title="Social Link"
         />
         <div className="social-content">
-          <ul className="social-list">
-            <li>
-              <a href="https://www.facebook.com/obsidiandrakee/" target="_blank" rel="noopener noreferrer">
-                <i className="fa fa-facebook" aria-hidden="true"></i>
-                <span> - Facebook</span>
+          {medias.map((media, index) => (
+            <div key={index}>
+              <a href={media[1]} target="_blank" rel="noopener noreferrer">
+                <img
+                  className="media-icon"
+                  src={`/src/assets/images/${media[0]}`}
+                  alt={media[0].split(".")[0]}
+                />
               </a>
-            </li>
-            <li>
-              <a href="https://x.com/obsidiandrakee" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-                <span> - Twitter</span>
-              </a>
-            </li>
-          </ul>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default SocialLinks;

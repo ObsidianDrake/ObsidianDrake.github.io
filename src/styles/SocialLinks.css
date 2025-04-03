@@ -1,107 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400');
-
 .social-content {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
     height: 300px;
+    gap: 50px;
 }
 
-.social-list {
-    display: flex;
-    margin-top: 70px;
-    padding: 0;
+.media-icon {
+    width: 80px;
+    margin: 10px;
+    border-radius: 22px;
 }
   
-.social-list li {
-    list-style: none;
-    margin: 0 20px;
-    font-family: 'Roboto Condensed', sans-serif;
-    position: relative;
-}
-  
-.social-list li a {
-    text-decoration: none;
-    display: block;
-    width: 210px;
-    height: 80px;
-    background: #fff;
-    text-align: left;
-    padding-left: 20px;
-    transform: rotate(-30deg) skew(25deg);
-    transition: .5s;
-    box-shadow: -20px 20px 10px rgba(0,0,0,.5);
-    position: relative;
-}
-  
-.social-list li a .fa { 
-    font-size: 40px;
-    color: #262626;
-    line-height: 80px;
-    padding-right: 14px;
-    transition: .5s;
-}
-  
-.social-list li a span {
-    position: absolute;
-    top: 30px;
-    color: #262626;
-    letter-spacing: 4px;
-    transition: .5s;
-}
-  
-.social-list li a::before {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: -20px;
-    height: 100%;
-    width: 20px;
-    background: #b1b1b1;
-    transform: rotate(0deg) skewY(-45deg);
-}
-  
-.social-list li a::after {
-    content: '';
-    position: absolute;
-    bottom: -20px;
-    left: -10px;
-    height: 20px;
-    width: 100%;
-    background: #b1b1b1;
-    transform: rotate(0deg) skewX(-45deg);
-}
-  
-.social-list li a:hover {
-    transform: rotate(-30deg) skew(25deg) translate(20px,-15px);
-    box-shadow: -50px 50px 50px rgba(0,0,0,.5);
-}
-  
-.social-list li:hover .fa,
-.social-list li:hover span {
-    color: #fff;
+@media (min-width: 768px) {
+    .media-icon {
+        width: 100px;
+    }
 }
 
-/* Facebook colors */
-.social-list li:hover:nth-child(1) a {
-    background: #3b5998;
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-.social-list li:hover:nth-child(1) a::before {
-    background: #365492;
-}
-.social-list li:hover:nth-child(1) a::after {
-    background: #4a69ad;
-}
-
-/* Twitter colors */
-ul li:hover:nth-child(2) a{
-    background: #00aced;
-}
-ul li:hover:nth-child(2) a:before{
-    background: #097aa5;
-}
-ul li:hover:nth-child(2) a:after{
-    background: #53b9e0;
+  
+.fade-in-up {
+    opacity: 1;
+    transform: translateY(0);
 }
