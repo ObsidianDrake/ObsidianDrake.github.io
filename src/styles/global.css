@@ -45,8 +45,8 @@
 .page {
   display: inline-block;
   overflow: hidden;
-  width: 80%;
-  margin-top: 60px;
+  width: 100%;
+  margin-top: 30px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -54,20 +54,26 @@
 
 .odd {
   background-color: var(--odd-page-color);
+  width: 100%;
 }
 
 .even {
   background-color: var(--even-page-color);
+  width: 100%;
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
   .page {
-    width: 70vw;
+    width: 100%;
   }
 }
 
