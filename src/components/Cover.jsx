@@ -32,10 +32,16 @@ const Cover = () => {
   }, []);
 
   const scrollDown = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: 'smooth'
-    });
+    const profileElement = document.querySelector('.intro');
+    if (profileElement) {
+      profileElement.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // 備用方案：如果找不到元素，則滾動到視窗高度位置
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
