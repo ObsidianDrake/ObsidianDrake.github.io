@@ -3,6 +3,7 @@ import Cover from '/src/components/Cover';
 // import Menu  from '/src/components/Menu';
 import ProfileInfo from '/src/components/ProfileInfo';
 import SocialLinks from './components/SocialLinks';
+import Events from './components/Events';
 import '/src/styles/global.css';
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
       <Cover className="cover" style={{ height: viewHeight }} />
       <div className="odd" style={{ width: '100%' }}><ProfileInfo className="page" /></div>
       <div className="even" style={{ width: '100%' }}><SocialLinks className="page" /></div>
+      <div className="odd" style={{ width: '100%' }}><Events className="page" /></div>
     </div>
   );
 }

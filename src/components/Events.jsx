@@ -1,27 +1,89 @@
-import React from "react";
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, EffectCoverflow } from 'swiper/modules';
+import SectionHead from '/src/components/SectionHead';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/effect-coverflow';
+import '/src/styles/Events.css';
+import event1 from '/src/assets/images/2024_FurryteaParty.jpeg';
+import event2 from '/src/assets/images/2024_Furry_train.jpeg';
+import event3 from '/src/assets/images/2024_FurMIT.jpg';
+import event4 from '/src/assets/images/2024_Infurnity.jpeg';
+import event5 from '/src/assets/images/2025_ちるこん.jpg';
+import event6 from '/src/assets/images/2025_FurryteaParty.jpg';
 
-const events = [
-  { title: "技術研討會", image: "/assets/images/event1.jpg" },
-  { title: "攝影展覽", image: "/assets/images/event2.jpg" },
-  { title: "黑客松", image: "/assets/images/event3.jpg" },
-  { title: "健身大會", image: "/assets/images/event4.jpg" },
-  { title: "開發者聚會", image: "/assets/images/event5.jpg" },
+const eventData = [
+  {
+    id: 1,
+    title: "2024 FurryteaParty",
+    image: event1
+  },
+  {
+    id: 2,
+    title: "2024 毛爪號",
+    image: event2
+  },
+  {
+    id: 3,
+    title: "2024 FurMIT",
+    image: event3
+  },
+  {
+    id: 4,
+    title: "2024 Infurnity",
+    image: event4
+  },
+  {
+    id: 5,
+    title: "2025 ちるこん",
+    image: event5
+  },
+  {
+    id: 6,
+    title: "2025 FurryteaParty",
+    image: event6
+  }
 ];
 
-function Events() {
+const Events = () => {
   return (
-    <section className="my-8">
-      <h2 className="text-2xl font-bold text-red-400">參加過的活動</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4">
-        {events.map((event, index) => (
-          <div key={index} className="text-center">
-            <img src={event.image} alt={event.title} className="w-full h-40 object-cover rounded-lg" />
-            <p className="mt-2 text-lg">{event.title}</p>
-          </div>
-        ))}
+    <div className="events">
+      <div className="container">
+        <SectionHead
+          title="Events"
+        />
+        <div className="events-content">
+          <Swiper
+            modules={[EffectCoverflow]}
+            spaceBetween={30}
+            slidesPerView={'auto'}
+            centeredSlides={true}
+            loop={true}
+            grabCursor={true}
+            effect={'coverflow'}
+            coverflowEffect={{
+              rotate: 5,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: false,
+            }}
+            className="events-swiper"
+          >
+            {eventData.map((event) => (
+              <SwiperSlide key={event.id} className="event-slide">
+                <div className="event-card">
+                  <img src={event.image} alt={event.title} className="event-image" />
+                  <h3 className="event-title">{event.title}</h3>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
 
 export default Events;
