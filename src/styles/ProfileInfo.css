@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   gap: 20px;
   padding: 20px;
   width: 100%;
@@ -20,6 +20,9 @@
   flex-direction: column;
   justify-content: center;
   min-width: 150px;
+  align-self: center;
+  height: 100%;
+  padding: 20px 0;
 }
 
 .img-container-profile {
@@ -40,6 +43,12 @@
 .about-container {
   margin: 0;
   min-width: 150px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 20px 0;
 }
 
 .about-container .about {
@@ -72,6 +81,7 @@
 @media (min-width: 768px) and (max-width: 1199px) {
   .profile-content {
     gap: 30px;
+    align-items: center;
   }
   
   .img-container-profile img {
@@ -82,6 +92,7 @@
 @media (min-width: 1200px) {
   .profile-content {
     gap: 80px;
+    align-items: center;
   }
   
   .img-container-profile img {
@@ -102,6 +113,7 @@
     flex: none;
     width: 100%;
     max-width: 300px;
+    align-self: center;
   }
   
   .detail-container {
