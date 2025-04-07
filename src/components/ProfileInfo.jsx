@@ -59,7 +59,13 @@ I am looking forward to get in touch with you!`;
             ))}
           </div>
           <div className="img-container-profile">
-            <img src={obsidianImage} alt="Obsidian" />
+            <img 
+              src={obsidianImage} 
+              alt="Obsidian" 
+              data-aos="fade-up" 
+              data-aos-delay="150" 
+              data-aos-offset="110"
+            />
           </div>
           <div className="about-container">
             <div className="about">

@@ -55,7 +55,7 @@ const Cover = () => {
             <h1 className="title" ref={titleRef}>
               Hi, <span className="highlight">I'm Obsidian!</span>
             </h1>
-            <p className="subtitle">Front-end Developer & UI Designer</p>
+            <p className="subtitle">Created by <a className="subtitle" href='https://atoama.cn/'>Atelier Amanojaku</a></p>
           </div>
           <button className="scroll-down-btn" onClick={scrollDown}>
             <span>Explore More</span>

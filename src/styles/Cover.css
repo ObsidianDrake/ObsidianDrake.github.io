@@ -44,7 +44,7 @@
 
 .highlight {
   color: #ffffff;
-  background: linear-gradient(to right, var(--subheading-color), var(--title-color));
+  background: linear-gradient(to right, #8ec5fc, #e0c3fc);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -135,6 +135,8 @@
 @media (max-width: 480px) {
   .hero-content {
     padding: 0 5%;
+    justify-content: flex-start;
+    padding-top: 15vh;
   }
   
   .greeting {
@@ -149,4 +151,3 @@
     font-size: 1.1rem;
   }
 }
-

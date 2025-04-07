@@ -1,46 +1,45 @@
 .profile-content {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   align-items: flex-start;
   gap: 20px;
   padding: 20px;
-}
-
-@media (min-width: 1200px) {
-  .profile-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 100px;
-    padding: 20px;
-  }
+  width: 100%;
 }
 
 .detail-container,
 .img-container-profile,
 .about-container {
-  flex: 1 1 300px;
-  max-width: 300px;
+  flex: 1;
+  min-width: 0;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 150px;
 }
 
 .img-container-profile {
-  flex: 1 1 300px;
-  max-width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 0.8;
 }
 
 .img-container-profile img {
-  width: var(--profile-image-size);
-  height: var(--profile-image-size);
-  max-height: var(--profile-image-size);
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+  transition: max-width 0.3s ease;
 }
 
 .about-container {
   margin: 0;
+  min-width: 150px;
 }
 
 .about-container .about {
@@ -68,4 +67,56 @@
   color: var(--tag-font-color);
   text-align: center;
   display: inline-block;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .profile-content {
+    gap: 30px;
+  }
+  
+  .img-container-profile img {
+    max-width: 180px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .profile-content {
+    gap: 80px;
+  }
+  
+  .img-container-profile img {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .profile-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .detail-container,
+  .img-container-profile,
+  .about-container {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .detail-container {
+    order: 0;
+  }
+  
+  .img-container-profile {
+    order: 1;
+  }
+  
+  .about-container {
+    order: 2;
+  }
+  
+  .img-container-profile img {
+    max-width: 220px;
+  }
 }
