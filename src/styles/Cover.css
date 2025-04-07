@@ -2,17 +2,151 @@
   overflow: hidden;
 }
 
-.title {
-  position: relative;
-  left: 10vh;
-  top: -90vh;
-  text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
-  font-size: 72px;
-  color: var(--cover-title-color);
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 10%;
+  box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
-  .title {
-    top: -80vh;
+.hero-text {
+  max-width: 600px;
+}
+
+.greeting {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeSlideUp 1s ease-out forwards;
+}
+
+.title {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  opacity: 0;
+  animation: fadeSlideUp 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.highlight {
+  color: #ffffff;
+  background: linear-gradient(to right, var(--subheading-color), var(--title-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeSlideUp 1s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.scroll-down-btn {
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  opacity: 0;
+  animation: fadeSlideUp 1s ease-out forwards;
+  animation-delay: 0.9s;
+}
+
+.scroll-down-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+}
+
+.arrow {
+  animation: bounce 2s infinite;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text {
+    max-width: 100%;
+  }
+  
+  .title {
+    font-size: 3rem;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 0 5%;
+  }
+  
+  .greeting {
+    font-size: 1rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+}
+

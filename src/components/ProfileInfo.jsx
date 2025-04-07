@@ -8,7 +8,26 @@ import 'aos/dist/aos.css'
 AOS.init()
 
 const ProfileInfo = () => {
-  const age = useMemo(() => new Date().getFullYear() - 2019, []);
+
+  const aboutMe = `Hi, I am Obsidian.
+I am looking forward to get in touch with you!`;
+
+  const age = useMemo(() => {
+    const birthDate = new Date('2019-09-27');
+    const today = new Date();
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+
+    const hasBirthdayPassed =
+      today.getMonth() > birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+
+    if (!hasBirthdayPassed) {
+      age--;
+    }
+
+    return age;
+  }, []);
   const details = useMemo(() => ({
     Name: 'Obsidian',
     Age: `${age} years`,
@@ -48,9 +67,12 @@ const ProfileInfo = () => {
                 About me
               </h2>
               <p data-aos="fade-left" data-aos-delay="200" data-aos-offset="120">
-                Hi, I am Obsidian.
-                <br/>
-                I am looking forward to get in touch with you!
+                {aboutMe.split('\n').map((line, idx) => (
+                  <React.Fragment key={idx}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
               </p>
             </div>
           </div>

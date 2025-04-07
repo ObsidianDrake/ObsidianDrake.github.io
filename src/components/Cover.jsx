@@ -31,17 +31,40 @@ const Cover = () => {
     };
   }, []);
 
+  const scrollDown = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <div className="cover">
       <Parallax
         bgImage={bgImage}
         className="img-container-cover"
         style={{ height: '100vh' }}
-        strength={200} // adjust strength as desired
+        strength={200}
+        bgStyle={{ filter: 'brightness(0.9)' }}
       >
         {/* The inner div is needed to set the height */}
         <div style={{ height: '100vh' }} />
-        <h1 className="title" ref={titleRef}>Hi, I'm Obsidian!</h1>
+        <div className="hero-content">
+          <div className="hero-text">
+            <p className="greeting">Welcome to my website</p>
+            <h1 className="title" ref={titleRef}>
+              Hi, <span className="highlight">I'm Obsidian!</span>
+            </h1>
+            <p className="subtitle">Front-end Developer & UI Designer</p>
+          </div>
+          <button className="scroll-down-btn" onClick={scrollDown}>
+            <span>Explore More</span>
+            <svg className="arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </button>
+        </div>
       </Parallax>
     </div>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "/src/styles/SocialLinks.css";
 import SectionHead from '/src/components/SectionHead';
 import { useInView } from "react-intersection-observer";
@@ -17,9 +17,10 @@ const SocialLinks = () => {
     [github_img, "https://github.com/ObsidianDrake"],
   ];
 
-  const { ref, inView } = useInView({
-    // triggerOnce: true, // 動畫只觸發一次
-    threshold: 0.2,     // 占容器 20% 高度就觸發
+  const [socialRef, inView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+    rootMargin: "-50px 0px"
   });
 
   return (
@@ -28,9 +29,13 @@ const SocialLinks = () => {
         <SectionHead
           title="Social Link"
         />
-        <div className="social-content">
+        <div className="social-content" ref={socialRef}>
           {medias.map((media, index) => (
-            <div key={index}>
+            <div 
+              key={index} 
+              className={`hidden ${inView ? 'fade-in-up' : ''}`} 
+              style={{ transitionDelay: `${index * 0.1}s` }}
+            >
               <a href={media[1]} target="_blank" rel="noopener noreferrer">
                 <img
                   className="media-icon"
