@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Parallax } from 'react-parallax';
-import wideImage from '/src/assets/images/banner_wide.png';
-import desktopImage from '/src/assets/images/banner_ori.png';
-import mobileImage from '/src/assets/images/banner_mobile.png';
+import wideImage from '/src/assets/images/banner_wide.webp';
+import desktopImage from '/src/assets/images/banner_ori.webp';
+import mobileImage from '/src/assets/images/banner_mobile.webp';
 import '/src/styles/Cover.css';
 
 const Cover = () => {

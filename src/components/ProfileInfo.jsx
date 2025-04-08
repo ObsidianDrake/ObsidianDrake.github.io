@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import '/src/styles/ProfileInfo.css';
 import SectionHead from '/src/components/SectionHead';
-import obsidianImage from '/src/assets/images/obsidian_angry.png';
+import obsidianImage from '/src/assets/images/obsidian_angry.webp';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 

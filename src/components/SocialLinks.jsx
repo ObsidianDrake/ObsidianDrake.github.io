@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import "/src/styles/SocialLinks.css";
 import SectionHead from '/src/components/SectionHead';
 import { useInView } from "react-intersection-observer";
-import facebook_img from '/src/assets/images/facebook.png';
-import twitter_img from '/src/assets/images/twitter-x.png';
-import discord_img from '/src/assets/images/discord.png';
-import bluesky_img from '/src/assets/images/bluesky.png';
-import github_img from '/src/assets/images/github.png';
+import facebook_img from '/src/assets/images/facebook.webp';
+import twitter_img from '/src/assets/images/twitter-x.webp';
+import discord_img from '/src/assets/images/discord.webp';
+import bluesky_img from '/src/assets/images/bluesky.webp';
+import github_img from '/src/assets/images/github.webp';
 
 const SocialLinks = () => {
   const medias = [

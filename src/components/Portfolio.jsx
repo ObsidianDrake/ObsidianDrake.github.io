@@ -1,6 +1,6 @@
 import React from "react";
 
-const portfolioImages = Array.from({ length: 10 }, (_, i) => `/assets/images/portfolio${i + 1}.jpg`);
+const portfolioImages = Array.from({ length: 10 }, (_, i) => `/assets/images/portfolio${i + 1}.webp`);
 
 function Portfolio() {
   return (
