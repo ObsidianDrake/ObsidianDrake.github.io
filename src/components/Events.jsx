@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, EffectCoverflow } from 'swiper/modules';
 import SectionHead from '/src/components/SectionHead';
@@ -47,6 +47,29 @@ const eventData = [
 ];
 
 const Events = () => {
+  const swiperRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.realIndex);
+  };
+
+  const handleSlideClick = (index) => {
+    if (swiperRef.current && swiperRef.current.swiper) {
+      const swiper = swiperRef.current.swiper;
+      const currentIndex = swiper.realIndex;
+      const slidesLength = eventData.length;
+      
+      // Calculate the shortest path to the target slide
+      let diff = index - currentIndex;
+      if (Math.abs(diff) > slidesLength / 2) {
+        diff = diff > 0 ? diff - slidesLength : diff + slidesLength;
+      }
+      
+      swiper.slideTo(swiper.activeIndex + diff);
+    }
+  };
+
   return (
     <div className="events">
       <div className="container">
@@ -55,6 +78,7 @@ const Events = () => {
         />
         <div className="events-content">
           <Swiper
+            ref={swiperRef}
             modules={[EffectCoverflow]}
             spaceBetween={30}
             slidesPerView={'auto'}
@@ -62,6 +86,7 @@ const Events = () => {
             loop={true}
             grabCursor={true}
             effect={'coverflow'}
+            onSlideChange={handleSlideChange}
             coverflowEffect={{
               rotate: 5,
               stretch: 0,
@@ -71,8 +96,12 @@ const Events = () => {
             }}
             className="events-swiper"
           >
-            {eventData.map((event) => (
-              <SwiperSlide key={event.id} className="event-slide">
+            {eventData.map((event, index) => (
+              <SwiperSlide 
+                key={event.id} 
+                className="event-slide"
+                onClick={() => handleSlideClick(index)}
+              >
                 <div className="event-card">
                   <img src={event.image} alt={event.title} className="event-image" />
                   <h3 className="event-title">{event.title}</h3>
