@@ -1,12 +1,15 @@
-import React, { useEffect } from "react";
 import "/src/styles/SocialLinks.css";
-import SectionHead from '/src/components/SectionHead';
-import { useInView } from "react-intersection-observer";
-import facebook_img from '/src/assets/images/facebook.webp';
-import twitter_img from '/src/assets/images/twitter-x.webp';
-import discord_img from '/src/assets/images/discord.webp';
-import bluesky_img from '/src/assets/images/bluesky.webp';
-import github_img from '/src/assets/images/github.webp';
+import SectionHead from "/src/components/SectionHead";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import facebook_img from "/src/assets/images/facebook.webp";
+import twitter_img from "/src/assets/images/twitter-x.webp";
+import discord_img from "/src/assets/images/discord.webp";
+import bluesky_img from "/src/assets/images/bluesky.webp";
+import github_img from "/src/assets/images/github.webp";
+
+AOS.init();
 
 const SocialLinks = () => {
   const medias = [
@@ -17,30 +20,21 @@ const SocialLinks = () => {
     [github_img, "https://github.com/ObsidianDrake"],
   ];
 
-  const [socialRef, inView] = useInView({
-    triggerOnce: false,
-    threshold: 0.1,
-    rootMargin: "-50px 0px"
-  });
-
   return (
     <div className="social">
       <div className="container">
-        <SectionHead
-          title="Social Link"
-        />
-        <div className="social-content" ref={socialRef}>
+        <SectionHead title="Social Link" />
+        <div className="social-content">
           {medias.map((media, index) => (
-            <div 
-              key={index} 
-              className={`hidden ${inView ? 'fade-in-up' : ''}`} 
-              style={{ transitionDelay: `${index * 0.1}s` }}
-            >
+            <div key={index}>
               <a href={media[1]} target="_blank" rel="noopener noreferrer">
                 <img
                   className="media-icon"
                   src={`${media[0]}`}
                   alt={media[0].split(".")[0]}
+                  data-aos="fade-up"
+                  data-aos-delay={100 * (index + 1)}
+                  data-aos-offset="110"
                 />
               </a>
             </div>
