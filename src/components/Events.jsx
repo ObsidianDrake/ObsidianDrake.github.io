@@ -1,10 +1,13 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow, Pagination } from "swiper/modules";
 import SectionHead from "/src/components/SectionHead";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
+import 'swiper/css/pagination';
 import "/src/styles/Events.css";
 import event1 from "/src/assets/images/2024_FurryteaParty.webp";
 import event2 from "/src/assets/images/2024_Furry_train.webp";
@@ -46,6 +49,11 @@ const eventData = [
   },
 ];
 
+AOS.init({
+  threshold: 0.05, // Animation starts when element is 10% in view
+  duration: 800, // Animation duration in ms
+});
+
 const Events = () => {
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -62,27 +70,30 @@ const Events = () => {
 
   return (
     <div className="events">
-      <div className="container">
+      <div className="events-container">
         <SectionHead title="Events" />
         <div className="events-content">
           <Swiper
             ref={swiperRef}
-            modules={[EffectCoverflow]}
-            spaceBetween={30}
-            slidesPerView={"auto"}
+            modules={[EffectCoverflow, Pagination]}
+            effect={'coverflow'}
+            grabCursor={true}
             centeredSlides={true}
             loop={true}
-            grabCursor={true}
-            effect={"coverflow"}
+            slidesPerView={'auto'}
             onSlideChange={handleSlideChange}
+            watchSlidesProgress={true}
+            pagination={true}
+            watchSlidesVisibility={true}
             coverflowEffect={{
-              rotate: 5,
+              rotate: 50,
               stretch: 0,
               depth: 100,
               modifier: 1,
-              slideShadows: false,
+              slideShadows: true,
             }}
             className="events-swiper"
+            data-aos="zoom-out"
           >
             {eventData.map((event, index) => (
               <SwiperSlide

@@ -9,7 +9,10 @@ import discord_img from "/src/assets/images/discord.webp";
 import bluesky_img from "/src/assets/images/bluesky.webp";
 import github_img from "/src/assets/images/github.webp";
 
-AOS.init();
+AOS.init({
+  threshold: 0.05, // Animation starts when element is 10% in view
+  duration: 800, // Animation duration in ms
+});
 
 const SocialLinks = () => {
   const medias = [
@@ -34,7 +37,7 @@ const SocialLinks = () => {
                   alt={media[0].split(".")[0]}
                   data-aos="fade-up"
                   data-aos-delay={100 * (index + 1)}
-                  data-aos-offset="110"
+                  data-aos-offset="0"
                 />
               </a>
             </div>
