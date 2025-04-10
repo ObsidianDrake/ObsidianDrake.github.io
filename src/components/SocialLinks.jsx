@@ -3,11 +3,11 @@ import SectionHead from "/src/components/SectionHead";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import facebook_img from "/src/assets/images/facebook.webp";
-import twitter_img from "/src/assets/images/twitter-x.webp";
-import discord_img from "/src/assets/images/discord.webp";
-import bluesky_img from "/src/assets/images/bluesky.webp";
-import github_img from "/src/assets/images/github.webp";
+import facebook_img from "/src/assets/images/social/facebook.webp";
+import twitter_img from "/src/assets/images/social/twitter-x.webp";
+import discord_img from "/src/assets/images/social/discord.webp";
+import bluesky_img from "/src/assets/images/social/bluesky.webp";
+import github_img from "/src/assets/images/social/github.webp";
 
 AOS.init({
   threshold: 0.05, // Animation starts when element is 10% in view

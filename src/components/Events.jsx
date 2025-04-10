@@ -9,12 +9,12 @@ import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import 'swiper/css/pagination';
 import "/src/styles/Events.css";
-import event1 from "/src/assets/images/2024_FurryteaParty.webp";
-import event2 from "/src/assets/images/2024_Furry_train.webp";
-import event3 from "/src/assets/images/2024_FurMIT.webp";
-import event4 from "/src/assets/images/2024_Infurnity.webp";
-import event5 from "/src/assets/images/2025_ちるこん.webp";
-import event6 from "/src/assets/images/2025_FurryteaParty.webp";
+import event1 from "/src/assets/images/events/2024_FurryteaParty.webp";
+import event2 from "/src/assets/images/events/2024_Furry_train.webp";
+import event3 from "/src/assets/images/events/2024_FurMIT.webp";
+import event4 from "/src/assets/images/events/2024_Infurnity.webp";
+import event5 from "/src/assets/images/events/2025_ちるこん.webp";
+import event6 from "/src/assets/images/events/2025_FurryteaParty.webp";
 
 const eventData = [
   {
