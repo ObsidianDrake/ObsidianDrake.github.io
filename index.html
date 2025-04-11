@@ -22,5 +22,15 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // 處理從 404.html 重定向的路由
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </body>
 </html>
