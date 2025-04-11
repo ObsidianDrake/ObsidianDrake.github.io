@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/src/assets/images/icon.webp" />
+    <link rel="icon" type="image/png" href="./src/assets/images/icon.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Obsidian Personal Web</title>
     <style>
@@ -20,6 +20,16 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="./src/main.jsx"></script>
+    <script>
+      // 處理從 404.html 重定向的路由
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </body>
 </html>

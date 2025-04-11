@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Cover from '/src/components/Cover';
 // import Menu  from '/src/components/Menu';
 import ProfileInfo from '/src/components/ProfileInfo';
