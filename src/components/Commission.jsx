@@ -60,10 +60,10 @@ const Commission = () => {
           {/* Top 7 commissions */}
           {topCommissions.map((commission) => (
             <div 
-              key={commission.id} 
+              key={commission.title} 
               className="commission-item"
               data-aos="fade-up"
-              data-aos-delay={100 * (commission.id % 3)}
+              data-aos-delay={100 * (commissionData.findIndex(item => item.title === commission.title) % 3)}
               onClick={() => openLightbox(commission)}
             >
               <div className="commission-card">
