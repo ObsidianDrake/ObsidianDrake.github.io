@@ -1,16 +1,17 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Cover from '/src/components/Cover';
 // import Menu  from '/src/components/Menu';
 import ProfileInfo from '/src/components/ProfileInfo';
 import SocialLinks from './components/SocialLinks';
 import Events from './components/Events';
 import Commission from './components/Commission';
+import CommissionsPage from './pages/CommissionsPage';
 import '/src/styles/global.css';
 
-function App() {
+function HomePage() {
   const [viewHeight, setViewHeight] = useState('0px');
-  const [scrolling, setScrolling] = useState(false);
-
+  
   useEffect(() => {
     // 設置初始視口高度
     setViewHeight(`${window.innerHeight}px`);
@@ -35,6 +36,17 @@ function App() {
       <div className="odd" style={{ width: '100%' }}><Events className="page" /></div>
       <div className="even" style={{ width: '100%' }}><Commission className="page" /></div>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/commissions" element={<CommissionsPage />} />
+      </Routes>
+    </Router>
   );
 }
 

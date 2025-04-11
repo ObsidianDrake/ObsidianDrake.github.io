@@ -1,58 +1,22 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import SectionHead from "/src/components/SectionHead";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "/src/styles/Commission.css";
-
-// Placeholder images and data - replace with your actual images
-const commissionData = [
-  {
-    id: 1,
-    title: "Commission 1",
-    image: "https://placehold.co/600x800",
-    author: "Artist Name 1",
-    description: "Character design commission"
-  },
-  {
-    id: 2,
-    title: "Commission 2",
-    image: "https://placehold.co/800x600",
-    author: "Artist Name 2",
-    description: "Full illustration commission"
-  },
-  {
-    id: 3,
-    title: "Commission 3",
-    image: "https://placehold.co/500x900",
-    author: "Artist Name 3",
-    description: "Chibi style commission"
-  },
-  {
-    id: 4,
-    title: "Commission 4",
-    image: "https://placehold.co/1200x800",
-    author: "Artist Name 4",
-    description: "Portrait commission"
-  },
-  {
-    id: 5,
-    title: "Commission 5",
-    image: "https://placehold.co/900x1200",
-    author: "Artist Name 5",
-    description: "Reference sheet commission"
-  },
-  {
-    id: 6,
-    title: "Commission 6",
-    image: "https://placehold.co/700x700",
-    author: "Artist Name 6",
-    description: "Badge design commission"
-  }
-];
+import { commissionData, authorsMap } from "../pages/CommissionsPage";
 
 const Commission = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [topCommissions, setTopCommissions] = useState([]);
+  
+  useEffect(() => {
+    // Randomly select 7 commissions
+    const shuffled = [...commissionData].sort(() => 0.5 - Math.random());
+    const randomFive = shuffled.slice(0, 7);
+    setTopCommissions(randomFive);
+  }, []);
 
   const openLightbox = (commission) => {
     setSelectedImage(commission);
@@ -67,6 +31,11 @@ const Commission = () => {
 
   const handleImageLoad = () => {
     setImageLoaded(true);
+  };
+
+  const handleAuthorClick = (e, url) => {
+    e.stopPropagation(); // Prevent opening the lightbox when clicking author link
+    window.open(url, '_blank', 'noopener,noreferrer');
   };
 
   // Handle escape key to close lightbox
@@ -88,7 +57,8 @@ const Commission = () => {
       <div className="container">
         <SectionHead title="Commissions" />
         <div className="commission-grid" data-aos="fade-up">
-          {commissionData.map((commission) => (
+          {/* Top 7 commissions */}
+          {topCommissions.map((commission) => (
             <div 
               key={commission.id} 
               className="commission-item"
@@ -104,11 +74,21 @@ const Commission = () => {
                   loading="lazy"
                 />
                 <div className="commission-author">
-                  <span>By: {commission.author}</span>
+                  <span>By: {authorsMap[commission.authorKey].name}</span>
                 </div>
               </div>
             </div>
           ))}
+
+          {/* Show More button */}
+          <Link to="/commissions" className="commission-item show-more-item" data-aos="fade-up">
+            <div className="commission-card show-more-card">
+              <div className="show-more-content">
+                <span className="show-more-text">Show More...</span>
+                <span className="show-more-icon">+</span>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
 
@@ -129,7 +109,14 @@ const Commission = () => {
               <h3>{selectedImage.title}</h3>
               <div className="lightbox-author">
                 <span className="author-label">Artist:</span>
-                <span className="author-name">{selectedImage.author}</span>
+                <a 
+                  href={authorsMap[selectedImage.authorKey].url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="author-name"
+                >
+                  {authorsMap[selectedImage.authorKey].name}
+                </a>
               </div>
               <p className="lightbox-description">{selectedImage.description}</p>
             </div>

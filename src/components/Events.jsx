@@ -83,7 +83,9 @@ const Events = () => {
             slidesPerView={'auto'}
             onSlideChange={handleSlideChange}
             watchSlidesProgress={true}
-            pagination={true}
+            pagination={{
+              clickable: true
+            }}
             watchSlidesVisibility={true}
             coverflowEffect={{
               rotate: 50,
