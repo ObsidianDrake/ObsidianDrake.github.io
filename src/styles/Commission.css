@@ -257,6 +257,28 @@
     overflow-y: auto;
     max-height: 85vh;
   }
+
+  .lightbox-info h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .lightbox-author {
+    margin-bottom: 15px;
+  }
+
+  .author-label {
+    font-size: 18px;
+  }
+
+  .author-name {
+    font-size: 18px;
+  }
+
+  .lightbox-description {
+    font-size: 16px;
+    line-height: 1.6;
+  }
 }
 
 @media (max-width: 768px) {
@@ -339,6 +361,8 @@
 /* Commissions page specific styles */
 .commissions-page {
   padding: 50px 0;
+  background-color: var(--even-page-color);
+  min-height: 100vh;
 }
 
 .commissions-intro {

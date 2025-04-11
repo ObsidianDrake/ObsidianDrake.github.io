@@ -14,8 +14,8 @@ const Commission = () => {
   useEffect(() => {
     // Randomly select 7 commissions
     const shuffled = [...commissionData].sort(() => 0.5 - Math.random());
-    const randomFive = shuffled.slice(0, 7);
-    setTopCommissions(randomFive);
+    const randomSeven = shuffled.slice(0, 7);
+    setTopCommissions(randomSeven);
   }, []);
 
   const openLightbox = (commission) => {

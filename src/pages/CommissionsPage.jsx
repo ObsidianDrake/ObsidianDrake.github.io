@@ -32,6 +32,7 @@ import sabo_1 from "/src/assets/images/commissions/薩波_笨版.webp";
 import Raier_1 from "/src/assets/images/commissions/雷邇_吸血鬼.webp";
 import Raier_2 from "/src/assets/images/commissions/雷邇_法師.webp";
 import FAIER_1 from "/src/assets/images/commissions/音川菲爾_名片.webp";
+import telegram_stickers from "/src/assets/images/commissions/telegram_sticker.webp";
 // Authors map with name and url
 export const authorsMap = {
   "虎丸": {
@@ -101,188 +102,168 @@ export const authorsMap = {
   "音川菲爾": {
     name: "音川菲爾",
     url: "https://www.facebook.com/profile.php?id=100011879237722"
+  },
+  "Telegram": {
+    name: "Telegram貼圖包",
+    url: "https://t.me/addstickers/ObsidianVideoPersonal"
   }
 };
 
 // Complete commission data
 export const commissionData = [
   {
-    id: 1,
-    title: "Archer",
-    image: archer,
-    authorKey: "capella"
+    title: "Obsidian OC",
+    image: obsidian_oc,
+    authorKey: "虎丸",
+    description: "獸設重製"
   },
   {
-    id: 2,
+    title: "Telegram Stickers",
+    image: telegram_stickers,
+    authorKey: "Telegram"
+  },
+  {
+    title: "小Q人",
+    image: slow_work_small_q,
+    authorKey: "Slow.work"
+  },
+  {
     title: "NFT",
     image: nft,
     authorKey: "Kutto"
   },
   {
-    id: 3,
-    title: "毛絨聖誕花圈",
-    image: mo_yu_2,
-    authorKey: "MoYu"
+    title: "內褲褲",
+    image: tai_lei_1,
+    authorKey: "拓雷"
   },
   {
-    id: 4,
-    title: "獸與地下城",
-    image: mo_yu_1,
-    authorKey: "MoYu"
+    title: "富士山",
+    image: KAi_K_1,
+    authorKey: "凱K"
   },
   {
-    id: 5,
-    title: "氣到對折",
-    image: slow_work_angry,
-    authorKey: "Slow.work"
+    title: "勇者",
+    image: benten_1,
+    authorKey: "弁天"
   },
   {
-    id: 6,
-    title: "酒吞童子",
-    image: tody_1,
-    authorKey: "七柚"
-  },
-  {
-    id: 7,
-    title: "除妖師",
-    image: tody_2,
-    authorKey: "七柚"
-  },
-  {
-    id: 8,
-    title: "獸獸鬥片",
-    image: janet_1,
-    authorKey: "伊秋"
-  },
-  {
-    id: 9,
-    title: "屁屁",
-    image: Kaltespur_1,
-    authorKey: "冷軌"
-  },
-  {
-    id: 10,
-    title: "翹屁屁",
-    image: Kaltespur_2,
-    authorKey: "冷軌"
-  },
-  {
-    id: 11,
-    title: "Apple Watch",
-    image: ras_soy_1,
-    authorKey: "瑞樹",
-    description: "Apple Watch Wallpaper"
-  },
-  {
-    id: 12,
-    title: "MagSafe",
-    image: ras_soy_2,
-    authorKey: "瑞樹",
-    description: "MagSafe iPhone 透明保護殼"
-  },
-  {
-    id: 13,
-    title: "杏鮑菇",
-    image: ras_soy_3,
-    authorKey: "瑞樹"
-  },
-  {
-    id: 14,
-    title: "毛爪號",
-    image: ras_soy_4,
-    authorKey: "瑞樹"
-  },
-  {
-    id: 15,
-    title: "櫛瓜",
-    image: ras_soy_5,
-    authorKey: "瑞樹"
-  },
-  {
-    id: 16,
-    title: "躺著",
-    image: ras_soy_7,
-    authorKey: "瑞樹"
-  },
-  {
-    id: 17,
-    title: "飯友",
-    image: ras_soy_8,
-    authorKey: "瑞樹",
-  },
-  {
-    id: 18,
-    title: "賴床",
-    image: sark_1,
-    authorKey: "薩克",
-  },
-  {
-    id: 19,
-    title: "笨",
-    image: sabo_1,
-    authorKey: "薩波",
-  },
-  {
-    id: 20,
-    title: "吸血鬼",
-    image: Raier_1,
-    authorKey: "雷邇",
-  },
-  {
-    id: 21,
-    title: "法師",
-    image: Raier_2,
-    authorKey: "雷邇",
-  },
-  {
-    id: 22,
     title: "名片透卡",
     image: FAIER_1,
     authorKey: "音川菲爾",
   },
   {
-    id: 23,
+    title: "氣到對折",
+    image: slow_work_angry,
+    authorKey: "Slow.work"
+  },
+  {
     title: "萬聖節",
     image: ras_soy_6,
     authorKey: "瑞樹",
     description: "萬聖節iPhone Wallpaper"
   },
   {
-    id: 24,
+    title: "酒吞童子",
+    image: tody_1,
+    authorKey: "七柚"
+  },
+  {
+    title: "除妖師",
+    image: tody_2,
+    authorKey: "七柚"
+  },
+  {
+    title: "翹屁屁",
+    image: Kaltespur_2,
+    authorKey: "冷軌"
+  },
+  {
+    title: "獸獸鬥片",
+    image: janet_1,
+    authorKey: "伊秋"
+  },
+  {
+    title: "毛絨聖誕花圈",
+    image: mo_yu_2,
+    authorKey: "MoYu"
+  },
+  {
+    title: "獸與地下城",
+    image: mo_yu_1,
+    authorKey: "MoYu"
+  },
+  {
+    title: "屁屁",
+    image: Kaltespur_1,
+    authorKey: "冷軌"
+  },
+  {
+    title: "Apple Watch",
+    image: ras_soy_1,
+    authorKey: "瑞樹",
+    description: "Apple Watch Wallpaper"
+  },
+  {
+    title: "MagSafe",
+    image: ras_soy_2,
+    authorKey: "瑞樹",
+    description: "MagSafe iPhone 透明保護殼"
+  },
+  {
+    title: "杏鮑菇",
+    image: ras_soy_3,
+    authorKey: "瑞樹"
+  },
+  {
+    title: "毛爪號",
+    image: ras_soy_4,
+    authorKey: "瑞樹"
+  },
+  {
+    title: "櫛瓜",
+    image: ras_soy_5,
+    authorKey: "瑞樹"
+  },
+  {
+    title: "躺著",
+    image: ras_soy_7,
+    authorKey: "瑞樹"
+  },
+  {
+    title: "飯友",
+    image: ras_soy_8,
+    authorKey: "瑞樹",
+  },
+  {
+    title: "賴床",
+    image: sark_1,
+    authorKey: "薩克",
+  },
+  {
+    title: "笨",
+    image: sabo_1,
+    authorKey: "薩波",
+  },
+  {
+    title: "吸血鬼",
+    image: Raier_1,
+    authorKey: "雷邇",
+  },
+  {
+    title: "法師",
+    image: Raier_2,
+    authorKey: "雷邇",
+  },
+  {
     title: "Pika貼圖包",
     image: pika_sticker,
     authorKey: "Pika"
   },
   {
-    id: 25,
-    title: "內褲褲",
-    image: tai_lei_1,
-    authorKey: "拓雷"
-  },
-  {
-    id: 26,
-    title: "富士山",
-    image: KAi_K_1,
-    authorKey: "凱K"
-  },
-  {
-    id: 27,
-    title: "小Q人",
-    image: slow_work_small_q,
-    authorKey: "Slow.work"
-  },
-  {
-    id: 28,
-    title: "勇者",
-    image: benten_1,
-    authorKey: "弁天"
-  },
-  {
-    id: 29,
-    title: "Obsidian OC",
-    image: obsidian_oc,
-    authorKey: "虎丸",
-    description: "獸設重製"
+    title: "Archer",
+    image: archer,
+    authorKey: "capella"
   },
 ];
 
@@ -292,9 +273,8 @@ const CommissionsPage = () => {
   const [sortedCommissions, setSortedCommissions] = useState([]);
   
   useEffect(() => {
-    // Sort commissions by ID in descending order (newest first)
-    const sorted = [...commissionData].sort((a, b) => b.id - a.id);
-    setSortedCommissions(sorted);
+    // Use the original array order
+    setSortedCommissions([...commissionData]);
 
     // Initialize AOS
     AOS.init({
@@ -348,10 +328,10 @@ const CommissionsPage = () => {
         <div className="commission-grid" data-aos="fade-up">
           {sortedCommissions.map((commission) => (
             <div 
-              key={commission.id} 
+              key={commission.title} 
               className="commission-item"
               data-aos="fade-up"
-              data-aos-delay={100 * (commission.id % 3)}
+              data-aos-delay={100 * (commission.title.charCodeAt(0) % 3)}
               onClick={() => openLightbox(commission)}
             >
               <div className="commission-card">
