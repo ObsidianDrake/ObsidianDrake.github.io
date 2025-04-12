@@ -1,17 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 import '/src/styles/ButtonNavigation.css';
+import { useTranslation } from '../i18n/LanguageContext';
 
 const ButtonNavigation = ({ currentPage, isLightboxOpen }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const navigationRef = useRef(null);
   const buttonRefs = useRef({});
+  const { t } = useTranslation();
 
   const pages = [
-    { name: 'Cover', path: '#cover' },
-    { name: 'Profile', path: '#profile' },
-    { name: 'Social', path: '#social' },
-    { name: 'Event', path: '#event' },
-    { name: 'Commission', path: '#commission' }
+    { name: 'cover', path: '#cover', label: t.nav.cover },
+    { name: 'profile', path: '#profile', label: t.nav.profile },
+    { name: 'social', path: '#social', label: t.nav.social },
+    { name: 'event', path: '#event', label: t.nav.event },
+    { name: 'commission', path: '#commission', label: t.nav.commission }
   ];
 
   useEffect(() => {
@@ -87,7 +89,7 @@ const ButtonNavigation = ({ currentPage, isLightboxOpen }) => {
           className={`nav-button ${currentPage === page.name.toLowerCase() ? 'active' : ''}`}
           onClick={() => handleClick(page.path)}
         >
-          {page.name}
+          {page.label}
         </button>
       ))}
     </div>

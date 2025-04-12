@@ -2,6 +2,7 @@ import "/src/styles/SocialLinks.css";
 import SectionHead from "/src/components/SectionHead";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from '../i18n/LanguageContext';
 
 import facebook_img from "/src/assets/images/social/facebook.webp";
 import twitter_img from "/src/assets/images/social/twitter-x.webp";
@@ -15,6 +16,8 @@ AOS.init({
 });
 
 const SocialLinks = () => {
+  const { t } = useTranslation();
+  
   const medias = [
     [facebook_img, "https://www.facebook.com/obsidiandrakee"],
     [twitter_img, "https://x.com/obsidiandrakee"],
@@ -26,7 +29,7 @@ const SocialLinks = () => {
   return (
     <div className="social">
       <div className="container">
-        <SectionHead title="Social Link" />
+        <SectionHead title={t.social.title} />
         <div className="social-content">
           {medias.map((media, index) => (
             <div key={index}>

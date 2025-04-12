@@ -7,6 +7,7 @@ import Events from './components/Events';
 import Commission from './components/Commission';
 import CommissionsPage from './pages/CommissionsPage';
 import ButtonNavigation from './components/ButtonNavigation';
+import LanguageSwitcher from './components/LanguageSwitcher';
 import '/src/styles/global.css';
 
 function HomePage() {
@@ -63,6 +64,7 @@ function HomePage() {
 
   return (
     <div className="home" style={{ width: '100%', overflow: 'hidden' }}>
+      <LanguageSwitcher />
       <div id="cover" className="cover-section">
         <Cover style={{ height: viewHeight }} />
       </div>

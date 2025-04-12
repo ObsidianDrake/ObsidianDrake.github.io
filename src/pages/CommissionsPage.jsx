@@ -3,6 +3,8 @@ import SectionHead from "/src/components/SectionHead";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "/src/styles/Commission.css";
+import { useTranslation } from '../i18n/LanguageContext';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 import obsidian_oc from "/src/assets/images/commissions/thumbnails/虎丸_獸設.webp";
 import archer from "/src/assets/images/commissions/thumbnails/capella_pera_archer.webp";
 import nft from "/src/assets/images/commissions/thumbnails/Kutto_NFT.webp";
@@ -340,6 +342,7 @@ const CommissionsPage = () => {
   const observerRef = useRef(null);
   const loadMoreRef = useRef(null);
   const ITEMS_PER_PAGE = 8;
+  const { t } = useTranslation();
 
   // Move preload function into useEffect to avoid circular dependencies
   useEffect(() => {
@@ -479,10 +482,11 @@ const CommissionsPage = () => {
 
   return (
     <div className="commissions-page">
+      <LanguageSwitcher />
       <div className="container">
-        <SectionHead title="Commissions" />
+        <SectionHead title={t.commissionsPage.title} />
         <p className="commissions-intro">
-          Here you can find all the commissioned artwork I've received from various talented artists.
+          {t.commissionsPage.intro}
         </p>
         <div className="commission-grid" data-aos="fade-up">
           {visibleCommissions.map((commission, index) => (
@@ -514,7 +518,7 @@ const CommissionsPage = () => {
                   onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                 />
                 <div className="commission-author">
-                  <span>By: {authorsMap[commission.authorKey].name}</span>
+                  <span>{t.commission.by}: {authorsMap[commission.authorKey].name}</span>
                 </div>
               </div>
             </div>
@@ -544,7 +548,7 @@ const CommissionsPage = () => {
             <div className="lightbox-info">
               <h3>{selectedImage.title}</h3>
               <div className="lightbox-author">
-                <span className="author-label">Artist:</span>
+                <span className="author-label">{t.commissionsPage.artist}:</span>
                 <a 
                   href={authorsMap[selectedImage.authorKey].url}
                   target="_blank"

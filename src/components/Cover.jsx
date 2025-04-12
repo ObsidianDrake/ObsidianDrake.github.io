@@ -4,10 +4,12 @@ import wideImage from '/src/assets/images/banner_wide.webp';
 import desktopImage from '/src/assets/images/banner_ori.webp';
 import mobileImage from '/src/assets/images/banner_mobile.webp';
 import '/src/styles/Cover.css';
+import { useTranslation } from '../i18n/LanguageContext';
 
 const Cover = () => {
   const [bgImage, setBgImage] = useState(false);
   const titleRef = useRef(null);
+  const { t } = useTranslation();
 
   const detectDevice = () => {
     const width = document.documentElement.clientWidth;
@@ -72,14 +74,14 @@ const Cover = () => {
         <div style={{ height: '100vh' }} />
         <div className="hero-content">
           <div className="hero-text">
-            <p className="greeting">Welcome to my website</p>
+            <p className="greeting">{t.cover.greeting}</p>
             <h1 className="title" ref={titleRef}>
-              Hi, <span className="highlight">I'm Obsidian!</span>
+              {t.cover.title}
             </h1>
-            <p className="subtitle">Created by <a className="subtitle" href='https://atoama.cn/'>Atelier Amanojaku</a></p>
+            <p className="subtitle">{t.cover.subtitle} <a className="subtitle" href='https://atoama.cn/'>Atelier Amanojaku</a></p>
           </div>
           <button className="scroll-down-btn" onClick={scrollDown}>
-            <span>Explore More</span>
+            <span>{t.cover.scrollDown}</span>
             <svg className="arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="12" y1="5" x2="12" y2="19"></line>
               <polyline points="19 12 12 19 5 12"></polyline>

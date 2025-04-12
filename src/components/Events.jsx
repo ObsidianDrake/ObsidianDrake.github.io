@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import 'swiper/css/pagination';
 import "/src/styles/Events.css";
+import { useTranslation } from '../i18n/LanguageContext';
 import event1 from "/src/assets/images/events/2024_FurryteaParty.webp";
 import event2 from "/src/assets/images/events/2024_Furry_train.webp";
 import event3 from "/src/assets/images/events/2024_FurMIT.webp";
@@ -63,6 +64,7 @@ AOS.init({
 const Events = () => {
   const swiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const { t } = useTranslation();
 
   const handleSlideChange = (swiper) => {
     setActiveIndex(swiper.realIndex);
@@ -77,7 +79,7 @@ const Events = () => {
   return (
     <div className="events">
       <div className="events-container">
-        <SectionHead title="Events" />
+        <SectionHead title={t.events.title} />
         <div className="events-content">
           <Swiper
             ref={swiperRef}

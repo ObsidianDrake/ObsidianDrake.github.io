@@ -4,10 +4,12 @@ import SectionHead from '/src/components/SectionHead';
 import obsidianImage from '/src/assets/images/little_q.webp';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { useTranslation } from '../i18n/LanguageContext';
 
 AOS.init()
 
 const ProfileInfo = () => {
+  const { t, locale } = useTranslation();
 
   const aboutMe = `Hi, I am Obsidian.
 I am looking forward to get in touch with you!`;
@@ -26,21 +28,22 @@ I am looking forward to get in touch with you!`;
       age--;
     }
 
-    return age;
-  }, []);
+    return locale === 'zh' ? `${age} 歲` : `${age} years`;
+  }, [locale]);
+
   const details = useMemo(() => ({
-    Name: 'Obsidian',
-    Age: `${age} years`,
-    Location: 'Hsinchu, Taiwan',
-    Education: 'Master degree'
-  }), [age]);
+    [t.profile.details.name]: 'Obsidian',
+    [t.profile.details.age]: age,
+    [t.profile.details.location]: 'Hsinchu, Taiwan',
+    [t.profile.details.education]: locale === 'zh' ? '碩士學位' : 'Master degree'
+  }), [t, age, locale]);
 
   return (
     <div className="intro">
       <div className="container">
         <SectionHead
-          title="Profile"
-          lead="“Front-end is very difficult to learn!”"
+          title={t.profile.title}
+          lead={t.profile.lead}
         />
         <div className="profile-content">
           <div className="detail-container">
@@ -70,10 +73,10 @@ I am looking forward to get in touch with you!`;
           <div className="about-container">
             <div className="about">
               <h2 data-aos="fade-left" data-aos-delay="100" data-aos-offset="120">
-                About me
+                {t.profile.aboutMe}
               </h2>
               <p data-aos="fade-left" data-aos-delay="200" data-aos-offset="120">
-                {aboutMe.split('\n').map((line, idx) => (
+                {t.profile.bio.split('\n').map((line, idx) => (
                   <React.Fragment key={idx}>
                     {line}
                     <br />

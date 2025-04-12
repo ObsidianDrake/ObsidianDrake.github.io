@@ -5,11 +5,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "/src/styles/Commission.css";
 import { commissionData, authorsMap } from "../pages/CommissionsPage";
+import { useTranslation } from '../i18n/LanguageContext';
 
 const Commission = ({ onLightboxChange }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [topCommissions, setTopCommissions] = useState([]);
+  const { t } = useTranslation();
   
   useEffect(() => {
     // Randomly select 7 commissions
@@ -57,7 +59,7 @@ const Commission = ({ onLightboxChange }) => {
   return (
     <div className="commission">
       <div className="container">
-        <SectionHead title="Commissions" />
+        <SectionHead title={t.commission.title} />
         <div className="commission-grid" data-aos="fade-up">
           {/* Top 7 commissions */}
           {topCommissions.map((commission, index) => (
@@ -76,7 +78,7 @@ const Commission = ({ onLightboxChange }) => {
                   loading="lazy"
                 />
                 <div className="commission-author">
-                  <span>By: {authorsMap[commission.authorKey].name}</span>
+                  <span>{t.commission.by}: {authorsMap[commission.authorKey].name}</span>
                 </div>
               </div>
             </div>
@@ -86,7 +88,7 @@ const Commission = ({ onLightboxChange }) => {
           <Link to="/commissions" className="commission-item show-more-item" data-aos="fade-up">
             <div className="commission-card show-more-card">
               <div className="show-more-content">
-                <span className="show-more-text">Show More...</span>
+                <span className="show-more-text">{t.commission.showMore}</span>
                 <span className="show-more-icon">+</span>
               </div>
             </div>
@@ -110,7 +112,7 @@ const Commission = ({ onLightboxChange }) => {
             <div className="lightbox-info">
               <h3>{selectedImage.title}</h3>
               <div className="lightbox-author">
-                <span className="author-label">Artist:</span>
+                <span className="author-label">{t.commission.artist}:</span>
                 <a 
                   href={authorsMap[selectedImage.authorKey].url}
                   target="_blank"
@@ -122,7 +124,23 @@ const Commission = ({ onLightboxChange }) => {
               </div>
               <p className="lightbox-description">{selectedImage.description}</p>
             </div>
-            <button className="lightbox-close" onClick={closeLightbox}>×</button>
+            <button className="lightbox-close" onClick={closeLightbox}>
+              <svg 
+                width="16" 
+                height="16" 
+                viewBox="0 0 16 16" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ display: 'block' }}
+              >
+                <path 
+                  d="M15 1L1 15M1 1L15 15" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                />
+              </svg>
+            </button>
           </div>
         </div>
       )}
