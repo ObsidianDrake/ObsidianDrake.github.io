@@ -66,7 +66,8 @@ It’s been exactly one year since I officially joined the fandom, and I’ve be
 
 So come say hi, give me a boop or a hug, and let’s have fun together!
 Looking forward to getting to know you all!`,values:{name:"Obsidian",location:"Hsinchu County, Taiwan",interests:`Gaming, Singing, Listening to Music,
-Coding`}},social:{title:"Social Links"},events:{title:"Events",photographer:"Photographer"},commission:{title:"Commissioned Works",showMore:"Show More...",artist:"Artist",by:"By"},commissionsPage:{title:"Commissioned Works",intro:"Here you can find all my commissioned works. NSFW works are excluded for now — they're still hidden in the usual place!",artist:"Artist"}},w0={nav:{cover:"首頁",profile:"簡介",social:"社群",event:"活動",commission:"委託"},cover:{greeting:"歡迎來到我的網站",title:"嗨，我是 黑曜石!",subtitle:"製作工作室：",scrollDown:"探索更多"},profile:{title:"自我介紹",lead:"享受毛生，吸爆毛毛！！！",aboutMe:"關於我",details:{name:"名字",location:"居住地",interests:"興趣"},bio:`嗨，我是黑曜石。
+Coding`}},social:{title:"Social Links"},events:{title:"Events",photographer:"Photographer"},commission:{title:"Commissioned Works",showMore:"Show More...",artist:"Artist",by:"By"},commissionsPage:{title:"Commissioned Works",intro:`Here you can find all of my commission works!
+(Well... except for the NSFW ones—they’re still tucked away in that familiar old spot!)`,artist:"Artist"}},w0={nav:{cover:"首頁",profile:"簡介",social:"社群",event:"活動",commission:"委託"},cover:{greeting:"歡迎來到我的網站",title:"嗨，我是 黑曜石!",subtitle:"製作工作室：",scrollDown:"探索更多"},profile:{title:"自我介紹",lead:"享受毛生，吸爆毛毛！！！",aboutMe:"關於我",details:{name:"名字",location:"居住地",interests:"興趣"},bio:`嗨，我是黑曜石。
 目前生活在新竹，是一名後端軟體工程師！一直期許自己能夠為自己做出一個網頁，這是一個非常好的機會，希望你們會喜歡！使用上有什麼想法或bug都可以告訴我，我非常樂意求教！
 
 在擁有獸設以前，就很常參與各式各樣的獸圈活動，後來因為一些緣分，很有幸的收到「黑曜石」的角色轉讓。
