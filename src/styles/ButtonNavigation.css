@@ -4,7 +4,6 @@
   left: 0;
   right: 0;
   display: flex;
-  justify-content: center;
   overflow-x: auto;
   background: rgba(0, 0, 0, 0.8);
   padding: 12px;
@@ -18,6 +17,13 @@
 /* 隱藏滾動條但保持滾動功能 */
 .button-navigation::-webkit-scrollbar {
   display: none;
+}
+
+/* 添加一個容器來實現視覺上的置中 */
+.button-navigation::before,
+.button-navigation::after {
+  content: '';
+  flex: 1;
 }
 
 .nav-button {
