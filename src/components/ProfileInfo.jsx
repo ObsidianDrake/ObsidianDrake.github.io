@@ -11,26 +11,8 @@ AOS.init()
 const ProfileInfo = () => {
   const { t, locale } = useTranslation();
 
-  const age = useMemo(() => {
-    const birthDate = new Date('2019-09-27');
-    const today = new Date();
-
-    let age = today.getFullYear() - birthDate.getFullYear();
-
-    const hasBirthdayPassed =
-      today.getMonth() > birthDate.getMonth() ||
-      (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
-
-    if (!hasBirthdayPassed) {
-      age--;
-    }
-
-    return locale === 'zh' ? `${age} 歲` : `${age} years`;
-  }, [locale]);
-
   const details = useMemo(() => ({
     [t.profile.details.name]: t.profile.values.name,
-    [t.profile.details.age]: age,
     [t.profile.details.location]: t.profile.values.location,
     [t.profile.details.interests]: t.profile.values.interests.split('\n').map((line, idx) => (
       <React.Fragment key={idx}>
@@ -38,7 +20,7 @@ const ProfileInfo = () => {
         <br />
       </React.Fragment>
     ))
-  }), [t, age]);
+  }), [t]);
 
   return (
     <div className="intro">

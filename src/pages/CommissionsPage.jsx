@@ -486,7 +486,12 @@ const CommissionsPage = () => {
       <div className="container">
         <SectionHead title={t.commissionsPage.title} />
         <p className="commissions-intro">
-          {t.commissionsPage.intro}
+          {t.commissionsPage.intro.split('\n').map((line, idx) => (
+            <React.Fragment key={idx}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}
         </p>
         <div className="commission-grid" data-aos="fade-up">
           {visibleCommissions.map((commission, index) => (
