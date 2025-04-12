@@ -147,7 +147,7 @@ export const authorsMap = {
 // Complete commission data with both thumbnail and full-size images
 export const commissionData = [
   {
-    title: "Obsidian OC",
+    title: "黑曜石 獸設",
     image: obsidian_oc,
     fullImage: obsidian_oc_full,
     authorKey: "虎丸",
@@ -184,10 +184,11 @@ export const commissionData = [
     authorKey: "弁天"
   },
   {
-    title: "名片透卡",
+    title: "名片",
     image: FAIER_1,
     fullImage: FAIER_1_full,
     authorKey: "音川菲爾",
+    description: "名片透卡"
   },
   {
     title: "內褲褲",
@@ -206,19 +207,22 @@ export const commissionData = [
     title: "富士山",
     image: KAi_K_1,
     fullImage: KAi_K_1_full,
-    authorKey: "凱K"
+    authorKey: "凱K",
+    description: "與火柴神父合作委託"
   },
   {
     title: "法師",
     image: Raier_2,
     fullImage: Raier_2_full,
     authorKey: "雷邇",
+    description: "獸無限-獸與地下城主題名牌"
   },
   {
     title: "吸血鬼",
     image: Raier_1,
     fullImage: Raier_1_full,
     authorKey: "雷邇",
+    description: "以茶會毛-百毛夜行主題名牌"
   },
   {
     title: "笨",
@@ -227,10 +231,11 @@ export const commissionData = [
     authorKey: "薩波",
   },
   {
-    title: "賴床",
+    title: "賴床~",
     image: sark_1,
     fullImage: sark_1_full,
     authorKey: "薩克",
+    description: "驚喜包委託"
   },
   {
     title: "飯友",
@@ -245,7 +250,7 @@ export const commissionData = [
     authorKey: "瑞樹"
   },
   {
-    title: "櫛瓜",
+    title: "我最愛吃的櫛瓜",
     image: ras_soy_5,
     fullImage: ras_soy_5_full,
     authorKey: "瑞樹"
@@ -257,20 +262,20 @@ export const commissionData = [
     authorKey: "瑞樹"
   },
   {
-    title: "杏鮑菇",
+    title: "杏鮑菇也很好吃",
     image: ras_soy_3,
     fullImage: ras_soy_3_full,
     authorKey: "瑞樹"
   },
   {
-    title: "MagSafe",
+    title: "MagSafe游泳圈",
     image: ras_soy_2,
     fullImage: ras_soy_2_full,
     authorKey: "瑞樹",
     description: "MagSafe iPhone 透明保護殼"
   },
   {
-    title: "Apple Watch",
+    title: "我眼裡的黑曜石",
     image: ras_soy_1,
     fullImage: ras_soy_1_full,
     authorKey: "瑞樹",

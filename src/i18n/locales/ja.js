@@ -9,7 +9,7 @@ const ja = {
 
     cover: {
       greeting: "私もふもふ生活は、ここから始まります。",
-      title: "こんにちは、黒曜石です！",
+      title: "こんにちは、\n黒曜石です！",
       subtitle: "キャラ製作：",
       scrollDown: "もっと見る"
     },
@@ -44,7 +44,7 @@ const ja = {
       title: "コミッション依頼作品",
       showMore: "もっと見る...",
       artist: "アーティスト",
-      by: "作："
+      by: "作"
     },
 
     commissionsPage: {

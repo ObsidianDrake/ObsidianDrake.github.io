@@ -76,7 +76,12 @@ const Cover = () => {
           <div className="hero-text">
             <p className="greeting">{t.cover.greeting}</p>
             <h1 className="title" ref={titleRef}>
-              {t.cover.title}
+              {t.cover.title.split('\n').map((line, idx) => (
+                <React.Fragment key={idx}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
             </h1>
             <p className="subtitle">{t.cover.subtitle} <a className="subtitle" href='https://atoama.cn/'>Atelier Amanojaku</a></p>
           </div>

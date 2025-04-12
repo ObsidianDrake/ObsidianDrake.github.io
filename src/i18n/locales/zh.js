@@ -12,7 +12,7 @@ const zh = {
   // 封面部分
   cover: {
     greeting: "歡迎來到我的網站",
-    title: "嗨，我是 黑曜石!",
+    title: "嗨，\n我是黑曜石!",
     subtitle: "製作工作室：",
     scrollDown: "探索更多"
   },
