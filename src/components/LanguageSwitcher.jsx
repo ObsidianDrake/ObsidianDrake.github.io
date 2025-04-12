@@ -19,6 +19,12 @@ const LanguageSwitcher = () => {
       >
         中文
       </button>
+      <button 
+        className={`lang-btn ${locale === 'ja' ? 'active' : ''}`} 
+        onClick={() => changeLanguage('ja')}
+      >
+        日本語
+      </button>
     </div>
   );
 };

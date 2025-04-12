@@ -232,7 +232,7 @@ const Events = () => {
             <div className="lightbox-info">
               <h3>{selectedImage.title}</h3>
               <div className="lightbox-author">
-                <span className="author-label">{t.events.photographer || "攝影師"}:</span>
+                <span className="author-label">{t.events.photographer}:</span>
                 <a 
                   href={photographersMap[selectedImage.photographerKey].url}
                   target="_blank"

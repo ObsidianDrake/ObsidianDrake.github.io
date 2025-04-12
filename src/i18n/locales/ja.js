@@ -19,7 +19,7 @@ const ja = {
       lead: "ケモライフを楽しもう、もふもふ最高！！！",
       aboutMe: "自己紹介",
       details: {
-        name: "黒曜石",
+        name: "名前",
         age: "ケモ年齢",
         location: "居住地",
         interests: "趣味"
@@ -37,7 +37,8 @@ const ja = {
     },
 
     events: {
-      title: "イベント参加"
+      title: "イベント参加",
+      photographer: "フォトグラファー"
     },
 
     commission: {

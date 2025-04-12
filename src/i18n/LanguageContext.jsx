@@ -1,11 +1,13 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import en from './locales/en';
 import zh from './locales/zh';
+import ja from './locales/ja';
 
 // Define available languages
 const languages = {
   en,
-  zh
+  zh,
+  ja
 };
 
 // Create language context
@@ -20,6 +22,11 @@ export const LanguageProvider = ({ children }) => {
     // Check if user is from Taiwan or using zh-TW language
     if (userLanguage.startsWith('zh-TW') || userLanguage === 'zh-HK' || userLanguage === 'zh-MO') {
       return 'zh';
+    }
+    
+    // Check if user is from Japan or using Japanese language
+    if (userLanguage.startsWith('ja') || userLanguage === 'ja-JP') {
+      return 'ja';
     }
     
     // For all other locales, use English

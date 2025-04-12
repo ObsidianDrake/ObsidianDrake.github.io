@@ -19,7 +19,7 @@ const en = {
       lead: "Born to fluff, never enough!!!",
       aboutMe: "About Me",
       details: {
-        name: "Obsidian",
+        name: "Name",
         age: "Furry Age",
         location: "Location",
         interests: "Interests"
@@ -37,7 +37,8 @@ const en = {
     },
   
     events: {
-      title: "Events"
+      title: "Events",
+      photographer: "Photographer"
     },
   
     commission: {

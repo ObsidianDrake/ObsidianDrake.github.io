@@ -23,7 +23,7 @@ const zh = {
     lead: "享受毛生，吸爆毛毛！！！",
     aboutMe: "關於我",
     details: {
-      name: "黑曜石",
+      name: "名字",
       age: "毛齡",
       location: "居住地",
       interests: "興趣"
@@ -43,7 +43,8 @@ const zh = {
   
   // 活動部分
   events: {
-    title: "活動場次"
+    title: "活動場次",
+    photographer: "攝影師"
   },
   
   // 委託部分
