@@ -11,9 +11,6 @@ AOS.init()
 const ProfileInfo = () => {
   const { t, locale } = useTranslation();
 
-  const aboutMe = `Hi, I am Obsidian.
-I am looking forward to get in touch with you!`;
-
   const age = useMemo(() => {
     const birthDate = new Date('2019-09-27');
     const today = new Date();
@@ -32,11 +29,16 @@ I am looking forward to get in touch with you!`;
   }, [locale]);
 
   const details = useMemo(() => ({
-    [t.profile.details.name]: 'Obsidian',
+    [t.profile.details.name]: t.profile.values.name,
     [t.profile.details.age]: age,
-    [t.profile.details.location]: 'Hsinchu, Taiwan',
-    [t.profile.details.education]: locale === 'zh' ? '碩士學位' : 'Master degree'
-  }), [t, age, locale]);
+    [t.profile.details.location]: t.profile.values.location,
+    [t.profile.details.interests]: t.profile.values.interests.split('\n').map((line, idx) => (
+      <React.Fragment key={idx}>
+        {line}
+        <br />
+      </React.Fragment>
+    ))
+  }), [t, age]);
 
   return (
     <div className="intro">

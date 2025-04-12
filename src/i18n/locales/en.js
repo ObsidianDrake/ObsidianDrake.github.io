@@ -1,60 +1,58 @@
-// English translations
 const en = {
-  // Navigation
-  nav: {
-    cover: "Cover",
-    profile: "Profile",
-    social: "Social",
-    event: "Event",
-    commission: "Commission"
-  },
-  
-  // Cover section
-  cover: {
-    greeting: "Welcome to my website",
-    title: "Hi, I'm Obsidian!",
-    subtitle: "Created by",
-    scrollDown: "Explore More"
-  },
-  
-  // Profile section
-  profile: {
-    title: "Profile",
-    lead: "Front-end is very difficult to learn!",
-    aboutMe: "About me",
-    details: {
-      name: "Name",
-      age: "Age",
-      location: "Location",
-      education: "Education"
+    nav: {
+      cover: "Home",
+      profile: "Profile",
+      social: "Social",
+      event: "Events",
+      commission: "Commissions"
     },
-    bio: "Hi, I am Obsidian.\nI am looking forward to get in touch with you!"
-  },
   
-  // Social section
-  social: {
-    title: "Social Link"
-  },
+    cover: {
+      greeting: "Welcome to my website",
+      title: "Hi, I'm Obsidian!",
+      subtitle: "Studio:",
+      scrollDown: "Explore More"
+    },
   
-  // Events section
-  events: {
-    title: "Events"
-  },
+    profile: {
+      title: "About Me",
+      lead: "Born to fluff, never enough!!!",
+      aboutMe: "About Me",
+      details: {
+        name: "Obsidian",
+        age: "Furry Age",
+        location: "Location",
+        interests: "Interests"
+      },
+      bio: "Hi, I'm Obsidian.\nLiving in Hsinchu, I'm a backend software engineer! I've always wanted to build my own website, and this is a great opportunity. I hope you like it! Feel free to tell me any thoughts or bugs — I'm happy to learn!\nObsidian has changed owners once. It's been one year since I joined the furry fandom, and I've really enjoyed it! I hope to share this happiness with you!",
+      values: {
+        name: "Obsidian",
+        location: "Hsinchu County, Taiwan",
+        interests: "Gaming, Singing, Listening to Music,\nCoding"
+      }
+    },
   
-  // Commission section
-  commission: {
-    title: "Commissions",
-    showMore: "Show More...",
-    artist: "Artist",
-    by: "By"
-  },
+    social: {
+      title: "Social Links"
+    },
   
-  // Commissions page
-  commissionsPage: {
-    title: "Commissions",
-    intro: "Here you can find all the commissioned artwork I've received from various talented artists.",
-    artist: "Artist"
-  }
-};
-
-export default en; 
+    events: {
+      title: "Events"
+    },
+  
+    commission: {
+      title: "Commissioned Works",
+      showMore: "Show More...",
+      artist: "Artist",
+      by: "By"
+    },
+  
+    commissionsPage: {
+      title: "Commissioned Works",
+      intro: "Here you can find all my commissioned works. NSFW works are excluded for now — they're still hidden in the usual place!",
+      artist: "Artist"
+    }
+  };
+  
+  export default en;
+  

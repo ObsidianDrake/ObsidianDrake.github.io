@@ -4,7 +4,7 @@ const zh = {
   nav: {
     cover: "首頁",
     profile: "簡介",
-    social: "社交",
+    social: "社群",
     event: "活動",
     commission: "委託"
   },
@@ -12,48 +12,53 @@ const zh = {
   // 封面部分
   cover: {
     greeting: "歡迎來到我的網站",
-    title: "嗨，我是 Obsidian！",
-    subtitle: "製作者：",
+    title: "嗨，我是 黑曜石!",
+    subtitle: "製作工作室：",
     scrollDown: "探索更多"
   },
   
   // 簡介部分
   profile: {
-    title: "簡介",
-    lead: "前端太難學啦！",
+    title: "自我介紹",
+    lead: "享受毛生，吸爆毛毛！！！",
     aboutMe: "關於我",
     details: {
-      name: "名稱",
-      age: "年齡",
-      location: "地點",
-      education: "學歷"
+      name: "黑曜石",
+      age: "毛齡",
+      location: "居住地",
+      interests: "興趣"
     },
-    bio: "嗨，我是 Obsidian。\n期待與你取得聯繫！"
+    bio: "嗨，我是黑曜石。\n生活在新竹，是一名後端軟體工程師！一直期許自己能夠為自己做出一個網頁，這是一個非常好的機會，希望你們會喜歡！使用上有什麼想法或bug都可以告訴我，我非常樂意求教！\n黑曜石有換過一次主人，現在的我剛好加入這個圈子一周年，我很喜歡這個圈子並且玩得很開心，也希望可以分享快樂給你們！",
+    values: {
+      name: "黑曜石",
+      location: "台灣 新竹縣",
+      interests: "遊戲、唱歌、聽音樂、\n程式設計"
+    }
   },
   
   // 社交部分
   social: {
-    title: "社交連結"
+    title: "社群連結"
   },
   
   // 活動部分
   events: {
-    title: "活動"
+    title: "活動場次"
   },
   
   // 委託部分
   commission: {
     title: "委託作品",
     showMore: "顯示更多...",
-    artist: "藝術家",
-    by: "繪者"
+    artist: "繪師",
+    by: "繪師"
   },
   
   // 委託頁面
   commissionsPage: {
     title: "委託作品",
-    intro: "這裡你可以找到我收到的所有來自各位才華洋溢的藝術家的委託作品。",
-    artist: "藝術家"
+    intro: "這裡可以找到我所有的委託作品。但目前不包括NSFW的部分，還是藏在常用的那個老地方！",
+    artist: "繪師"
   }
 };
 

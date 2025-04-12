@@ -70,12 +70,14 @@
 .detail-container .detail .key {
   background-color: var(--tag-color);
   width: 100px;
+  min-width: 100px;
   margin-right: 10px;
-  vertical-align: middle;
-  line-height: 20px;
   color: var(--tag-font-color);
   text-align: center;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
