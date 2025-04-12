@@ -1,0 +1,56 @@
+.button-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  overflow-x: auto;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 12px;
+  z-index: 1000;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-overflow-scrolling: touch; /* 在 iOS 上實現平滑滾動 */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* 隱藏滾動條但保持滾動功能 */
+.button-navigation::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-button {
+  flex: 0 0 auto; /* 防止按鈕被壓縮 */
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-width: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap; /* 防止文字換行 */
+  margin: 0 4px; /* 添加按鈕間距 */
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.nav-button.active {
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (min-width: 769px) {
+  .button-navigation {
+    display: none;
+  }
+} 

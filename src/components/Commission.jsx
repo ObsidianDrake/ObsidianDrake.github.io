@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import "/src/styles/Commission.css";
 import { commissionData, authorsMap } from "../pages/CommissionsPage";
 
-const Commission = () => {
+const Commission = ({ onLightboxChange }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageLoaded, setImageLoaded] = useState(false);
   const [topCommissions, setTopCommissions] = useState([]);
@@ -22,11 +22,13 @@ const Commission = () => {
     setSelectedImage(commission);
     setImageLoaded(false);
     document.body.style.overflow = "hidden"; // Prevent scrolling when lightbox is open
+    if (onLightboxChange) onLightboxChange(true);
   };
 
   const closeLightbox = () => {
     setSelectedImage(null);
     document.body.style.overflow = "auto"; // Re-enable scrolling
+    if (onLightboxChange) onLightboxChange(false);
   };
 
   const handleImageLoad = () => {
