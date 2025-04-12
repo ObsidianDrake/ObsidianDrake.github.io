@@ -371,16 +371,16 @@ const CommissionsPage = () => {
   const loadMoreRef = useRef(null);
   const ITEMS_PER_PAGE = 8;
 
-  // 将预加载函数移到useEffect外部，避免循环依赖
+  // Move preload function into useEffect to avoid circular dependencies
   useEffect(() => {
     // Sort commissions by ID in descending order (newest first)
     const sorted = [...commissionData].sort((a, b) => b.id - a.id);
     setSortedCommissions(sorted);
     
-    // 立即显示前ITEMS_PER_PAGE张图片
+    // Display the first ITEMS_PER_PAGE images immediately
     setVisibleCommissions(sorted.slice(0, ITEMS_PER_PAGE));
     
-    // 预加载下一批图片
+    // Preload the next batch of images
     const preloadNextBatch = () => {
       const nextBatchStart = ITEMS_PER_PAGE;
       const nextBatchEnd = Math.min(nextBatchStart + ITEMS_PER_PAGE, sorted.length);
@@ -399,10 +399,10 @@ const CommissionsPage = () => {
       }
     };
     
-    // 延迟预加载以避免与初始渲染冲突
+    // Delay preloading to avoid conflict with initial rendering
     const timer = setTimeout(preloadNextBatch, 1000);
 
-    // 初始化AOS
+    // Initialize AOS
     AOS.init({
       once: true,
       threshold: 0.02,
@@ -410,14 +410,14 @@ const CommissionsPage = () => {
       easing: 'ease-out-cubic'
     });
 
-    // 清理函数
+    // Cleanup function
     return () => {
       clearTimeout(timer);
     };
-  }, []); // 空依赖数组，只在组件挂载时运行一次
+  }, []); // Empty dependency array, runs only once when component mounts
 
   useEffect(() => {
-    if (!sortedCommissions.length) return; // 防止在sortedCommissions初始化前运行
+    if (!sortedCommissions.length) return; // Prevent running before sortedCommissions is initialized
     
     // Setup Intersection Observer with earlier trigger
     observerRef.current = new IntersectionObserver(
@@ -428,10 +428,10 @@ const CommissionsPage = () => {
             const start = 0;
             const end = nextPage * ITEMS_PER_PAGE;
             
-            // 更新可见的commission
+            // Update visible commissions
             setVisibleCommissions(sortedCommissions.slice(start, end));
             
-            // 预加载下一批，但不依赖state更新
+            // Preload next batch without dependency on state update
             const preloadNextBatch = () => {
               const nextBatchStart = end;
               const nextBatchEnd = Math.min(nextBatchStart + ITEMS_PER_PAGE, sortedCommissions.length);
@@ -450,7 +450,7 @@ const CommissionsPage = () => {
               }
             };
             
-            // 使用setTimeout延迟预加载
+            // Use setTimeout to delay preloading
             setTimeout(preloadNextBatch, 300);
             
             return nextPage;
@@ -459,7 +459,7 @@ const CommissionsPage = () => {
       },
       { 
         threshold: 0.05,
-        rootMargin: '500px' // 更早触发加载
+        rootMargin: '500px' // Trigger loading earlier
       }
     );
 
@@ -472,7 +472,7 @@ const CommissionsPage = () => {
         observerRef.current.disconnect();
       }
     };
-  }, [sortedCommissions]); // 只在sortedCommissions变化时运行
+  }, [sortedCommissions]); // Only runs when sortedCommissions changes
 
   const openLightbox = (commission) => {
     setSelectedImage(commission);
@@ -587,7 +587,23 @@ const CommissionsPage = () => {
               </div>
               <p className="lightbox-description">{selectedImage.description}</p>
             </div>
-            <button className="lightbox-close" onClick={closeLightbox}>×</button>
+            <button className="lightbox-close" onClick={closeLightbox}>
+              <svg 
+                width="16" 
+                height="16" 
+                viewBox="0 0 16 16" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ display: 'block' }}
+              >
+                <path 
+                  d="M15 1L1 15M1 1L15 15" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                />
+              </svg>
+            </button>
           </div>
         </div>
       )}
