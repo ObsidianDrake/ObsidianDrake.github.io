@@ -60,12 +60,12 @@ const Commission = ({ onLightboxChange }) => {
         <SectionHead title="Commissions" />
         <div className="commission-grid" data-aos="fade-up">
           {/* Top 7 commissions */}
-          {topCommissions.map((commission) => (
+          {topCommissions.map((commission, index) => (
             <div 
-              key={commission.id} 
+              key={`commission-${index}-${commission.title}`} 
               className="commission-item"
               data-aos="fade-up"
-              data-aos-delay={100 * (commission.id % 3)}
+              data-aos-delay={String(100 * (index % 3))}
               onClick={() => openLightbox(commission)}
             >
               <div className="commission-card">

@@ -145,163 +145,55 @@ export const authorsMap = {
 // Complete commission data with both thumbnail and full-size images
 export const commissionData = [
   {
-    id: 1,
-    title: "Archer",
-    image: archer,
-    fullImage: archer_full,
-    authorKey: "capella"
+    title: "Obsidian OC",
+    image: obsidian_oc,
+    fullImage: obsidian_oc_full,
+    authorKey: "虎丸",
+    description: "獸設重製"
   },
   {
-    id: 2,
-    title: "NFT",
-    image: nft,
-    fullImage: nft_full,
-    authorKey: "Kutto"
+    title: "Telegram貼圖包",
+    image: telegram_stickers,
+    fullImage: telegram_stickers_full,
+    authorKey: "Telegram"
   },
   {
-    id: 3,
-    title: "毛絨聖誕花圈",
-    image: mo_yu_2,
-    fullImage: mo_yu_2_full,
-    authorKey: "MoYu"
+    title: "小Q人",
+    image: slow_work_small_q,
+    fullImage: slow_work_small_q_full,
+    authorKey: "Slow.work"
   },
   {
-    id: 4,
-    title: "獸與地下城",
-    image: mo_yu_1,
-    fullImage: mo_yu_1_full,
-    authorKey: "MoYu"
-  },
-  {
-    id: 5,
     title: "氣到對折",
     image: slow_work_angry,
     fullImage: slow_work_angry_full,
     authorKey: "Slow.work"
   },
   {
-    id: 6,
-    title: "酒吞童子",
-    image: tody_1,
-    fullImage: tody_1_full,
-    authorKey: "七柚"
+    title: "Pika貼圖包",
+    image: pika_sticker,
+    fullImage: pika_sticker_full,
+    authorKey: "Pika"
   },
   {
-    id: 7,
-    title: "除妖師",
-    image: tody_2,
-    fullImage: tody_2_full,
-    authorKey: "七柚"
+    title: "勇者",
+    image: benten_1,
+    fullImage: benten_1_full,
+    authorKey: "弁天"
   },
   {
-    id: 8,
-    title: "獸獸鬥片",
-    image: janet_1,
-    fullImage: janet_1_full,
-    authorKey: "伊秋"
-  },
-  {
-    id: 9,
-    title: "屁屁",
-    image: Kaltespur_1,
-    fullImage: Kaltespur_1_full,
-    authorKey: "冷軌"
-  },
-  {
-    id: 10,
-    title: "翹屁屁",
-    image: Kaltespur_2,
-    fullImage: Kaltespur_2_full,
-    authorKey: "冷軌"
-  },
-  {
-    id: 11,
-    title: "Apple Watch",
-    image: ras_soy_1,
-    fullImage: ras_soy_1_full,
-    authorKey: "瑞樹",
-    description: "Apple Watch Wallpaper"
-  },
-  {
-    id: 12,
-    title: "MagSafe",
-    image: ras_soy_2,
-    fullImage: ras_soy_2_full,
-    authorKey: "瑞樹",
-    description: "MagSafe iPhone 透明保護殼"
-  },
-  {
-    id: 13,
-    title: "杏鮑菇",
-    image: ras_soy_3,
-    fullImage: ras_soy_3_full,
-    authorKey: "瑞樹"
-  },
-  {
-    id: 14,
-    title: "毛爪號",
-    image: ras_soy_4,
-    fullImage: ras_soy_4_full,
-    authorKey: "瑞樹"
-  },
-  {
-    id: 15,
-    title: "櫛瓜",
-    image: ras_soy_5,
-    fullImage: ras_soy_5_full,
-    authorKey: "瑞樹"
-  },
-  {
-    id: 16,
-    title: "躺著",
-    image: ras_soy_7,
-    fullImage: ras_soy_7_full,
-    authorKey: "瑞樹"
-  },
-  {
-    id: 17,
-    title: "飯友",
-    image: ras_soy_8,
-    fullImage: ras_soy_8_full,
-    authorKey: "瑞樹",
-  },
-  {
-    id: 18,
-    title: "賴床",
-    image: sark_1,
-    fullImage: sark_1_full,
-    authorKey: "薩克",
-  },
-  {
-    id: 19,
-    title: "笨",
-    image: sabo_1,
-    fullImage: sabo_1_full,
-    authorKey: "薩波",
-  },
-  {
-    id: 20,
-    title: "吸血鬼",
-    image: Raier_1,
-    fullImage: Raier_1_full,
-    authorKey: "雷邇",
-  },
-  {
-    id: 21,
-    title: "法師",
-    image: Raier_2,
-    fullImage: Raier_2_full,
-    authorKey: "雷邇",
-  },
-  {
-    id: 22,
     title: "名片透卡",
     image: FAIER_1,
     fullImage: FAIER_1_full,
     authorKey: "音川菲爾",
   },
   {
-    id: 23,
+    title: "內褲褲",
+    image: tai_lei_1,
+    fullImage: tai_lei_1_full,
+    authorKey: "拓雷"
+  },
+  {
     title: "萬聖節",
     image: ras_soy_6,
     fullImage: ras_soy_6_full,
@@ -309,55 +201,133 @@ export const commissionData = [
     description: "萬聖節iPhone Wallpaper"
   },
   {
-    id: 24,
-    title: "Pika貼圖包",
-    image: pika_sticker,
-    fullImage: pika_sticker_full,
-    authorKey: "Pika"
-  },
-  {
-    id: 25,
-    title: "內褲褲",
-    image: tai_lei_1,
-    fullImage: tai_lei_1_full,
-    authorKey: "拓雷"
-  },
-  {
-    id: 26,
     title: "富士山",
     image: KAi_K_1,
     fullImage: KAi_K_1_full,
     authorKey: "凱K"
   },
   {
-    id: 27,
-    title: "小Q人",
-    image: slow_work_small_q,
-    fullImage: slow_work_small_q_full,
-    authorKey: "Slow.work"
+    title: "法師",
+    image: Raier_2,
+    fullImage: Raier_2_full,
+    authorKey: "雷邇",
   },
   {
-    id: 28,
-    title: "勇者",
-    image: benten_1,
-    fullImage: benten_1_full,
-    authorKey: "弁天"
+    title: "吸血鬼",
+    image: Raier_1,
+    fullImage: Raier_1_full,
+    authorKey: "雷邇",
   },
   {
-    id: 29,
-    title: "Telegram貼圖包",
-    image: telegram_stickers,
-    fullImage: telegram_stickers_full,
-    authorKey: "Telegram"
+    title: "笨",
+    image: sabo_1,
+    fullImage: sabo_1_full,
+    authorKey: "薩波",
   },
   {
-    id: 30,
-    title: "Obsidian OC",
-    image: obsidian_oc,
-    fullImage: obsidian_oc_full,
-    authorKey: "虎丸",
-    description: "獸設重製"
+    title: "賴床",
+    image: sark_1,
+    fullImage: sark_1_full,
+    authorKey: "薩克",
   },
+  {
+    title: "飯友",
+    image: ras_soy_8,
+    fullImage: ras_soy_8_full,
+    authorKey: "瑞樹",
+  },
+  {
+    title: "躺著",
+    image: ras_soy_7,
+    fullImage: ras_soy_7_full,
+    authorKey: "瑞樹"
+  },
+  {
+    title: "櫛瓜",
+    image: ras_soy_5,
+    fullImage: ras_soy_5_full,
+    authorKey: "瑞樹"
+  },
+  {
+    title: "毛爪號",
+    image: ras_soy_4,
+    fullImage: ras_soy_4_full,
+    authorKey: "瑞樹"
+  },
+  {
+    title: "杏鮑菇",
+    image: ras_soy_3,
+    fullImage: ras_soy_3_full,
+    authorKey: "瑞樹"
+  },
+  {
+    title: "MagSafe",
+    image: ras_soy_2,
+    fullImage: ras_soy_2_full,
+    authorKey: "瑞樹",
+    description: "MagSafe iPhone 透明保護殼"
+  },
+  {
+    title: "Apple Watch",
+    image: ras_soy_1,
+    fullImage: ras_soy_1_full,
+    authorKey: "瑞樹",
+    description: "Apple Watch Wallpaper"
+  },
+  {
+    title: "翹屁屁",
+    image: Kaltespur_2,
+    fullImage: Kaltespur_2_full,
+    authorKey: "冷軌"
+  },
+  {
+    title: "屁屁",
+    image: Kaltespur_1,
+    fullImage: Kaltespur_1_full,
+    authorKey: "冷軌"
+  },
+  {
+    title: "獸獸鬥片",
+    image: janet_1,
+    fullImage: janet_1_full,
+    authorKey: "伊秋"
+  },
+  {
+    title: "除妖師",
+    image: tody_2,
+    fullImage: tody_2_full,
+    authorKey: "七柚"
+  },
+  {
+    title: "酒吞童子",
+    image: tody_1,
+    fullImage: tody_1_full,
+    authorKey: "七柚"
+  },
+  {
+    title: "獸與地下城",
+    image: mo_yu_1,
+    fullImage: mo_yu_1_full,
+    authorKey: "MoYu"
+  },
+  {
+    title: "毛絨聖誕花圈",
+    image: mo_yu_2,
+    fullImage: mo_yu_2_full,
+    authorKey: "MoYu"
+  },
+  {
+    title: "NFT",
+    image: nft,
+    fullImage: nft_full,
+    authorKey: "Kutto"
+  },
+  {
+    title: "Archer",
+    image: archer,
+    fullImage: archer_full,
+    authorKey: "capella"
+  }
 ];
 
 const CommissionsPage = () => {
@@ -373,26 +343,25 @@ const CommissionsPage = () => {
 
   // Move preload function into useEffect to avoid circular dependencies
   useEffect(() => {
-    // Sort commissions by ID in descending order (newest first)
-    const sorted = [...commissionData].sort((a, b) => b.id - a.id);
-    setSortedCommissions(sorted);
+    // Use the original order of the array
+    setSortedCommissions([...commissionData]);
     
     // Display the first ITEMS_PER_PAGE images immediately
-    setVisibleCommissions(sorted.slice(0, ITEMS_PER_PAGE));
+    setVisibleCommissions(commissionData.slice(0, ITEMS_PER_PAGE));
     
     // Preload the next batch of images
     const preloadNextBatch = () => {
       const nextBatchStart = ITEMS_PER_PAGE;
-      const nextBatchEnd = Math.min(nextBatchStart + ITEMS_PER_PAGE, sorted.length);
+      const nextBatchEnd = Math.min(nextBatchStart + ITEMS_PER_PAGE, commissionData.length);
       
       for (let i = nextBatchStart; i < nextBatchEnd; i++) {
-        if (sorted[i]) {
+        if (commissionData[i]) {
           const img = new Image();
-          img.src = sorted[i].image;
+          img.src = commissionData[i].image;
           img.onload = () => {
             setImagesLoaded(prev => ({
               ...prev,
-              [sorted[i].id]: true
+              [i]: true
             }));
           };
         }
@@ -443,7 +412,7 @@ const CommissionsPage = () => {
                   img.onload = () => {
                     setImagesLoaded(prev => ({
                       ...prev,
-                      [sortedCommissions[i].id]: true
+                      [i]: true
                     }));
                   };
                 }
@@ -516,12 +485,12 @@ const CommissionsPage = () => {
           Here you can find all the commissioned artwork I've received from various talented artists.
         </p>
         <div className="commission-grid" data-aos="fade-up">
-          {visibleCommissions.map((commission) => (
+          {visibleCommissions.map((commission, index) => (
             <div 
-              key={commission.id} 
+              key={index} 
               className="commission-item"
               data-aos="fade-up"
-              data-aos-delay={100 * (commission.id % 3)}
+              data-aos-delay={100 * (index % 3)}
               onClick={() => openLightbox(commission)}
             >
               <div className="commission-card">
@@ -533,12 +502,12 @@ const CommissionsPage = () => {
                   style={{ 
                     transition: 'transform 0.3s ease-out, opacity 0.3s ease-out',
                     transform: 'scale(1)',
-                    opacity: imagesLoaded[commission.id] ? 1 : 0.5
+                    opacity: imagesLoaded[index] ? 1 : 0.5
                   }}
                   onLoad={() => {
                     setImagesLoaded(prev => ({
                       ...prev,
-                      [commission.id]: true
+                      [index]: true
                     }));
                   }}
                   onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
