@@ -1,8 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '/src/styles/ButtonNavigation.css';
 
 const ButtonNavigation = ({ currentPage, isLightboxOpen }) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const navigationRef = useRef(null);
+  const buttonRefs = useRef({});
+
+  const pages = [
+    { name: 'Cover', path: '#cover' },
+    { name: 'Profile', path: '#profile' },
+    { name: 'Social', path: '#social' },
+    { name: 'Event', path: '#event' },
+    { name: 'Commission', path: '#commission' }
+  ];
 
   useEffect(() => {
     const handleResize = () => {
@@ -13,16 +23,26 @@ const ButtonNavigation = ({ currentPage, isLightboxOpen }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  useEffect(() => {
+    if (navigationRef.current && currentPage) {
+      const activeButton = buttonRefs.current[currentPage];
+      if (activeButton) {
+        const container = navigationRef.current;
+        const containerWidth = container.clientWidth;
+        const buttonLeft = activeButton.offsetLeft;
+        const buttonWidth = activeButton.clientWidth;
+        const scrollLeft = buttonLeft - (containerWidth / 2) + (buttonWidth / 2);
+        
+        container.scrollTo({
+          left: scrollLeft,
+          behavior: 'smooth'
+        });
+      }
+    }
+  }, [currentPage]);
+
   // 在 Cover 頁面或 lightbox 打開時不顯示導航
   if (!isMobile || currentPage === 'cover' || isLightboxOpen) return null;
-
-  const pages = [
-    { name: 'Cover', path: '#cover' },
-    { name: 'Profile', path: '#profile' },
-    { name: 'Social', path: '#social' },
-    { name: 'Event', path: '#event' },
-    { name: 'Commission', path: '#commission' }
-  ];
 
   const scrollToElement = (element) => {
     const startPosition = window.pageYOffset;
@@ -59,10 +79,11 @@ const ButtonNavigation = ({ currentPage, isLightboxOpen }) => {
   };
 
   return (
-    <div className="button-navigation">
+    <div className="button-navigation" ref={navigationRef}>
       {pages.map((page) => (
         <button
           key={page.name}
+          ref={el => buttonRefs.current[page.name.toLowerCase()] = el}
           className={`nav-button ${currentPage === page.name.toLowerCase() ? 'active' : ''}`}
           onClick={() => handleClick(page.path)}
         >
