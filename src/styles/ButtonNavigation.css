@@ -9,7 +9,7 @@
   padding: 12px;
   z-index: 1000;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  -webkit-overflow-scrolling: touch; /* 在 iOS 上實現平滑滾動 */
+  /* -webkit-overflow-scrolling: touch; 在 iOS 上實現平滑滾動 */
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
 }
