@@ -12,10 +12,21 @@ const Commission = ({ onLightboxChange }) => {
   const [topCommissions, setTopCommissions] = useState([]);
   
   useEffect(() => {
-    // Randomly select 7 commissions
-    const shuffled = [...commissionData].sort(() => 0.5 - Math.random());
-    const randomSeven = shuffled.slice(0, 7);
-    setTopCommissions(randomSeven);
+    // 根據螢幕寬度決定顯示的卡片數量
+    const handleResize = () => {
+      const isMediumScreen = window.innerWidth < 1100;
+      const cardCount = isMediumScreen ? 5 : 7;
+      const shuffled = [...commissionData].sort(() => 0.5 - Math.random());
+      const selectedCards = shuffled.slice(0, cardCount);
+      setTopCommissions(selectedCards);
+    };
+
+    // 初始設置
+    handleResize();
+
+    // 監聽視窗大小變化
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const openLightbox = (commission) => {
