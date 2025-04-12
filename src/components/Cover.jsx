@@ -32,15 +32,30 @@ const Cover = () => {
   }, []);
 
   const scrollDown = () => {
-    const profileElement = document.querySelector('.intro');
+    const profileElement = document.getElementById('profile');
     if (profileElement) {
-      profileElement.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      // 備用方案：如果找不到元素，則滾動到視窗高度位置
-      window.scrollTo({
-        top: window.innerHeight,
-        behavior: 'smooth'
-      });
+      const startPosition = window.pageYOffset;
+      const targetPosition = profileElement.offsetTop;
+      const distance = targetPosition - startPosition;
+      const duration = 500;
+      let start = null;
+
+      const animation = (currentTime) => {
+        if (start === null) start = currentTime;
+        const timeElapsed = currentTime - start;
+        const progress = Math.min(timeElapsed / duration, 1);
+        
+        const easeInOutCubic = t => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        const easedProgress = easeInOutCubic(progress);
+        
+        window.scrollTo(0, startPosition + distance * easedProgress);
+        
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animation);
+        }
+      };
+
+      requestAnimationFrame(animation);
     }
   };
 

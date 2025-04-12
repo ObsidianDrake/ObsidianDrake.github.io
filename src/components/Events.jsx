@@ -15,11 +15,12 @@ import event3 from "/src/assets/images/events/2024_FurMIT.webp";
 import event4 from "/src/assets/images/events/2024_Infurnity.webp";
 import event5 from "/src/assets/images/events/2025_ちるこん.webp";
 import event6 from "/src/assets/images/events/2025_FurryteaParty.webp";
+import event7 from "/src/assets/images/events/2025_A_Family.webp";
 
 const eventData = [
   {
     id: 1,
-    title: "2024 FurryteaParty",
+    title: "2024 FurryTeaParty",
     image: event1,
   },
   {
@@ -44,8 +45,13 @@ const eventData = [
   },
   {
     id: 6,
-    title: "2025 FurryteaParty",
+    title: "2025 FurryTeaParty",
     image: event6,
+  },
+  {
+    id: 7,
+    title: "2025 A Family",
+    image: event7,
   },
 ];
 
@@ -86,7 +92,6 @@ const Events = () => {
             pagination={{
               clickable: true
             }}
-            watchSlidesVisibility={true}
             coverflowEffect={{
               rotate: 50,
               stretch: 0,

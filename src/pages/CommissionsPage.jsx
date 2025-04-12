@@ -32,6 +32,7 @@ import sabo_1 from "/src/assets/images/commissions/薩波_笨版.webp";
 import Raier_1 from "/src/assets/images/commissions/雷邇_吸血鬼.webp";
 import Raier_2 from "/src/assets/images/commissions/雷邇_法師.webp";
 import FAIER_1 from "/src/assets/images/commissions/音川菲爾_名片.webp";
+import telegram_stickers from "/src/assets/images/commissions/telegram_sticker.webp";
 // Authors map with name and url
 export const authorsMap = {
   "虎丸": {
@@ -101,7 +102,11 @@ export const authorsMap = {
   "音川菲爾": {
     name: "音川菲爾",
     url: "https://www.facebook.com/profile.php?id=100011879237722"
-  }
+  },
+  "Telegram": {
+    name: "Telegram貼圖包",
+    url: "https://t.me/addstickers/ObsidianVideoPersonal"
+  },
 };
 
 // Complete commission data
@@ -279,6 +284,12 @@ export const commissionData = [
   },
   {
     id: 29,
+    title: "Telegram貼圖包",
+    image: telegram_stickers,
+    authorKey: "Telegram"
+  },
+  {
+    id: 30,
     title: "Obsidian OC",
     image: obsidian_oc,
     authorKey: "虎丸",
