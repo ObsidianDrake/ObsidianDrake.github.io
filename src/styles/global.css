@@ -35,7 +35,14 @@
   --subtitle-color: var(--title-color);
   --subheading-color: rgb(45, 168, 177);
   --text-color: #434242;
+
+  /* Fonts */
+  --main-font: 'Open Sans', sans-serif;
+  --ja-font: 'Noto Sans JP', 'Noto Sans CJK JP', sans-serif;
+  --zh-font: 'Noto Sans TC', 'Noto Sans CJK TC', sans-serif;
 }
+
+/* Fonts are now imported in index.html */
 
 .home {
   height: 100%;
@@ -95,6 +102,69 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   vertical-align: baseline;
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--main-font);
   color: var(--text-color);
+}
+
+/* Language-specific font classes */
+.ja {
+  font-family: var(--ja-font);
+}
+
+.zh {
+  font-family: var(--zh-font);
+}
+
+/* Japanese-specific typography adjustments */
+.ja h1, .ja h2, .ja h3, .ja h4, .ja h5, .ja h6 {
+  font-family: var(--ja-font);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.ja p, .ja span, .ja div, .ja button, .ja a {
+  font-family: var(--ja-font);
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+}
+
+.ja .hero-content .title {
+  font-family: var(--ja-font);
+  font-weight: 700;
+}
+
+.ja .hero-content .subtitle {
+  font-family: var(--ja-font);
+  font-weight: 400;
+}
+
+.ja .nav-button, .ja .lang-btn {
+  font-family: var(--ja-font);
+}
+
+/* Chinese-specific typography adjustments */
+.zh h1, .zh h2, .zh h3, .zh h4, .zh h5, .zh h6 {
+  font-family: var(--zh-font);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.zh p, .zh span, .zh div, .zh button, .zh a {
+  font-family: var(--zh-font);
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+}
+
+.zh .hero-content .title {
+  font-family: var(--zh-font);
+  font-weight: 700;
+}
+
+.zh .hero-content .subtitle {
+  font-family: var(--zh-font);
+  font-weight: 400;
+}
+
+.zh .nav-button, .zh .lang-btn {
+  font-family: var(--zh-font);
 }

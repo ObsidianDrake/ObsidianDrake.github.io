@@ -39,6 +39,13 @@ export const LanguageProvider = ({ children }) => {
   // Update translations when locale changes
   useEffect(() => {
     setTranslations(languages[locale]);
+    
+    // Apply language-specific font classes to the document body
+    document.body.classList.remove('en', 'zh', 'ja');
+    document.body.classList.add(locale);
+    
+    // Set lang attribute for accessibility
+    document.documentElement.lang = locale;
   }, [locale]);
   
   // Function to change language

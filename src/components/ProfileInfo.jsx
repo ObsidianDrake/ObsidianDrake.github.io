@@ -27,7 +27,12 @@ const ProfileInfo = () => {
       <div className="container">
         <SectionHead
           title={t.profile.title}
-          lead={t.profile.lead}
+          lead={t.profile.lead.split('\n').map((line, idx) => (
+            <React.Fragment key={idx}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}
         />
         <div className="profile-content">
           <div className="detail-container">

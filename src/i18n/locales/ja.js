@@ -16,7 +16,7 @@ const ja = {
 
   profile: {
     title: "自己紹介",
-    lead: "もふもふしたり、ケモナー生活満喫！",
+    lead: "もふもふしたり、\nケモナー生活満喫！",
     aboutMe: "自己紹介",
     details: {
       name: "名前",
@@ -27,7 +27,7 @@ const ja = {
     values: {
       name: "黒曜石",
       location: "台湾 新竹県",
-      interests: "オンラインゲーム、\nカラオケ、音楽聴くこと、\nプログラミング"
+      interests: "オンラインゲーム、\nカラオケ、音楽聴くこと、プログラミング"
     }
   },
 
