@@ -344,7 +344,6 @@
 }
 
 .show-more-icon {
-  font-size: 30px;
   width: 50px;
   height: 50px;
   display: flex;
@@ -352,7 +351,15 @@
   justify-content: center;
   border: 2px solid rgba(255, 255, 255, 0.9);
   border-radius: 50%;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.show-more-icon svg {
+  color: rgba(255, 255, 255, 0.95);
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
 .show-more-item:hover .show-more-card {
@@ -383,5 +390,102 @@
   .commissions-intro {
     font-size: 16px;
     margin: 15px auto 30px;
+  }
+}
+
+/* 回到首頁按鈕 */
+.back-to-home {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 6px 16px;
+  height: 42px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 30px;
+  color: var(--title-color);
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.back-to-home:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.back-to-home svg {
+  margin-right: 8px;
+  color: var(--title-color);
+  width: 24px;
+  height: 24px;
+}
+
+.back-to-home span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 回到頂部按鈕 */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 100;
+  color: var(--title-color);
+  transition: all 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .back-to-home {
+    top: 15px;
+    left: 15px;
+    padding: 6px 12px;
+    height: 38px;
+  }
+  
+  .back-to-home span {
+    font-size: 12px;
+  }
+  
+  .back-to-home svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .scroll-to-top {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .scroll-to-top svg {
+    width: 20px;
+    height: 20px;
   }
 } 

@@ -50,7 +50,8 @@ const ja = {
     commissionsPage: {
       title: "コミッション依頼作品",
       intro: "こちらでは黒曜石のイラストコミッションです！\nお楽しみくださいー！センシティブはとあるところに隠していましたw探しに行ってねw",
-      artist: "アーティスト"
+      artist: "アーティスト",
+      backToHome: "首頁に戻る"
     }
   };
   

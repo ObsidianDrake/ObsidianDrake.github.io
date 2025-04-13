@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "/src/styles/Commission.css";
 import { useTranslation } from '../i18n/LanguageContext';
+import { Link } from "react-router-dom";
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import obsidian_oc from "/src/assets/images/commissions/thumbnails/虎丸_獸設.webp";
 import archer from "/src/assets/images/commissions/thumbnails/capella_pera_archer.webp";
@@ -344,10 +345,35 @@ const CommissionsPage = () => {
   const [visibleCommissions, setVisibleCommissions] = useState([]);
   const [page, setPage] = useState(1);
   const [imagesLoaded, setImagesLoaded] = useState({});
+  const [showScrollTop, setShowScrollTop] = useState(false);
   const observerRef = useRef(null);
   const loadMoreRef = useRef(null);
   const ITEMS_PER_PAGE = 8;
   const { t } = useTranslation();
+
+  // 監聽滾動以決定是否顯示回到頂部按鈕
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 400) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  // 回到頂部功能
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   // Move preload function into useEffect to avoid circular dependencies
   useEffect(() => {
@@ -488,6 +514,16 @@ const CommissionsPage = () => {
   return (
     <div className="commissions-page">
       <LanguageSwitcher />
+
+      {/* 回到首頁按鈕 */}
+      <Link to="/" className="back-to-home">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 12H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        <span>{t.commissionsPage.backToHome || "Back to Home"}</span>
+      </Link>
+
       <div className="container">
         <SectionHead title={t.commissionsPage.title} />
         <p className="commissions-intro">
@@ -536,6 +572,20 @@ const CommissionsPage = () => {
         </div>
         <div ref={loadMoreRef} style={{ height: '50px' }} />
       </div>
+
+      {/* 回到頂部按鈕 */}
+      {showScrollTop && (
+        <button 
+          className="scroll-to-top"
+          onClick={scrollToTop}
+          aria-label="Scroll to top"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19V5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M5 12L12 5L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+      )}
 
       {/* Lightbox for enlarged view */}
       {selectedImage && (

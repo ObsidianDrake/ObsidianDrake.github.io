@@ -58,7 +58,8 @@ const zh = {
   commissionsPage: {
     title: "委託作品",
     intro: "這裡可以找到我所有的委託作品。但目前不包括NSFW的部分，還是藏在常用的那個老地方！",
-    artist: "繪師"
+    artist: "繪師",
+    backToHome: "返回首頁"
   }
 };
 

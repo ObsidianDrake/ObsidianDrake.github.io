@@ -50,7 +50,8 @@ const en = {
     commissionsPage: {
       title: "Commissioned Works",
       intro: "Here you can find all of my commission works!\n(Well... except for the NSFW ones—they’re still tucked away in that familiar old spot!)",
-      artist: "Artist"
+      artist: "Artist",
+      backToHome: "Back to Home"
     }
   };
 
