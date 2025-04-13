@@ -1,6 +1,4 @@
-// 中文翻譯
 const zh = {
-  // 導航
   nav: {
     cover: "首頁",
     profile: "簡介",
@@ -9,7 +7,6 @@ const zh = {
     commission: "委託"
   },
 
-  // 封面部分
   cover: {
     greeting: "歡迎來到我的網站",
     title: "嗨，\n我是黑曜石!",
@@ -17,7 +14,6 @@ const zh = {
     scrollDown: "探索更多"
   },
 
-  // 簡介部分
   profile: {
     title: "自我介紹",
     lead: "享受毛生，吸爆毛毛！！！",
@@ -35,18 +31,15 @@ const zh = {
     }
   },
 
-  // 社交部分
   social: {
     title: "社群連結"
   },
 
-  // 活動部分
   events: {
     title: "活動場次",
     photographer: "攝影師"
   },
 
-  // 委託部分
   commission: {
     title: "委託作品",
     showMore: "顯示更多...",
@@ -54,7 +47,6 @@ const zh = {
     by: "繪師"
   },
 
-  // 委託頁面
   commissionsPage: {
     title: "委託作品",
     intro: "這裡可以找到我所有的委託作品。但目前不包括NSFW的部分，還是藏在常用的那個老地方！",
