@@ -101,7 +101,7 @@ const eventData = [
     title: "2025 A Family",
     image: event7,
     fullImage: event7Full,
-    photographerKey: "萊恩"
+    photographerKey: "Sanu"
   },
 ];
 

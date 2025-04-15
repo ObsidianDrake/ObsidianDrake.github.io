@@ -6,7 +6,7 @@ import SocialLinks from './components/SocialLinks';
 import Events from './components/Events';
 import Commission from './components/Commission';
 import CommissionsPage from './pages/CommissionsPage';
-import ButtonNavigation from './components/ButtonNavigation';
+// import ButtonNavigation from './components/ButtonNavigation';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import '/src/styles/global.css';
 
@@ -80,7 +80,7 @@ function HomePage() {
       <div id="commission" className="page-section">
         <Commission className="page" onLightboxChange={setIsLightboxOpen} />
       </div>
-      <ButtonNavigation currentPage={currentPage} isLightboxOpen={isLightboxOpen} />
+      {/* <ButtonNavigation currentPage={currentPage} isLightboxOpen={isLightboxOpen} /> */}
     </div>
   );
 }
