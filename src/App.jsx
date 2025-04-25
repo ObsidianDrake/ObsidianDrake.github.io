@@ -68,16 +68,16 @@ function HomePage() {
       <div id="cover" className="cover-section">
         <Cover style={{ height: viewHeight }} />
       </div>
-      <div id="profile" className="page-section">
+      <div id="profile" className="page-section odd">
         <ProfileInfo className="page" />
       </div>
-      <div id="social" className="page-section">
+      <div id="social" className="page-section even">
         <SocialLinks className="page" />
       </div>
-      <div id="event" className="page-section">
+      <div id="event" className="page-section odd">
         <Events className="page" />
       </div>
-      <div id="commission" className="page-section">
+      <div id="commission" className="page-section even">
         <Commission className="page" onLightboxChange={setIsLightboxOpen} />
       </div>
       {/* <ButtonNavigation currentPage={currentPage} isLightboxOpen={isLightboxOpen} /> */}

@@ -512,7 +512,7 @@ const CommissionsPage = () => {
   }, [selectedImage]);
 
   return (
-    <div className="commissions-page">
+    <div className="commissions-page even">
       <LanguageSwitcher />
 
       {/* 回到首頁按鈕 */}
