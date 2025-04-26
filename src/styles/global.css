@@ -1,0 +1,170 @@
+:root {
+  /* Menu */
+  --menu-height: 50px;
+  --menu-width: 150px;
+
+  /* Profile */
+  --profile-image-size: 250px;
+
+  /* Size */
+  --title-size-mobile: 48px;
+  --title-size: 54px;
+  --subtitle-size: 24px;
+  --subtitle-size-mobile: 18px;
+
+  /* Colors */
+  --even-page-color: rgba(230, 228, 222, 0.8);
+  --odd-page-color: #F7F9FB;
+
+  --menu-color: white;
+  --odd-tab-color: rgb(255, 255, 255);
+  --even-tab-color: rgb(255, 255, 255);
+  --trigger-tab-color: rgb(49, 51, 66);
+  --trigger-font-color: white;
+  --tab-hover-color: rgb(121, 140, 158);
+
+  --tag-color: rgb(55, 133, 179);
+  --tag-font-color: #DFE0E0;
+
+  --score-off: #DFE0E0;
+  --score-on: rgb(158, 136, 97);
+  --skill-hover: #DFE0E0;
+
+  --cover-title-color: rgb(27, 55, 107);
+  --title-color: rgb(85, 126, 179);
+  --subtitle-color: var(--title-color);
+  --subheading-color: rgb(45, 168, 177);
+  --text-color: #434242;
+
+  /* Fonts */
+  --main-font: 'Open Sans', sans-serif;
+  --ja-font: 'Noto Sans JP', 'Noto Sans CJK JP', sans-serif;
+  --zh-font: 'Noto Sans TC', 'Noto Sans CJK TC', sans-serif;
+}
+
+/* Fonts are now imported in index.html */
+
+.home {
+  height: 100%;
+  width: 100%;
+}
+
+.page {
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.odd {
+  background-color: var(--odd-page-color);
+  width: 100%;
+}
+
+.even {
+  background-color: var(--even-page-color);
+  width: 100%;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .page {
+    width: 100%;
+  }
+}
+
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-family: var(--main-font);
+  color: var(--text-color);
+}
+
+/* Language-specific font classes */
+.ja {
+  font-family: var(--ja-font);
+}
+
+.zh {
+  font-family: var(--zh-font);
+}
+
+/* Japanese-specific typography adjustments */
+.ja h1, .ja h2, .ja h3, .ja h4, .ja h5, .ja h6 {
+  font-family: var(--ja-font);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.ja p, .ja span, .ja div, .ja button, .ja a {
+  font-family: var(--ja-font);
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+}
+
+.ja .hero-content .title {
+  font-family: var(--ja-font);
+  font-weight: 700;
+}
+
+.ja .hero-content .subtitle {
+  font-family: var(--ja-font);
+  font-weight: 400;
+}
+
+.ja .nav-button, .ja .lang-btn {
+  font-family: var(--ja-font);
+}
+
+/* Chinese-specific typography adjustments */
+.zh h1, .zh h2, .zh h3, .zh h4, .zh h5, .zh h6 {
+  font-family: var(--zh-font);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.zh p, .zh span, .zh div, .zh button, .zh a {
+  font-family: var(--zh-font);
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+}
+
+.zh .hero-content .title {
+  font-family: var(--zh-font);
+  font-weight: 700;
+}
+
+.zh .hero-content .subtitle {
+  font-family: var(--zh-font);
+  font-weight: 400;
+}
+
+.zh .nav-button, .zh .lang-btn {
+  font-family: var(--zh-font);
+}

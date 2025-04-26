@@ -1,0 +1,34 @@
+.social-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 200px;
+  gap: 30px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.media-icon {
+  width: 70px;
+  margin: 5px;
+  border-radius: 22px;
+  transition: transform 0.3s ease;
+}
+
+.media-icon:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 768px) {
+  .media-icon {
+    width: 90px;
+  }
+
+  .social-content {
+    gap: 50px;
+    min-height: 250px;
+  }
+}

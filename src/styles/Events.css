@@ -1,0 +1,143 @@
+.events {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
+.events-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 0;
+  box-sizing: border-box;
+}
+
+.events-content {
+  width: 80%;
+  margin: 40px auto;
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.events-swiper {
+  width: 100%;
+  padding: 30px 0;
+  overflow: hidden !important;
+  position: relative;
+  margin: 0 auto;
+}
+
+.swiper-container {
+  overflow: hidden !important;
+}
+
+.swiper-wrapper {
+  overflow: visible;
+}
+
+.swiper-slide {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-slide-visible {
+  opacity: 1;
+}
+
+.event-slide {
+  width: 300px;
+  height: 350px;
+  transition: transform 0.3s;
+}
+
+.event-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+/* Pagination styling */
+.events .swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+}
+
+.events .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(85, 126, 179, 0.3);
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.events .swiper-pagination-bullet-active {
+  background-color: var(--title-color);
+  width: 25px;
+  border-radius: 5px;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .event-slide {
+    width: 250px;
+    height: 300px;
+  }
+  
+  .event-title {
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .events-content {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-slide {
+    width: 200px;
+    height: 250px;
+  }
+  
+  .events-content {
+    margin: 20px auto;
+    width: 100%;
+  }
+  
+  .event-title {
+    padding: 10px;
+    font-size: 1rem;
+  }
+} 

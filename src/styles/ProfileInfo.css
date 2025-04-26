@@ -1,0 +1,144 @@
+.profile-content {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.detail-container,
+.img-container-profile,
+.about-container {
+  flex: 1;
+  min-width: 0;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 150px;
+  align-self: center;
+  height: 100%;
+  padding: 20px 0;
+}
+
+.img-container-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0.8;
+}
+
+.img-container-profile img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+  transition: max-width 0.3s ease;
+}
+
+.about-container {
+  margin: 0;
+  min-width: 150px;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 20px 0;
+}
+
+.about-container .about {
+  text-align: left;
+}
+
+.about-container .about h2{
+  text-align: left;
+  color: var(--subtitle-color);
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.detail-container .detail .item {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.detail-container .detail .key {
+  background-color: var(--tag-color);
+  width: 100px;
+  min-width: 100px;
+  margin-right: 10px;
+  color: var(--tag-font-color);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.detail-container .detail .value {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  min-height: 36px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .profile-content {
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .img-container-profile img {
+    max-width: 180px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .profile-content {
+    gap: 80px;
+    align-items: center;
+  }
+  
+  .img-container-profile img {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .profile-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .detail-container,
+  .img-container-profile,
+  .about-container {
+    flex: none;
+    width: 100%;
+    max-width: 300px;
+    align-self: center;
+  }
+  
+  .detail-container {
+    order: 0;
+  }
+  
+  .img-container-profile {
+    order: 1;
+  }
+  
+  .about-container {
+    order: 2;
+  }
+  
+  .img-container-profile img {
+    max-width: 220px;
+  }
+}

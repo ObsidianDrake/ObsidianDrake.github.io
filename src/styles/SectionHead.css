@@ -1,0 +1,28 @@
+.section-title {
+  padding-top: 40px;
+  margin-bottom: 20px;
+  font-size: var(--title-size-mobile);
+  color: var(--title-color);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: var(--title-size);
+  }
+}
+
+.section-lead {
+  font-style: italic;
+  font-weight: 300;
+  font-size: var(--subtitle-size);
+  text-align: center;
+}
+
+.spacer {
+  opacity: 0.2;
+  border: 0;
+  border-top: 1px solid #727878;
+  height: 0;
+  margin: 40px;
+}
