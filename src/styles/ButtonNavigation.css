@@ -6,7 +6,7 @@
   display: flex;
   overflow-x: auto;
   background: rgba(0, 0, 0, 0.8);
-  padding: 12px;
+  padding: 12px 12px calc(12px + env(safe-area-inset-bottom)) 12px; /* 加上 safe area */
   z-index: 1000;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   /* -webkit-overflow-scrolling: touch; 在 iOS 上實現平滑滾動 */

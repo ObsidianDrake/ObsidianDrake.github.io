@@ -27,7 +27,7 @@ const en = {
     values: {
       name: "Obsidian",
       location: "Hsinchu County, Taiwan",
-      interests: "Gaming, Singing, Listening to Music,\nCoding"
+      interests: "Gaming, Singing, Listening to Music,Coding"
     }
   },
 

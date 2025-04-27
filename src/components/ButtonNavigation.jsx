@@ -3,6 +3,7 @@ import '/src/styles/ButtonNavigation.css';
 import { useTranslation } from '../i18n/LanguageContext';
 
 const ButtonNavigation = ({ currentPage, isLightboxOpen }) => {
+  // console.info("current: ", currentPage);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const navigationRef = useRef(null);
   const buttonRefs = useRef({});

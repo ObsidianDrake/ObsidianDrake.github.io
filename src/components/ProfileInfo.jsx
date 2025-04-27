@@ -14,12 +14,7 @@ const ProfileInfo = () => {
   const details = useMemo(() => ({
     [t.profile.details.name]: t.profile.values.name,
     [t.profile.details.location]: t.profile.values.location,
-    [t.profile.details.interests]: t.profile.values.interests.split('\n').map((line, idx) => (
-      <React.Fragment key={idx}>
-        {line}
-        <br />
-      </React.Fragment>
-    ))
+    [t.profile.details.interests]: t.profile.values.interests
   }), [t]);
 
   return (

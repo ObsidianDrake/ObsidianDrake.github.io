@@ -36,6 +36,8 @@ import Raier_1 from "/src/assets/images/commissions/thumbnails/雷邇_吸血鬼.
 import Raier_2 from "/src/assets/images/commissions/thumbnails/雷邇_法師.webp";
 import FAIER_1 from "/src/assets/images/commissions/thumbnails/音川菲爾_名片.webp";
 import telegram_stickers from "/src/assets/images/commissions/thumbnails/telegram_sticker.webp";
+import guruminn_1 from "/src/assets/images/commissions/thumbnails/guruminn_1.webp";
+import guruminn_2 from "/src/assets/images/commissions/thumbnails/guruminn_2.webp";
 
 // Import full-size images for lightbox
 import obsidian_oc_full from "/src/assets/images/commissions/虎丸_獸設.webp";
@@ -68,6 +70,8 @@ import Raier_1_full from "/src/assets/images/commissions/雷邇_吸血鬼.webp";
 import Raier_2_full from "/src/assets/images/commissions/雷邇_法師.webp";
 import FAIER_1_full from "/src/assets/images/commissions/音川菲爾_名片.webp";
 import telegram_stickers_full from "/src/assets/images/commissions/telegram_sticker.webp";
+import guruminn_1_full from "/src/assets/images/commissions/guruminn_1.webp";
+import guruminn_2_full from "/src/assets/images/commissions/guruminn_2.webp";
 
 // Authors map with name and url
 export const authorsMap = {
@@ -142,6 +146,10 @@ export const authorsMap = {
   "Telegram": {
     name: "Telegram貼圖包",
     url: "https://t.me/addstickers/ObsidianVideoPersonal"
+  },
+  "縫乃ぐるみん": {
+    name: "縫乃ぐるみん",
+    url: "https://x.com/guruminn_M"
   },
 };
 
@@ -224,6 +232,18 @@ export const commissionData = [
     fullImage: Raier_1_full,
     authorKey: "雷邇",
     description: "以茶會毛-百毛夜行主題名牌"
+  },
+  {
+    title: "",
+    image: guruminn_1,
+    fullImage: guruminn_1_full,
+    authorKey: "縫乃ぐるみん",
+  },
+  {
+    title: "",
+    image: guruminn_2,
+    fullImage: guruminn_2_full,
+    authorKey: "縫乃ぐるみん",
   },
   {
     title: "笨",

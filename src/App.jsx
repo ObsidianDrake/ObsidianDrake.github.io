@@ -6,7 +6,7 @@ import SocialLinks from './components/SocialLinks';
 import Events from './components/Events';
 import Commission from './components/Commission';
 import CommissionsPage from './pages/CommissionsPage';
-// import ButtonNavigation from './components/ButtonNavigation';
+import ButtonNavigation from './components/ButtonNavigation';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import '/src/styles/global.css';
 
@@ -37,18 +37,13 @@ function HomePage() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const id = entry.target.id;
-          // 確保在 Cover 頁面時設置正確的狀態
-          if (id === 'cover') {
-            setCurrentPage('cover');
-          } else {
-            setCurrentPage(id);
-          }
+          setCurrentPage(id);
         }
       });
     };
 
     observerRef.current = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5,
+      threshold: 0.3,
       rootMargin: '-50px 0px -50px 0px'
     });
 
@@ -80,7 +75,7 @@ function HomePage() {
       <div id="commission" className="page-section even">
         <Commission className="page" onLightboxChange={setIsLightboxOpen} />
       </div>
-      {/* <ButtonNavigation currentPage={currentPage} isLightboxOpen={isLightboxOpen} /> */}
+      <ButtonNavigation currentPage={currentPage} isLightboxOpen={isLightboxOpen} />
     </div>
   );
 }
