@@ -14,7 +14,8 @@ const ProfileInfo = () => {
   const details = useMemo(() => ({
     [t.profile.details.name]: t.profile.values.name,
     [t.profile.details.location]: t.profile.values.location,
-    [t.profile.details.interests]: t.profile.values.interests
+    [t.profile.details.interests]: t.profile.values.interests,
+    [t.profile.details.shortTermGoal]: t.profile.values.shortTermGoal
   }), [t]);
 
   return (

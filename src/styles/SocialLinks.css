@@ -16,10 +16,12 @@
   margin: 5px;
   border-radius: 22px;
   transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .media-icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 768px) {

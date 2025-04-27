@@ -17,7 +17,7 @@ AOS.init({
 
 const SocialLinks = () => {
   const { t } = useTranslation();
-  
+
   const medias = [
     [facebook_img, "https://www.facebook.com/obsidiandrakee"],
     [twitter_img, "https://x.com/obsidiandrakee"],

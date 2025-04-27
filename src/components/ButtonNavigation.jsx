@@ -97,4 +97,4 @@ const ButtonNavigation = ({ currentPage, isLightboxOpen }) => {
   );
 };
 
-export default ButtonNavigation; 
+export default ButtonNavigation;

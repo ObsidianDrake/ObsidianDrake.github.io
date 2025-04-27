@@ -169,4 +169,4 @@ const Commission = ({ onLightboxChange }) => {
   );
 };
 
-export default Commission; 
+export default Commission;
