@@ -14,6 +14,9 @@ import mo_yu_2 from "/src/assets/images/commissions/thumbnails/Mo_Yu_聖誕節.w
 import pika_sticker from "/src/assets/images/commissions/thumbnails/Pika_貼圖包.webp";
 import slow_work_small_q from "/src/assets/images/commissions/thumbnails/Slow.work_小Q人.webp";
 import slow_work_angry from "/src/assets/images/commissions/thumbnails/Slow.work_氣到對折.webp";
+import slow_work_fish from "/src/assets/images/commissions/thumbnails/Slow.work_摸魚.webp";
+import slow_work_game from "/src/assets/images/commissions/thumbnails/Slow.work_打電動.webp";
+import slow_work_coffee from "/src/assets/images/commissions/thumbnails/Slow.work_咖啡點滴.webp";
 import tody_1 from "/src/assets/images/commissions/thumbnails/七柚_酒吞童子.webp";
 import tody_2 from "/src/assets/images/commissions/thumbnails/七柚_除妖師.webp";
 import janet_1 from "/src/assets/images/commissions/thumbnails/伊秋_獸獸鬥片.webp";
@@ -48,6 +51,9 @@ import mo_yu_2_full from "/src/assets/images/commissions/Mo_Yu_聖誕節.webp";
 import pika_sticker_full from "/src/assets/images/commissions/Pika_貼圖包.webp";
 import slow_work_small_q_full from "/src/assets/images/commissions/Slow.work_小Q人.webp";
 import slow_work_angry_full from "/src/assets/images/commissions/Slow.work_氣到對折.webp";
+import slow_work_fish_full from "/src/assets/images/commissions/Slow.work_摸魚.webp";
+import slow_work_game_full from "/src/assets/images/commissions/Slow.work_打電動.webp";
+import slow_work_coffee_full from "/src/assets/images/commissions/Slow.work_咖啡點滴.webp";
 import tody_1_full from "/src/assets/images/commissions/七柚_酒吞童子.webp";
 import tody_2_full from "/src/assets/images/commissions/七柚_除妖師.webp";
 import janet_1_full from "/src/assets/images/commissions/伊秋_獸獸鬥片.webp";
@@ -232,6 +238,27 @@ export const commissionData = [
     fullImage: Raier_1_full,
     authorKey: "雷邇",
     description: "以茶會毛-百毛夜行主題名牌"
+  },
+  {
+    title: "咖啡點滴",
+    image: slow_work_coffee,
+    fullImage: slow_work_coffee_full,
+    authorKey: "Slow.work",
+    description: "社畜委託-偷懶摸魚系列"
+  },
+  {
+    title: "摸魚摸摸",
+    image: slow_work_fish,
+    fullImage: slow_work_fish_full,
+    authorKey: "Slow.work",
+    description: "社畜委託-偷懶摸魚系列"
+  },
+  {
+    title: "",
+    image: slow_work_game,
+    fullImage: slow_work_game_full,
+    authorKey: "Slow.work",
+    description: "社畜委託-偷懶摸魚系列"
   },
   {
     title: "",
