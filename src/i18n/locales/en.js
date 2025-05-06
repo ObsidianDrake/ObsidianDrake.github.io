@@ -22,14 +22,14 @@ const en = {
       name: "Name",
       location: "Location",
       interests: "Interests",
-      shortTermGoal: "Short-Term Goal"
+      favarAnimate: "Top Pick Anime"
     },
-    bio: "Hi there! I’m Obsidian!\nI live in Hsinchu and work as a backend software engineer.\nIt’s always been a dream of mine to create a website of my own—so here it is! I’m super excited to share it with you, and I really hope you like it! If you spot any bugs or have suggestions, feel free to reach out—I’m always happy to learn and improve!\n\nEven before having a fursona, I was already actively participating in all sorts of furry events. Through a wonderful twist of fate, I was lucky enough to be entrusted with the character “Obsidian.”\nIt’s been exactly one year since I officially joined the fandom, and I’ve been loving every moment of it! I’ve had so much fun, and now I want to spread that joy to all of you, too!\n\nSo come say hi, give me a boop or a hug, and let’s have fun together!\nLooking forward to getting to know you all!",
+    bio: "Hi there! I'm Obsidian!\nI live in Hsinchu and work as a backend software engineer.\nIt's always been a dream of mine to create a website of my own—so here it is! I'm super excited to share it with you, and I really hope you like it! If you spot any bugs or have suggestions, feel free to reach out—I'm always happy to learn and improve!\n\nEven before having a fursona, I was already actively participating in all sorts of furry events. Through a wonderful twist of fate, I was lucky enough to be entrusted with the character “Obsidian.”\nIt's been exactly one year since I officially joined the fandom, and I've been loving every moment of it! I've had so much fun, and now I want to spread that joy to all of you, too!\n\nSo come say hi, give me a boop or a hug, and let's have fun together!\nLooking forward to getting to know you all!",
     values: {
       name: "Obsidian",
       location: "Hsinchu County, Taiwan",
-      interests: "Gaming, Singing, Listening to Music, Coding",
-      shortTermGoal: "Snowboarding"
+      interests: "Gaming, Animate, Singing, Listening to Music, Tennis, Badminton, Coding",
+      favarAnimate: "FULLMETAL ALCHEMIST, Vivy -Fluorite Eye's Song-"
     }
   },
 

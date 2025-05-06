@@ -69,7 +69,7 @@
 
 .detail-container .detail .key {
   background-color: var(--tag-color);
-  width: 100px;
+  width: 120px;
   min-width: 100px;
   margin-right: 10px;
   color: var(--tag-font-color);

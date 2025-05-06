@@ -254,20 +254,17 @@ export const commissionData = [
     description: "社畜委託-偷懶摸魚系列"
   },
   {
-    title: "",
     image: slow_work_game,
     fullImage: slow_work_game_full,
     authorKey: "Slow.work",
     description: "社畜委託-偷懶摸魚系列"
   },
   {
-    title: "",
     image: guruminn_1,
     fullImage: guruminn_1_full,
     authorKey: "縫乃ぐるみん",
   },
   {
-    title: "",
     image: guruminn_2,
     fullImage: guruminn_2_full,
     authorKey: "縫乃ぐるみん",
@@ -279,7 +276,6 @@ export const commissionData = [
     authorKey: "薩波",
   },
   {
-    title: "賴床~",
     image: sark_1,
     fullImage: sark_1_full,
     authorKey: "薩克",
@@ -292,7 +288,6 @@ export const commissionData = [
     authorKey: "瑞樹",
   },
   {
-    title: "躺著",
     image: ras_soy_7,
     fullImage: ras_soy_7_full,
     authorKey: "瑞樹"
