@@ -41,6 +41,7 @@ import FAIER_1 from "/src/assets/images/commissions/thumbnails/音川菲爾_名�
 import telegram_stickers from "/src/assets/images/commissions/thumbnails/telegram_sticker.webp";
 import guruminn_1 from "/src/assets/images/commissions/thumbnails/guruminn_1.webp";
 import guruminn_2 from "/src/assets/images/commissions/thumbnails/guruminn_2.webp";
+import guruminn_3 from "/src/assets/images/commissions/thumbnails/guruminn_3.webp";
 
 // Import full-size images for lightbox
 import obsidian_oc_full from "/src/assets/images/commissions/虎丸_獸設.webp";
@@ -78,6 +79,7 @@ import FAIER_1_full from "/src/assets/images/commissions/音川菲爾_名片.web
 import telegram_stickers_full from "/src/assets/images/commissions/telegram_sticker.webp";
 import guruminn_1_full from "/src/assets/images/commissions/guruminn_1.webp";
 import guruminn_2_full from "/src/assets/images/commissions/guruminn_2.webp";
+import guruminn_3_full from "/src/assets/images/commissions/guruminn_3.webp";
 
 // Authors map with name and url
 export const authorsMap = {
@@ -153,8 +155,8 @@ export const authorsMap = {
     name: "Telegram貼圖包",
     url: "https://t.me/addstickers/ObsidianVideoPersonal"
   },
-  "縫乃ぐるみん": {
-    name: "縫乃ぐるみん",
+  "ぐるみん": {
+    name: "ぐるみん",
     url: "https://x.com/guruminn_M"
   },
 };
@@ -219,6 +221,12 @@ export const commissionData = [
     description: "萬聖節iPhone Wallpaper"
   },
   {
+    image: guruminn_3,
+    fullImage: guruminn_3_full,
+    authorKey: "ぐるみん",
+    description: "結婚三週年委託"
+  },
+  {
     title: "富士山",
     image: KAi_K_1,
     fullImage: KAi_K_1_full,
@@ -262,12 +270,12 @@ export const commissionData = [
   {
     image: guruminn_1,
     fullImage: guruminn_1_full,
-    authorKey: "縫乃ぐるみん",
+    authorKey: "ぐるみん",
   },
   {
     image: guruminn_2,
     fullImage: guruminn_2_full,
-    authorKey: "縫乃ぐるみん",
+    authorKey: "ぐるみん",
   },
   {
     title: "笨",

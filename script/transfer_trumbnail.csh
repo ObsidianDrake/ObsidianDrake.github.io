@@ -28,15 +28,23 @@ set name = `echo "$filename" | sed 's/\.[^.]*$//'`
 # Temporary output path
 set temp_output = "$output/${name}.webp"
 
-# Convert and resize using 'convert' (ImageMagick)
-# Resize to ensure small size, e.g., 300x300 or less first
-convert "$input" -resize 300x300 "$temp_output"
+# Detect OS and decide command
+set os_type = `uname`
+if ("$os_type" == "Darwin") then
+    set im_command = "magick"
+    set stat_cmd = "stat -f%z"
+else
+    set im_command = "convert"
+    set stat_cmd = "stat -c%s"
+endif
+# Initial conversion and resize
+$im_command "$input" -resize 300x300 "$temp_output"
 
 # Loop to reduce quality if file size > 50KB
 set quality = 90
 
 while (1)
-    set size = `stat -c%s "$temp_output"`
+    set size = `$stat_cmd "$temp_output"`
     if ($size < 51200) then
         break
     endif
@@ -45,7 +53,7 @@ while (1)
         echo "Warning: Cannot reduce image below 50KB even at low quality."
         break
     endif
-    convert "$input" -resize 300x300 -quality $quality "$temp_output"
+    $im_command "$input" -resize 300x300 -quality $quality "$temp_output"
 end
 
 echo "Thumbnail saved to: $temp_output"
