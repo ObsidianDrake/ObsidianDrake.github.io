@@ -17,6 +17,8 @@ import slow_work_angry from "/src/assets/images/commissions/thumbnails/Slow.work
 import slow_work_fish from "/src/assets/images/commissions/thumbnails/Slow.work_摸魚.webp";
 import slow_work_game from "/src/assets/images/commissions/thumbnails/Slow.work_打電動.webp";
 import slow_work_coffee from "/src/assets/images/commissions/thumbnails/Slow.work_咖啡點滴.webp";
+import slow_work_meat from "/src/assets/images/commissions/thumbnails/Slow.work_肉粽串.webp";
+import slow_work_stone from "/src/assets/images/commissions/thumbnails/Slow.work_中部粽.webp";
 import tody_1 from "/src/assets/images/commissions/thumbnails/七柚_酒吞童子.webp";
 import tody_2 from "/src/assets/images/commissions/thumbnails/七柚_除妖師.webp";
 import janet_1 from "/src/assets/images/commissions/thumbnails/伊秋_獸獸鬥片.webp";
@@ -42,6 +44,7 @@ import telegram_stickers from "/src/assets/images/commissions/thumbnails/telegra
 import guruminn_1 from "/src/assets/images/commissions/thumbnails/guruminn_1.webp";
 import guruminn_2 from "/src/assets/images/commissions/thumbnails/guruminn_2.webp";
 import guruminn_3 from "/src/assets/images/commissions/thumbnails/guruminn_3.webp";
+import kogi_mordekaiser from "/src/assets/images/commissions/thumbnails/Kogi_Mordekaiser.webp";
 
 // Import full-size images for lightbox
 import obsidian_oc_full from "/src/assets/images/commissions/虎丸_獸設.webp";
@@ -55,6 +58,8 @@ import slow_work_angry_full from "/src/assets/images/commissions/Slow.work_氣�
 import slow_work_fish_full from "/src/assets/images/commissions/Slow.work_摸魚.webp";
 import slow_work_game_full from "/src/assets/images/commissions/Slow.work_打電動.webp";
 import slow_work_coffee_full from "/src/assets/images/commissions/Slow.work_咖啡點滴.webp";
+import slow_work_meat_full from "/src/assets/images/commissions/Slow.work_肉粽串.webp";
+import slow_work_stone_full from "/src/assets/images/commissions/Slow.work_中部粽.webp";
 import tody_1_full from "/src/assets/images/commissions/七柚_酒吞童子.webp";
 import tody_2_full from "/src/assets/images/commissions/七柚_除妖師.webp";
 import janet_1_full from "/src/assets/images/commissions/伊秋_獸獸鬥片.webp";
@@ -80,6 +85,7 @@ import telegram_stickers_full from "/src/assets/images/commissions/telegram_stic
 import guruminn_1_full from "/src/assets/images/commissions/guruminn_1.webp";
 import guruminn_2_full from "/src/assets/images/commissions/guruminn_2.webp";
 import guruminn_3_full from "/src/assets/images/commissions/guruminn_3.webp";
+import kogi_mordekaiser_full from "/src/assets/images/commissions/Kogi_Mordekaiser.webp";
 
 // Authors map with name and url
 export const authorsMap = {
@@ -105,7 +111,7 @@ export const authorsMap = {
   },
   "Slow.work": {
     name: "Slow.work",
-    url: "https://www.facebook.com/slow.work.x"
+    url: "https://slow.work/"
   },
   "七柚": {
     name: "七柚",
@@ -159,6 +165,10 @@ export const authorsMap = {
     name: "ぐるみん",
     url: "https://x.com/guruminn_M"
   },
+  "Kogi": {
+    name: "Kogi",
+    url: "https://ko-fi.com/c/3ddc03fd98"
+  },
 };
 
 // Complete commission data with both thumbnail and full-size images
@@ -189,10 +199,11 @@ export const commissionData = [
     authorKey: "Slow.work"
   },
   {
-    title: "Pika貼圖包",
-    image: pika_sticker,
-    fullImage: pika_sticker_full,
-    authorKey: "Pika"
+    title: "魔鬥黑曜龍",
+    image: kogi_mordekaiser,
+    fullImage: kogi_mordekaiser_full,
+    authorKey: "Kogi",
+    description: "參考英雄聯盟造型-魔鬥凱薩 死灰墓騎"
   },
   {
     title: "勇者",
@@ -234,18 +245,10 @@ export const commissionData = [
     description: "與火柴神父合作委託"
   },
   {
-    title: "法師",
-    image: Raier_2,
-    fullImage: Raier_2_full,
-    authorKey: "雷邇",
-    description: "獸無限-獸與地下城主題名牌"
-  },
-  {
-    title: "吸血鬼",
-    image: Raier_1,
-    fullImage: Raier_1_full,
-    authorKey: "雷邇",
-    description: "以茶會毛-百毛夜行主題名牌"
+    title: "端午節肉粽串",
+    image: slow_work_meat,
+    fullImage: slow_work_meat_full,
+    authorKey: "Slow.work"
   },
   {
     title: "咖啡點滴",
@@ -255,11 +258,10 @@ export const commissionData = [
     description: "社畜委託-偷懶摸魚系列"
   },
   {
-    title: "摸魚摸摸",
-    image: slow_work_fish,
-    fullImage: slow_work_fish_full,
-    authorKey: "Slow.work",
-    description: "社畜委託-偷懶摸魚系列"
+    title: "中部粽",
+    image: slow_work_stone,
+    fullImage: slow_work_stone_full,
+    authorKey: "Slow.work"
   },
   {
     image: slow_work_game,
@@ -301,6 +303,40 @@ export const commissionData = [
     authorKey: "瑞樹"
   },
   {
+    title: "MagSafe游泳圈",
+    image: ras_soy_2,
+    fullImage: ras_soy_2_full,
+    authorKey: "瑞樹",
+    description: "MagSafe iPhone 透明保護殼"
+  },
+  {
+    title: "我眼裡的黑曜石",
+    image: ras_soy_1,
+    fullImage: ras_soy_1_full,
+    authorKey: "瑞樹",
+    description: "Apple Watch Wallpaper"
+  },
+  {
+    title: "Pika貼圖包",
+    image: pika_sticker,
+    fullImage: pika_sticker_full,
+    authorKey: "Pika"
+  },
+  {
+    title: "法師",
+    image: Raier_2,
+    fullImage: Raier_2_full,
+    authorKey: "雷邇",
+    description: "獸無限-獸與地下城主題名牌"
+  },
+  {
+    title: "吸血鬼",
+    image: Raier_1,
+    fullImage: Raier_1_full,
+    authorKey: "雷邇",
+    description: "以茶會毛-百毛夜行主題名牌"
+  },
+  {
     title: "我最愛吃的櫛瓜",
     image: ras_soy_5,
     fullImage: ras_soy_5_full,
@@ -319,18 +355,11 @@ export const commissionData = [
     authorKey: "瑞樹"
   },
   {
-    title: "MagSafe游泳圈",
-    image: ras_soy_2,
-    fullImage: ras_soy_2_full,
-    authorKey: "瑞樹",
-    description: "MagSafe iPhone 透明保護殼"
-  },
-  {
-    title: "我眼裡的黑曜石",
-    image: ras_soy_1,
-    fullImage: ras_soy_1_full,
-    authorKey: "瑞樹",
-    description: "Apple Watch Wallpaper"
+    title: "摸魚摸摸",
+    image: slow_work_fish,
+    fullImage: slow_work_fish_full,
+    authorKey: "Slow.work",
+    description: "社畜委託-偷懶摸魚系列"
   },
   {
     title: "翹屁屁",
