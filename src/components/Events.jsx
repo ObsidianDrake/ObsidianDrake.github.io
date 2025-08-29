@@ -17,6 +17,7 @@ import event4 from "/src/assets/images/events/2024_Infurnity.webp";
 import event5 from "/src/assets/images/events/2025_ちるこん.webp";
 import event6 from "/src/assets/images/events/2025_FurryteaParty.webp";
 import event7 from "/src/assets/images/events/2025_A_Family.webp";
+import event8 from "/src/assets/images/events/2025_UTFG.webp";
 
 import event1Full from "/src/assets/images/events/full/2024_FurryteaParty.webp";
 import event2Full from "/src/assets/images/events/full/2024_Furry_train.webp";
@@ -25,6 +26,7 @@ import event4Full from "/src/assets/images/events/full/2024_Infurnity.webp";
 import event5Full from "/src/assets/images/events/full/2025_ちるこん.webp";
 import event6Full from "/src/assets/images/events/full/2025_FurryteaParty.webp";
 import event7Full from "/src/assets/images/events/full/2025_A_Family.webp";
+import event8Full from "/src/assets/images/events/full/2025_UTFG.webp";
 
 export const photographersMap = {
   "小怪": {
@@ -50,6 +52,10 @@ export const photographersMap = {
   "紀州の関東人(Kisyu)": {
     name: "紀州の関東人(Kisyu)",
     url: "https://x.com/JyakiganKatana"
+  },
+  "蒼穹": {
+    name: "蒼穹",
+    url: "https://www.facebook.com/cang.qiong.697438"
   },
 };
 
@@ -102,6 +108,13 @@ const eventData = [
     image: event7,
     fullImage: event7Full,
     photographerKey: "Sanu"
+  },
+  {
+    id: 8,
+    title: "2025 UTFG",
+    image: event8,
+    fullImage: event8Full,
+    photographerKey: "蒼穹"
   },
 ];
 
