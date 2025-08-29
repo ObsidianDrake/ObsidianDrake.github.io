@@ -19,6 +19,7 @@ import slow_work_game from "/src/assets/images/commissions/thumbnails/Slow.work_
 import slow_work_coffee from "/src/assets/images/commissions/thumbnails/Slow.work_咖啡點滴.webp";
 import slow_work_meat from "/src/assets/images/commissions/thumbnails/Slow.work_肉粽串.webp";
 import slow_work_stone from "/src/assets/images/commissions/thumbnails/Slow.work_中部粽.webp";
+import slow_work_friend from "/src/assets/images/commissions/thumbnails/Slow.work_ともよし.webp";
 import tody_1 from "/src/assets/images/commissions/thumbnails/七柚_酒吞童子.webp";
 import tody_2 from "/src/assets/images/commissions/thumbnails/七柚_除妖師.webp";
 import janet_1 from "/src/assets/images/commissions/thumbnails/伊秋_獸獸鬥片.webp";
@@ -45,6 +46,7 @@ import guruminn_1 from "/src/assets/images/commissions/thumbnails/guruminn_1.web
 import guruminn_2 from "/src/assets/images/commissions/thumbnails/guruminn_2.webp";
 import guruminn_3 from "/src/assets/images/commissions/thumbnails/guruminn_3.webp";
 import kogi_mordekaiser from "/src/assets/images/commissions/thumbnails/Kogi_Mordekaiser.webp";
+import makotoo_tennis from "/src/assets/images/commissions/thumbnails/マコトウ_打網球.webp";
 
 // Import full-size images for lightbox
 import obsidian_oc_full from "/src/assets/images/commissions/虎丸_獸設.webp";
@@ -60,6 +62,7 @@ import slow_work_game_full from "/src/assets/images/commissions/Slow.work_打電
 import slow_work_coffee_full from "/src/assets/images/commissions/Slow.work_咖啡點滴.webp";
 import slow_work_meat_full from "/src/assets/images/commissions/Slow.work_肉粽串.webp";
 import slow_work_stone_full from "/src/assets/images/commissions/Slow.work_中部粽.webp";
+import slow_work_friend_full from "/src/assets/images/commissions/Slow.work_ともよし.webp";
 import tody_1_full from "/src/assets/images/commissions/七柚_酒吞童子.webp";
 import tody_2_full from "/src/assets/images/commissions/七柚_除妖師.webp";
 import janet_1_full from "/src/assets/images/commissions/伊秋_獸獸鬥片.webp";
@@ -86,6 +89,7 @@ import guruminn_1_full from "/src/assets/images/commissions/guruminn_1.webp";
 import guruminn_2_full from "/src/assets/images/commissions/guruminn_2.webp";
 import guruminn_3_full from "/src/assets/images/commissions/guruminn_3.webp";
 import kogi_mordekaiser_full from "/src/assets/images/commissions/Kogi_Mordekaiser.webp";
+import makotoo_tennis_full from "/src/assets/images/commissions/マコトウ_打網球.webp";
 
 // Authors map with name and url
 export const authorsMap = {
@@ -169,6 +173,10 @@ export const authorsMap = {
     name: "Kogi",
     url: "https://ko-fi.com/c/3ddc03fd98"
   },
+  "マコトウ": {
+    name: "マコトウ",
+    url: "https://x.com/mako_makotoo"
+  },
 };
 
 // Complete commission data with both thumbnail and full-size images
@@ -187,10 +195,16 @@ export const commissionData = [
     authorKey: "Telegram"
   },
   {
-    title: "小Q人",
-    image: slow_work_small_q,
-    fullImage: slow_work_small_q_full,
-    authorKey: "Slow.work"
+    image: makotoo_tennis,
+    fullImage: makotoo_tennis_full,
+    authorKey: "マコトウ"
+  },
+  {
+    title: "麻吉阿魯巴!!",
+    image: slow_work_friend,
+    fullImage: slow_work_friend_full,
+    authorKey: "Slow.work",
+    description: "銀太 チビシロン 黑月影狼"
   },
   {
     title: "氣到對折",
@@ -248,6 +262,12 @@ export const commissionData = [
     title: "端午節肉粽串",
     image: slow_work_meat,
     fullImage: slow_work_meat_full,
+    authorKey: "Slow.work"
+  },
+  {
+    title: "小Q人",
+    image: slow_work_small_q,
+    fullImage: slow_work_small_q_full,
     authorKey: "Slow.work"
   },
   {

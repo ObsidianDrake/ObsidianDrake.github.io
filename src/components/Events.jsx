@@ -61,60 +61,52 @@ export const photographersMap = {
 
 const eventData = [
   {
-    id: 1,
-    title: "2024 FurryTeaParty",
-    image: event1,
-    fullImage: event1Full,
-    photographerKey: "小怪"
+    title: "2025 UTFG",
+    image: event8,
+    fullImage: event8Full,
+    photographerKey: "蒼穹"
   },
   {
-    id: 2,
-    title: "2024 毛爪號",
-    image: event2,
-    fullImage: event2Full,
-    photographerKey: "Aaron"
-  },
-  {
-    id: 3,
-    title: "2024 FurMIT",
-    image: event3,
-    fullImage: event3Full,
-    photographerKey: "Guni"
-  },
-  {
-    id: 4,
-    title: "2024 Infurnity",
-    image: event4,
-    fullImage: event4Full,
-    photographerKey: "小怪"
-  },
-  {
-    id: 5,
-    title: "2025 ちるこん",
-    image: event5,
-    fullImage: event5Full,
-    photographerKey: "紀州の関東人(Kisyu)"
-  },
-  {
-    id: 6,
-    title: "2025 FurryTeaParty",
-    image: event6,
-    fullImage: event6Full,
-    photographerKey: "小怪"
-  },
-  {
-    id: 7,
     title: "2025 A Family",
     image: event7,
     fullImage: event7Full,
     photographerKey: "Sanu"
   },
   {
-    id: 8,
-    title: "2025 UTFG",
-    image: event8,
-    fullImage: event8Full,
-    photographerKey: "蒼穹"
+    title: "2025 FurryTeaParty",
+    image: event6,
+    fullImage: event6Full,
+    photographerKey: "小怪"
+  },
+  {
+    title: "2025 ちるこん",
+    image: event5,
+    fullImage: event5Full,
+    photographerKey: "紀州の関東人(Kisyu)"
+  },
+  {
+    title: "2024 Infurnity",
+    image: event4,
+    fullImage: event4Full,
+    photographerKey: "小怪"
+  },
+  {
+    title: "2024 FurMIT",
+    image: event3,
+    fullImage: event3Full,
+    photographerKey: "Guni"
+  },
+  {
+    title: "2024 毛爪號",
+    image: event2,
+    fullImage: event2Full,
+    photographerKey: "Aaron"
+  },
+  {
+    title: "2024 FurryTeaParty",
+    image: event1,
+    fullImage: event1Full,
+    photographerKey: "小怪"
   },
 ];
 

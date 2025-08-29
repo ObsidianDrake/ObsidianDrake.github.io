@@ -15,7 +15,7 @@ const ProfileInfo = () => {
     [t.profile.details.name]: t.profile.values.name,
     [t.profile.details.location]: t.profile.values.location,
     [t.profile.details.interests]: t.profile.values.interests,
-    [t.profile.details.favarAnimate]: t.profile.values.favarAnimate
+    [t.profile.details.languageLearning]: t.profile.values.languageLearning
   }), [t]);
 
   return (
@@ -41,7 +41,12 @@ const ProfileInfo = () => {
                   data-aos-offset="100"
                 >
                   <strong className="key">{key}</strong>
-                  <div className="value">{value}</div>
+                  <div className="value">{value.split('\n').map((line, idx) => (
+                    <React.Fragment key={idx}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}</div>
                 </div>
               </div>
             ))}
