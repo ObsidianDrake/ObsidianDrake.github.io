@@ -28,7 +28,7 @@ const zh = {
     values: {
       name: "黑曜石",
       location: "台灣 新竹縣",
-      interests: "遊戲、動畫、唱歌、聽音樂、網球、羽球、程式設計",
+      interests: "旅遊、遊戲、動畫、唱歌、聽音樂、網球、羽球、程式設計",
       languageLearning: "中文： 精通✅\n英文： 中等🔼\n日文： 學習中📖🔰"
     }
   },
