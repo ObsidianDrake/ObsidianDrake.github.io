@@ -123,11 +123,16 @@ const Commission = ({ onLightboxChange }) => {
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
             <div className="lightbox-image-container">
               <img 
-                src={selectedImage.image} 
-                alt={selectedImage.title} 
+                src={selectedImage.fullImage}
+                alt={selectedImage.title}
                 className="lightbox-image"
                 onLoad={handleImageLoad}
-                style={{ opacity: imageLoaded ? 1 : 0, transition: 'opacity 0.3s ease' }}
+                style={{ opacity: imageLoaded ? 1 : 0,
+                  opacity: imageLoaded ? 1 : 0, 
+                  transition: 'opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                  transform: imageLoaded ? 'scale(1)' : 'scale(0.98)',
+                  transformOrigin: 'center center'
+                }}
               />
             </div>
             <div className="lightbox-info">

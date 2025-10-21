@@ -14,12 +14,9 @@ import mo_yu_2 from "/src/assets/images/commissions/thumbnails/Mo_Yu_聖誕節.w
 import pika_sticker from "/src/assets/images/commissions/thumbnails/Pika_貼圖包.webp";
 import slow_work_small_q from "/src/assets/images/commissions/thumbnails/Slow.work_小Q人.webp";
 import slow_work_angry from "/src/assets/images/commissions/thumbnails/Slow.work_氣到對折.webp";
-import slow_work_fish from "/src/assets/images/commissions/thumbnails/Slow.work_摸魚.webp";
-import slow_work_game from "/src/assets/images/commissions/thumbnails/Slow.work_打電動.webp";
-import slow_work_coffee from "/src/assets/images/commissions/thumbnails/Slow.work_咖啡點滴.webp";
 import slow_work_meat from "/src/assets/images/commissions/thumbnails/Slow.work_肉粽串.webp";
-import slow_work_stone from "/src/assets/images/commissions/thumbnails/Slow.work_中部粽.webp";
 import slow_work_friend from "/src/assets/images/commissions/thumbnails/Slow.work_ともよし.webp";
+import slow_work_flight from "/src/assets/images/commissions/thumbnails/Slow.work_flight_ticket.webp";
 import tody_1 from "/src/assets/images/commissions/thumbnails/七柚_酒吞童子.webp";
 import tody_2 from "/src/assets/images/commissions/thumbnails/七柚_除妖師.webp";
 import janet_1 from "/src/assets/images/commissions/thumbnails/伊秋_獸獸鬥片.webp";
@@ -29,7 +26,6 @@ import KAi_K_1 from "/src/assets/images/commissions/thumbnails/凱K_富士山.we
 import benten_1 from "/src/assets/images/commissions/thumbnails/弁天_勇者.webp";
 import tai_lei_1 from "/src/assets/images/commissions/thumbnails/拓雷_內褲褲.webp";
 import ras_soy_1 from "/src/assets/images/commissions/thumbnails/瑞樹_AppleWatch.webp";
-import ras_soy_2 from "/src/assets/images/commissions/thumbnails/瑞樹_MagSafe.webp";
 import ras_soy_3 from "/src/assets/images/commissions/thumbnails/瑞樹_杏鮑菇.webp";
 import ras_soy_4 from "/src/assets/images/commissions/thumbnails/瑞樹_毛爪號.webp";
 import ras_soy_5 from "/src/assets/images/commissions/thumbnails/瑞樹_櫛瓜.webp";
@@ -57,12 +53,9 @@ import mo_yu_2_full from "/src/assets/images/commissions/Mo_Yu_聖誕節.webp";
 import pika_sticker_full from "/src/assets/images/commissions/Pika_貼圖包.webp";
 import slow_work_small_q_full from "/src/assets/images/commissions/Slow.work_小Q人.webp";
 import slow_work_angry_full from "/src/assets/images/commissions/Slow.work_氣到對折.webp";
-import slow_work_fish_full from "/src/assets/images/commissions/Slow.work_摸魚.webp";
-import slow_work_game_full from "/src/assets/images/commissions/Slow.work_打電動.webp";
-import slow_work_coffee_full from "/src/assets/images/commissions/Slow.work_咖啡點滴.webp";
 import slow_work_meat_full from "/src/assets/images/commissions/Slow.work_肉粽串.webp";
-import slow_work_stone_full from "/src/assets/images/commissions/Slow.work_中部粽.webp";
 import slow_work_friend_full from "/src/assets/images/commissions/Slow.work_ともよし.webp";
+import slow_work_flight_full from "/src/assets/images/commissions/Slow.work_flight_ticket.webp";
 import tody_1_full from "/src/assets/images/commissions/七柚_酒吞童子.webp";
 import tody_2_full from "/src/assets/images/commissions/七柚_除妖師.webp";
 import janet_1_full from "/src/assets/images/commissions/伊秋_獸獸鬥片.webp";
@@ -72,7 +65,6 @@ import KAi_K_1_full from "/src/assets/images/commissions/凱K_富士山.webp";
 import benten_1_full from "/src/assets/images/commissions/弁天_勇者.webp";
 import tai_lei_1_full from "/src/assets/images/commissions/拓雷_內褲褲.webp";
 import ras_soy_1_full from "/src/assets/images/commissions/瑞樹_AppleWatch.webp";
-import ras_soy_2_full from "/src/assets/images/commissions/瑞樹_MagSafe.webp";
 import ras_soy_3_full from "/src/assets/images/commissions/瑞樹_杏鮑菇.webp";
 import ras_soy_4_full from "/src/assets/images/commissions/瑞樹_毛爪號.webp";
 import ras_soy_5_full from "/src/assets/images/commissions/瑞樹_櫛瓜.webp";
@@ -252,6 +244,12 @@ export const commissionData = [
     description: "結婚三週年委託"
   },
   {
+    image: slow_work_flight,
+    fullImage: slow_work_flight_full,
+    authorKey: "Slow.work",
+    description: "買機票囉"
+  },
+  {
     title: "富士山",
     image: KAi_K_1,
     fullImage: KAi_K_1_full,
@@ -269,25 +267,6 @@ export const commissionData = [
     image: slow_work_small_q,
     fullImage: slow_work_small_q_full,
     authorKey: "Slow.work"
-  },
-  {
-    title: "咖啡點滴",
-    image: slow_work_coffee,
-    fullImage: slow_work_coffee_full,
-    authorKey: "Slow.work",
-    description: "社畜委託-偷懶摸魚系列"
-  },
-  {
-    title: "中部粽",
-    image: slow_work_stone,
-    fullImage: slow_work_stone_full,
-    authorKey: "Slow.work"
-  },
-  {
-    image: slow_work_game,
-    fullImage: slow_work_game_full,
-    authorKey: "Slow.work",
-    description: "社畜委託-偷懶摸魚系列"
   },
   {
     image: guruminn_1,
@@ -321,13 +300,6 @@ export const commissionData = [
     image: ras_soy_7,
     fullImage: ras_soy_7_full,
     authorKey: "瑞樹"
-  },
-  {
-    title: "MagSafe游泳圈",
-    image: ras_soy_2,
-    fullImage: ras_soy_2_full,
-    authorKey: "瑞樹",
-    description: "MagSafe iPhone 透明保護殼"
   },
   {
     title: "我眼裡的黑曜石",
@@ -373,13 +345,6 @@ export const commissionData = [
     image: ras_soy_3,
     fullImage: ras_soy_3_full,
     authorKey: "瑞樹"
-  },
-  {
-    title: "摸魚摸摸",
-    image: slow_work_fish,
-    fullImage: slow_work_fish_full,
-    authorKey: "Slow.work",
-    description: "社畜委託-偷懶摸魚系列"
   },
   {
     title: "翹屁屁",
