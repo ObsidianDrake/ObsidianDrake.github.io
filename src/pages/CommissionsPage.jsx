@@ -37,12 +37,15 @@ import sabo_1 from "/src/assets/images/commissions/thumbnails/薩波_笨版.webp
 import Raier_1 from "/src/assets/images/commissions/thumbnails/雷邇_吸血鬼.webp";
 import Raier_2 from "/src/assets/images/commissions/thumbnails/雷邇_法師.webp";
 import FAIER_1 from "/src/assets/images/commissions/thumbnails/音川菲爾_名片.webp";
+import FAIER_2 from "/src/assets/images/commissions/thumbnails/音川菲爾_乖小龍.webp";
 import telegram_stickers from "/src/assets/images/commissions/thumbnails/telegram_sticker.webp";
 import guruminn_1 from "/src/assets/images/commissions/thumbnails/guruminn_1.webp";
 import guruminn_2 from "/src/assets/images/commissions/thumbnails/guruminn_2.webp";
 import guruminn_3 from "/src/assets/images/commissions/thumbnails/guruminn_3.webp";
 import kogi_mordekaiser from "/src/assets/images/commissions/thumbnails/Kogi_Mordekaiser.webp";
 import makotoo_tennis from "/src/assets/images/commissions/thumbnails/マコトウ_打網球.webp";
+import macy_drake from "/src/assets/images/commissions/thumbnails/MACY_圖騰.webp";
+import dog_trap from "/src/assets/images/commissions/thumbnails/豆格_被困住了.webp";
 
 // Import full-size images for lightbox
 import obsidian_oc_full from "/src/assets/images/commissions/虎丸_獸設.webp";
@@ -76,12 +79,15 @@ import sabo_1_full from "/src/assets/images/commissions/薩波_笨版.webp";
 import Raier_1_full from "/src/assets/images/commissions/雷邇_吸血鬼.webp";
 import Raier_2_full from "/src/assets/images/commissions/雷邇_法師.webp";
 import FAIER_1_full from "/src/assets/images/commissions/音川菲爾_名片.webp";
+import FAIER_2_full from "/src/assets/images/commissions/音川菲爾_乖小龍.webp";
 import telegram_stickers_full from "/src/assets/images/commissions/telegram_sticker.webp";
 import guruminn_1_full from "/src/assets/images/commissions/guruminn_1.webp";
 import guruminn_2_full from "/src/assets/images/commissions/guruminn_2.webp";
 import guruminn_3_full from "/src/assets/images/commissions/guruminn_3.webp";
 import kogi_mordekaiser_full from "/src/assets/images/commissions/Kogi_Mordekaiser.webp";
 import makotoo_tennis_full from "/src/assets/images/commissions/マコトウ_打網球.webp";
+import macy_drake_full from "/src/assets/images/commissions/MACY_圖騰.webp";
+import dog_trap_full from "/src/assets/images/commissions/豆格_被困住了.webp";
 
 // Authors map with name and url
 export const authorsMap = {
@@ -169,6 +175,14 @@ export const authorsMap = {
     name: "マコトウ",
     url: "https://x.com/mako_makotoo"
   },
+  "MACY": {
+    name: "阿路 MACY",
+    url: "https://www.facebook.com/wang.y.xuan.779"
+  },
+  "豆格": {
+    name: "豆格 DOG",
+    url: "https://www.facebook.com/dou.ge.687606"
+  },
 };
 
 // Complete commission data with both thumbnail and full-size images
@@ -196,7 +210,7 @@ export const commissionData = [
     image: slow_work_friend,
     fullImage: slow_work_friend_full,
     authorKey: "Slow.work",
-    description: "銀太 チビシロン 黑月影狼"
+    description: "黑月影狼、銀太、チビシロン"
   },
   {
     title: "氣到對折",
@@ -218,11 +232,9 @@ export const commissionData = [
     authorKey: "弁天"
   },
   {
-    title: "名片",
-    image: FAIER_1,
-    fullImage: FAIER_1_full,
-    authorKey: "音川菲爾",
-    description: "名片透卡"
+    image: FAIER_2,
+    fullImage: FAIER_2_full,
+    authorKey: "音川菲爾"
   },
   {
     title: "內褲褲",
@@ -244,6 +256,12 @@ export const commissionData = [
     description: "結婚三週年委託"
   },
   {
+    title: "MH風格",
+    image: macy_drake,
+    fullImage: macy_drake_full,
+    authorKey: "MACY"
+  },
+  {
     image: slow_work_flight,
     fullImage: slow_work_flight_full,
     authorKey: "Slow.work",
@@ -263,6 +281,13 @@ export const commissionData = [
     authorKey: "Slow.work"
   },
   {
+    title: "名片",
+    image: FAIER_1,
+    fullImage: FAIER_1_full,
+    authorKey: "音川菲爾",
+    description: "名片透卡"
+  },
+  {
     title: "小Q人",
     image: slow_work_small_q,
     fullImage: slow_work_small_q_full,
@@ -277,6 +302,11 @@ export const commissionData = [
     image: guruminn_2,
     fullImage: guruminn_2_full,
     authorKey: "ぐるみん",
+  },
+  {
+    image: dog_trap,
+    fullImage: dog_trap_full,
+    authorKey: "豆格"
   },
   {
     title: "笨",
