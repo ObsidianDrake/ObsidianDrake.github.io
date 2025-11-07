@@ -19,7 +19,7 @@ const SocialLinks = () => {
   const { t } = useTranslation();
 
   const medias = [
-    [facebook_img, "https://www.facebook.com/obsidiandrakee"],
+    [facebook_img, "https://www.facebook.com/obsidiandrake"],
     [twitter_img, "https://x.com/obsidiandrakee"],
     [discord_img, "https://discordapp.com/users/622288266951131137"],
     [bluesky_img, "https://bsky.app/profile/obsidiandrake.bsky.social"],
