@@ -10,23 +10,27 @@ import "swiper/css/effect-coverflow";
 import 'swiper/css/pagination';
 import "/src/styles/Events.css";
 import { useTranslation } from '../i18n/LanguageContext';
-import event1 from "/src/assets/images/events/2024_FurryteaParty.webp";
-import event2 from "/src/assets/images/events/2024_Furry_train.webp";
-import event3 from "/src/assets/images/events/2024_FurMIT.webp";
-import event4 from "/src/assets/images/events/2024_Infurnity.webp";
-import event5 from "/src/assets/images/events/2025_ちるこん.webp";
-import event6 from "/src/assets/images/events/2025_FurryteaParty.webp";
-import event7 from "/src/assets/images/events/2025_A_Family.webp";
-import event8 from "/src/assets/images/events/2025_UTFG.webp";
+import event1  from "/src/assets/images/events/2024_FurryteaParty.webp";
+import event2  from "/src/assets/images/events/2024_Furry_train.webp";
+import event3  from "/src/assets/images/events/2024_FurMIT.webp";
+import event4  from "/src/assets/images/events/2024_Infurnity.webp";
+import event5  from "/src/assets/images/events/2025_ちるこん.webp";
+import event6  from "/src/assets/images/events/2025_FurryteaParty.webp";
+import event7  from "/src/assets/images/events/2025_A_Family.webp";
+import event8  from "/src/assets/images/events/2025_UTFG.webp";
+import event9  from "/src/assets/images/events/2025_おきけも.webp";
+import event10 from "/src/assets/images/events/2025_Infurnity.webp";
 
-import event1Full from "/src/assets/images/events/full/2024_FurryteaParty.webp";
-import event2Full from "/src/assets/images/events/full/2024_Furry_train.webp";
-import event3Full from "/src/assets/images/events/full/2024_FurMIT.webp";
-import event4Full from "/src/assets/images/events/full/2024_Infurnity.webp";
-import event5Full from "/src/assets/images/events/full/2025_ちるこん.webp";
-import event6Full from "/src/assets/images/events/full/2025_FurryteaParty.webp";
-import event7Full from "/src/assets/images/events/full/2025_A_Family.webp";
-import event8Full from "/src/assets/images/events/full/2025_UTFG.webp";
+import event1Full  from "/src/assets/images/events/full/2024_FurryteaParty.webp";
+import event2Full  from "/src/assets/images/events/full/2024_Furry_train.webp";
+import event3Full  from "/src/assets/images/events/full/2024_FurMIT.webp";
+import event4Full  from "/src/assets/images/events/full/2024_Infurnity.webp";
+import event5Full  from "/src/assets/images/events/full/2025_ちるこん.webp";
+import event6Full  from "/src/assets/images/events/full/2025_FurryteaParty.webp";
+import event7Full  from "/src/assets/images/events/full/2025_A_Family.webp";
+import event8Full  from "/src/assets/images/events/full/2025_UTFG.webp";
+import event9Full  from "/src/assets/images/events/full/2025_おきけも.webp";
+import event10Full from "/src/assets/images/events/full/2025_Infurnity.webp";
 
 export const photographersMap = {
   "小怪": {
@@ -57,9 +61,29 @@ export const photographersMap = {
     name: "蒼穹",
     url: "https://www.facebook.com/cang.qiong.697438"
   },
+  "框框": {
+    name: "Kuang Kuang",
+    url: "https://www.facebook.com/kuang.kuang.148"
+  },
+  "ㄉㄉ": {
+    name: "ㄉㄉ",
+    url: "https://www.facebook.com/DDWoofPT"
+  },
 };
 
 const eventData = [
+  {
+    title: "2025 Infurnity",
+    image: event10,
+    fullImage: event10Full,
+    photographerKey: "ㄉㄉ"
+  },
+  {
+    title: "2025 おきけも",
+    image: event9,
+    fullImage: event9Full,
+    photographerKey: "框框"
+  },
   {
     title: "2025 UTFG",
     image: event8,

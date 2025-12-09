@@ -127,7 +127,7 @@ const Commission = ({ onLightboxChange }) => {
                 alt={selectedImage.title}
                 className="lightbox-image"
                 onLoad={handleImageLoad}
-                style={{ opacity: imageLoaded ? 1 : 0,
+                style={{
                   opacity: imageLoaded ? 1 : 0, 
                   transition: 'opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                   transform: imageLoaded ? 'scale(1)' : 'scale(0.98)',
