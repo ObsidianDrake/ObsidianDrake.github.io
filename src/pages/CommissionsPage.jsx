@@ -17,6 +17,7 @@ import slow_work_angry from "/src/assets/images/commissions/thumbnails/Slow.work
 import slow_work_meat from "/src/assets/images/commissions/thumbnails/Slow.work_肉粽串.webp";
 import slow_work_friend from "/src/assets/images/commissions/thumbnails/Slow.work_ともよし.webp";
 import slow_work_flight from "/src/assets/images/commissions/thumbnails/Slow.work_flight_ticket.webp";
+import slow_work_halloween from "/src/assets/images/commissions/thumbnails/Slow.work_halloween.webp";
 import tody_1 from "/src/assets/images/commissions/thumbnails/七柚_酒吞童子.webp";
 import tody_2 from "/src/assets/images/commissions/thumbnails/七柚_除妖師.webp";
 import janet_1 from "/src/assets/images/commissions/thumbnails/伊秋_獸獸鬥片.webp";
@@ -44,6 +45,7 @@ import guruminn_2 from "/src/assets/images/commissions/thumbnails/guruminn_2.web
 import guruminn_3 from "/src/assets/images/commissions/thumbnails/guruminn_3.webp";
 import kogi_mordekaiser from "/src/assets/images/commissions/thumbnails/Kogi_Mordekaiser.webp";
 import makotoo_tennis from "/src/assets/images/commissions/thumbnails/マコトウ_打網球.webp";
+import makotoo_snowboard from "/src/assets/images/commissions/thumbnails/マコトウ_滑雪.webp";
 import macy_drake from "/src/assets/images/commissions/thumbnails/MACY_圖騰.webp";
 import dog_trap from "/src/assets/images/commissions/thumbnails/豆格_被困住了.webp";
 
@@ -59,6 +61,7 @@ import slow_work_angry_full from "/src/assets/images/commissions/Slow.work_氣�
 import slow_work_meat_full from "/src/assets/images/commissions/Slow.work_肉粽串.webp";
 import slow_work_friend_full from "/src/assets/images/commissions/Slow.work_ともよし.webp";
 import slow_work_flight_full from "/src/assets/images/commissions/Slow.work_flight_ticket.webp";
+import slow_work_halloween_full from "/src/assets/images/commissions/Slow.work_halloween.webp";
 import tody_1_full from "/src/assets/images/commissions/七柚_酒吞童子.webp";
 import tody_2_full from "/src/assets/images/commissions/七柚_除妖師.webp";
 import janet_1_full from "/src/assets/images/commissions/伊秋_獸獸鬥片.webp";
@@ -86,6 +89,7 @@ import guruminn_2_full from "/src/assets/images/commissions/guruminn_2.webp";
 import guruminn_3_full from "/src/assets/images/commissions/guruminn_3.webp";
 import kogi_mordekaiser_full from "/src/assets/images/commissions/Kogi_Mordekaiser.webp";
 import makotoo_tennis_full from "/src/assets/images/commissions/マコトウ_打網球.webp";
+import makotoo_snowboard_full from "/src/assets/images/commissions/マコトウ_滑雪.webp";
 import macy_drake_full from "/src/assets/images/commissions/MACY_圖騰.webp";
 import dog_trap_full from "/src/assets/images/commissions/豆格_被困住了.webp";
 
@@ -213,10 +217,9 @@ export const commissionData = [
     description: "黑月影狼、銀太、チビシロン"
   },
   {
-    title: "氣到對折",
-    image: slow_work_angry,
-    fullImage: slow_work_angry_full,
-    authorKey: "Slow.work"
+    image: makotoo_snowboard,
+    fullImage: makotoo_snowboard_full,
+    authorKey: "マコトウ"
   },
   {
     title: "魔鬥黑曜龍",
@@ -278,6 +281,12 @@ export const commissionData = [
     title: "端午節肉粽串",
     image: slow_work_meat,
     fullImage: slow_work_meat_full,
+    authorKey: "Slow.work"
+  },
+  {
+    title: "氣到對折",
+    image: slow_work_angry,
+    fullImage: slow_work_angry_full,
     authorKey: "Slow.work"
   },
   {
@@ -343,6 +352,12 @@ export const commissionData = [
     image: pika_sticker,
     fullImage: pika_sticker_full,
     authorKey: "Pika"
+  },
+  {
+    title: "Halloween",
+    image: slow_work_halloween,
+    fullImage: slow_work_halloween_full,
+    authorKey: "Slow.work"
   },
   {
     title: "法師",
