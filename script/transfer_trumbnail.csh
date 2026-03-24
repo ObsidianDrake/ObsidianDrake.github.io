@@ -37,8 +37,8 @@ else
     set im_command = "convert"
     set stat_cmd = "stat -c%s"
 endif
-# Initial conversion and resize
-$im_command "$input" -resize 300x300 "$temp_output"
+# Initial conversion and resize (Extract first frame [0] to save space animated webp)
+$im_command "$input"'[0]' -resize 300x300 "$temp_output"
 
 # Loop to reduce quality if file size > 50KB
 set quality = 90
@@ -53,7 +53,7 @@ while (1)
         echo "Warning: Cannot reduce image below 50KB even at low quality."
         break
     endif
-    $im_command "$input" -resize 300x300 -quality $quality "$temp_output"
+    $im_command "$input"'[0]' -resize 300x300 -quality $quality "$temp_output"
 end
 
 echo "Thumbnail saved to: $temp_output"

@@ -48,6 +48,7 @@ import makotoo_tennis from "/src/assets/images/commissions/thumbnails/マコト�
 import makotoo_snowboard from "/src/assets/images/commissions/thumbnails/マコトウ_滑雪.webp";
 import macy_drake from "/src/assets/images/commissions/thumbnails/MACY_圖騰.webp";
 import dog_trap from "/src/assets/images/commissions/thumbnails/豆格_被困住了.webp";
+import niji_anime from "/src/assets/images/commissions/thumbnails/虹_アニメ.webp";
 
 // Import full-size images for lightbox
 import obsidian_oc_full from "/src/assets/images/commissions/虎丸_獸設.webp";
@@ -92,6 +93,7 @@ import makotoo_tennis_full from "/src/assets/images/commissions/マコトウ_打
 import makotoo_snowboard_full from "/src/assets/images/commissions/マコトウ_滑雪.webp";
 import macy_drake_full from "/src/assets/images/commissions/MACY_圖騰.webp";
 import dog_trap_full from "/src/assets/images/commissions/豆格_被困住了.webp";
+import niji_anime_full from "/src/assets/images/commissions/虹_アニメ.webp";
 
 // Authors map with name and url
 export const authorsMap = {
@@ -187,6 +189,10 @@ export const authorsMap = {
     name: "豆格 DOG",
     url: "https://www.facebook.com/dou.ge.687606"
   },
+  "虹 にじ": {
+    name: "虹 にじ",
+    url: "https://x.com/NijiUso"
+  }
 };
 
 // Complete commission data with both thumbnail and full-size images
@@ -251,6 +257,11 @@ export const commissionData = [
     fullImage: ras_soy_6_full,
     authorKey: "瑞樹",
     description: "萬聖節iPhone Wallpaper"
+  },
+  {
+    image: niji_anime,
+    fullImage: niji_anime_full,
+    authorKey: "虹 にじ"
   },
   {
     image: guruminn_3,
@@ -488,15 +499,15 @@ const CommissionsPage = () => {
   useEffect(() => {
     // Use the original order of the array
     setSortedCommissions([...commissionData]);
-    
+
     // Display the first ITEMS_PER_PAGE images immediately
     setVisibleCommissions(commissionData.slice(0, ITEMS_PER_PAGE));
-    
+
     // Preload the next batch of images
     const preloadNextBatch = () => {
       const nextBatchStart = ITEMS_PER_PAGE;
       const nextBatchEnd = Math.min(nextBatchStart + ITEMS_PER_PAGE, commissionData.length);
-      
+
       for (let i = nextBatchStart; i < nextBatchEnd; i++) {
         if (commissionData[i]) {
           const img = new Image();
@@ -510,7 +521,7 @@ const CommissionsPage = () => {
         }
       }
     };
-    
+
     // Delay preloading to avoid conflict with initial rendering
     const timer = setTimeout(preloadNextBatch, 1000);
 
@@ -530,7 +541,7 @@ const CommissionsPage = () => {
 
   useEffect(() => {
     if (!sortedCommissions.length) return; // Prevent running before sortedCommissions is initialized
-    
+
     // Setup Intersection Observer with earlier trigger
     observerRef.current = new IntersectionObserver(
       (entries) => {
@@ -539,15 +550,15 @@ const CommissionsPage = () => {
             const nextPage = prevPage + 1;
             const start = 0;
             const end = nextPage * ITEMS_PER_PAGE;
-            
+
             // Update visible commissions
             setVisibleCommissions(sortedCommissions.slice(start, end));
-            
+
             // Preload next batch without dependency on state update
             const preloadNextBatch = () => {
               const nextBatchStart = end;
               const nextBatchEnd = Math.min(nextBatchStart + ITEMS_PER_PAGE, sortedCommissions.length);
-              
+
               for (let i = nextBatchStart; i < nextBatchEnd; i++) {
                 if (sortedCommissions[i]) {
                   const img = new Image();
@@ -561,15 +572,15 @@ const CommissionsPage = () => {
                 }
               }
             };
-            
+
             // Use setTimeout to delay preloading
             setTimeout(preloadNextBatch, 300);
-            
+
             return nextPage;
           });
         }
       },
-      { 
+      {
         threshold: 0.05,
         rootMargin: '500px' // Trigger loading earlier
       }
@@ -627,8 +638,8 @@ const CommissionsPage = () => {
       {/* 回到首頁按鈕 */}
       <Link to="/" className="back-to-home">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19 12H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M19 12H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
         <span>{t.commissionsPage.backToHome || "Back to Home"}</span>
       </Link>
@@ -645,20 +656,20 @@ const CommissionsPage = () => {
         </p>
         <div className="commission-grid" data-aos="fade-up">
           {visibleCommissions.map((commission, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="commission-item"
               data-aos="fade-up"
               data-aos-delay={100 * (index % 3)}
               onClick={() => openLightbox(commission)}
             >
               <div className="commission-card">
-                <img 
-                  src={commission.image} 
-                  alt={commission.title} 
+                <img
+                  src={commission.image}
+                  alt={commission.title}
                   className="commission-image"
                   loading="eager"
-                  style={{ 
+                  style={{
                     transition: 'transform 0.3s ease-out, opacity 0.3s ease-out',
                     transform: 'scale(1)',
                     opacity: imagesLoaded[index] ? 1 : 0.5
@@ -684,14 +695,14 @@ const CommissionsPage = () => {
 
       {/* 回到頂部按鈕 */}
       {showScrollTop && (
-        <button 
+        <button
           className="scroll-to-top"
           onClick={scrollToTop}
           aria-label="Scroll to top"
         >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 19V5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M5 12L12 5L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M12 19V5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M5 12L12 5L19 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
       )}
@@ -701,13 +712,13 @@ const CommissionsPage = () => {
         <div className="lightbox" onClick={closeLightbox}>
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
             <div className="lightbox-image-container">
-              <img 
-                src={selectedImage.fullImage} 
-                alt={selectedImage.title} 
+              <img
+                src={selectedImage.fullImage}
+                alt={selectedImage.title}
                 className="lightbox-image"
                 onLoad={handleImageLoad}
-                style={{ 
-                  opacity: imageLoaded ? 1 : 0, 
+                style={{
+                  opacity: imageLoaded ? 1 : 0,
                   transition: 'opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                   transform: imageLoaded ? 'scale(1)' : 'scale(0.98)',
                   transformOrigin: 'center center'
@@ -718,7 +729,7 @@ const CommissionsPage = () => {
               <h3>{selectedImage.title}</h3>
               <div className="lightbox-author">
                 <span className="author-label">{t.commissionsPage.artist}:</span>
-                <a 
+                <a
                   href={authorsMap[selectedImage.authorKey].url}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -730,19 +741,19 @@ const CommissionsPage = () => {
               <p className="lightbox-description">{selectedImage.description}</p>
             </div>
             <button className="lightbox-close" onClick={closeLightbox}>
-              <svg 
-                width="16" 
-                height="16" 
-                viewBox="0 0 16 16" 
-                fill="none" 
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 style={{ display: 'block' }}
               >
-                <path 
-                  d="M15 1L1 15M1 1L15 15" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
+                <path
+                  d="M15 1L1 15M1 1L15 15"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 />
               </svg>
             </button>
