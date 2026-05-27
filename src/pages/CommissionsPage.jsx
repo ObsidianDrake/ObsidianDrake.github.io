@@ -18,6 +18,7 @@ import slow_work_meat from "/src/assets/images/commissions/thumbnails/Slow.work_
 import slow_work_friend from "/src/assets/images/commissions/thumbnails/Slow.work_ともよし.webp";
 import slow_work_flight from "/src/assets/images/commissions/thumbnails/Slow.work_flight_ticket.webp";
 import slow_work_halloween from "/src/assets/images/commissions/thumbnails/Slow.work_halloween.webp";
+import slow_work_ski from "/src/assets/images/commissions/thumbnails/Slow.work_滑雪.webp";
 import tody_1 from "/src/assets/images/commissions/thumbnails/七柚_酒吞童子.webp";
 import tody_2 from "/src/assets/images/commissions/thumbnails/七柚_除妖師.webp";
 import janet_1 from "/src/assets/images/commissions/thumbnails/伊秋_獸獸鬥片.webp";
@@ -46,9 +47,11 @@ import guruminn_3 from "/src/assets/images/commissions/thumbnails/guruminn_3.web
 import kogi_mordekaiser from "/src/assets/images/commissions/thumbnails/Kogi_Mordekaiser.webp";
 import makotoo_tennis from "/src/assets/images/commissions/thumbnails/マコトウ_打網球.webp";
 import makotoo_snowboard from "/src/assets/images/commissions/thumbnails/マコトウ_滑雪.webp";
+import makotoo_skydiving from "/src/assets/images/commissions/thumbnails/マコトウ_skydiving.webp"
 import macy_drake from "/src/assets/images/commissions/thumbnails/MACY_圖騰.webp";
 import dog_trap from "/src/assets/images/commissions/thumbnails/豆格_被困住了.webp";
 import niji_anime from "/src/assets/images/commissions/thumbnails/虹_アニメ.webp";
+import han_han from "/src/assets/images/commissions/thumbnails/HanHan_彩票.webp";
 
 // Import full-size images for lightbox
 import obsidian_oc_full from "/src/assets/images/commissions/虎丸_獸設.webp";
@@ -63,6 +66,7 @@ import slow_work_meat_full from "/src/assets/images/commissions/Slow.work_肉粽
 import slow_work_friend_full from "/src/assets/images/commissions/Slow.work_ともよし.webp";
 import slow_work_flight_full from "/src/assets/images/commissions/Slow.work_flight_ticket.webp";
 import slow_work_halloween_full from "/src/assets/images/commissions/Slow.work_halloween.webp";
+import slow_work_ski_full from "/src/assets/images/commissions/Slow.work_滑雪.webp";
 import tody_1_full from "/src/assets/images/commissions/七柚_酒吞童子.webp";
 import tody_2_full from "/src/assets/images/commissions/七柚_除妖師.webp";
 import janet_1_full from "/src/assets/images/commissions/伊秋_獸獸鬥片.webp";
@@ -91,9 +95,11 @@ import guruminn_3_full from "/src/assets/images/commissions/guruminn_3.webp";
 import kogi_mordekaiser_full from "/src/assets/images/commissions/Kogi_Mordekaiser.webp";
 import makotoo_tennis_full from "/src/assets/images/commissions/マコトウ_打網球.webp";
 import makotoo_snowboard_full from "/src/assets/images/commissions/マコトウ_滑雪.webp";
+import makotoo_skydiving_full from "/src/assets/images/commissions/マコトウ_skydiving.webp";
 import macy_drake_full from "/src/assets/images/commissions/MACY_圖騰.webp";
 import dog_trap_full from "/src/assets/images/commissions/豆格_被困住了.webp";
 import niji_anime_full from "/src/assets/images/commissions/虹_アニメ.webp";
+import han_han_full from "/src/assets/images/commissions/HanHan_彩票.webp";
 
 // Authors map with name and url
 export const authorsMap = {
@@ -192,6 +198,10 @@ export const authorsMap = {
   "虹 にじ": {
     name: "虹 にじ",
     url: "https://x.com/NijiUso"
+  },
+  "Han Han": {
+    name: "Han Han 犀牛",
+    url: "https://www.facebook.com/Rhinohanhan9333"
   }
 };
 
@@ -223,9 +233,29 @@ export const commissionData = [
     description: "黑月影狼、銀太、チビシロン"
   },
   {
+    title: "我對滑雪的想像～",
+    image: slow_work_ski,
+    fullImage: slow_work_ski_full,
+    authorKey: "Slow.work",
+    description: "蛋白石"
+  },
+  {
+    title: "Wanaka Skydiving!",
+    image: makotoo_skydiving,
+    fullImage: makotoo_skydiving_full,
+    authorKey: "マコトウ",
+    description: "跳傘"
+  },
+  {
+    image: FAIER_2,
+    fullImage: FAIER_2_full,
+    authorKey: "音川菲爾"
+  },
+  {
     image: makotoo_snowboard,
     fullImage: makotoo_snowboard_full,
-    authorKey: "マコトウ"
+    authorKey: "マコトウ",
+    description: "蛋白石"
   },
   {
     title: "魔鬥黑曜龍",
@@ -235,21 +265,15 @@ export const commissionData = [
     description: "參考英雄聯盟造型-魔鬥凱薩 死灰墓騎"
   },
   {
-    title: "勇者",
-    image: benten_1,
-    fullImage: benten_1_full,
-    authorKey: "弁天"
-  },
-  {
-    image: FAIER_2,
-    fullImage: FAIER_2_full,
-    authorKey: "音川菲爾"
-  },
-  {
     title: "內褲褲",
     image: tai_lei_1,
     fullImage: tai_lei_1_full,
     authorKey: "拓雷"
+  },
+  {
+    image: han_han,
+    fullImage: han_han_full,
+    authorKey: "Han Han"
   },
   {
     title: "萬聖節",
@@ -257,6 +281,12 @@ export const commissionData = [
     fullImage: ras_soy_6_full,
     authorKey: "瑞樹",
     description: "萬聖節iPhone Wallpaper"
+  },
+  {
+    title: "勇者",
+    image: benten_1,
+    fullImage: benten_1_full,
+    authorKey: "弁天"
   },
   {
     image: niji_anime,
