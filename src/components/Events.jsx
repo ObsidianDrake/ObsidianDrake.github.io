@@ -20,6 +20,7 @@ import event7  from "/src/assets/images/events/2025_A_Family.webp";
 import event8  from "/src/assets/images/events/2025_UTFG.webp";
 import event9  from "/src/assets/images/events/2025_おきけも.webp";
 import event10 from "/src/assets/images/events/2025_Infurnity.webp";
+import event11 from "/src/assets/images/events/2026_UTFG.webp";
 
 import event1Full  from "/src/assets/images/events/full/2024_FurryteaParty.webp";
 import event2Full  from "/src/assets/images/events/full/2024_Furry_train.webp";
@@ -31,6 +32,7 @@ import event7Full  from "/src/assets/images/events/full/2025_A_Family.webp";
 import event8Full  from "/src/assets/images/events/full/2025_UTFG.webp";
 import event9Full  from "/src/assets/images/events/full/2025_おきけも.webp";
 import event10Full from "/src/assets/images/events/full/2025_Infurnity.webp";
+import event11Full from "/src/assets/images/events/full/2026_UTFG.webp";
 
 export const photographersMap = {
   "小怪": {
@@ -69,9 +71,19 @@ export const photographersMap = {
     name: "ㄉㄉ",
     url: "https://www.facebook.com/DDWoofPT"
   },
+  "猫太 NEKOTA": {
+    name: "猫太 NEKOTA",
+    url: "https://x.com/hinekota"
+  },
 };
 
 const eventData = [
+  {
+    title: "2026 UTFG",
+    image: event11,
+    fullImage: event11Full,
+    photographerKey: "猫太 NEKOTA"
+  },
   {
     title: "2025 Infurnity",
     image: event10,
@@ -227,7 +239,7 @@ const Events = () => {
           >
             {eventData.map((event, index) => (
               <SwiperSlide
-                key={event.id}
+                key={event.title}
                 className="event-slide"
                 onClick={() => handleSlideClick(index, event)}
               >
