@@ -19,6 +19,7 @@ import slow_work_friend from "/src/assets/images/commissions/thumbnails/Slow.wor
 import slow_work_flight from "/src/assets/images/commissions/thumbnails/Slow.work_flight_ticket.webp";
 import slow_work_halloween from "/src/assets/images/commissions/thumbnails/Slow.work_halloween.webp";
 import slow_work_ski from "/src/assets/images/commissions/thumbnails/Slow.work_滑雪.webp";
+import slow_work_2026_trip from "/src/assets/images/commissions/thumbnails/Slow.work_2026_trip_with_opal.webp";
 import tody_1 from "/src/assets/images/commissions/thumbnails/七柚_酒吞童子.webp";
 import tody_2 from "/src/assets/images/commissions/thumbnails/七柚_除妖師.webp";
 import janet_1 from "/src/assets/images/commissions/thumbnails/伊秋_獸獸鬥片.webp";
@@ -67,6 +68,7 @@ import slow_work_friend_full from "/src/assets/images/commissions/Slow.work_と�
 import slow_work_flight_full from "/src/assets/images/commissions/Slow.work_flight_ticket.webp";
 import slow_work_halloween_full from "/src/assets/images/commissions/Slow.work_halloween.webp";
 import slow_work_ski_full from "/src/assets/images/commissions/Slow.work_滑雪.webp";
+import slow_work_2026_trip_full from "/src/assets/images/commissions/Slow.work_2026_trip_with_opal.webp";
 import tody_1_full from "/src/assets/images/commissions/七柚_酒吞童子.webp";
 import tody_2_full from "/src/assets/images/commissions/七柚_除妖師.webp";
 import janet_1_full from "/src/assets/images/commissions/伊秋_獸獸鬥片.webp";
@@ -269,6 +271,13 @@ export const commissionData = [
     image: tai_lei_1,
     fullImage: tai_lei_1_full,
     authorKey: "拓雷"
+  },
+  {
+    title: "2026 Trip with Opal",
+    image: slow_work_2026_trip,
+    fullImage: slow_work_2026_trip_full,
+    authorKey: "Slow.work",
+    description: "蛋白石"
   },
   {
     image: han_han,
