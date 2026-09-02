@@ -53,6 +53,7 @@ import macy_drake from "/src/assets/images/commissions/thumbnails/MACY_圖騰.we
 import dog_trap from "/src/assets/images/commissions/thumbnails/豆格_被困住了.webp";
 import niji_anime from "/src/assets/images/commissions/thumbnails/虹_アニメ.webp";
 import han_han from "/src/assets/images/commissions/thumbnails/HanHan_彩票.webp";
+import umiinu_sleep from "/src/assets/images/commissions/thumbnails/海犬_sleep.webp";
 
 // Import full-size images for lightbox
 import obsidian_oc_full from "/src/assets/images/commissions/虎丸_獸設.webp";
@@ -102,6 +103,7 @@ import macy_drake_full from "/src/assets/images/commissions/MACY_圖騰.webp";
 import dog_trap_full from "/src/assets/images/commissions/豆格_被困住了.webp";
 import niji_anime_full from "/src/assets/images/commissions/虹_アニメ.webp";
 import han_han_full from "/src/assets/images/commissions/HanHan_彩票.webp";
+import umiinu_sleep_full from "/src/assets/images/commissions/海犬_sleep.webp";
 
 // Authors map with name and url
 export const authorsMap = {
@@ -204,7 +206,11 @@ export const authorsMap = {
   "Han Han": {
     name: "Han Han 犀牛",
     url: "https://www.facebook.com/Rhinohanhan9333"
-  }
+  },
+  "海犬": {
+    name: "海犬",
+    url: "https://x.com/darkwolfwanwan"
+  },
 };
 
 // Complete commission data with both thumbnail and full-size images
@@ -278,6 +284,11 @@ export const commissionData = [
     fullImage: slow_work_2026_trip_full,
     authorKey: "Slow.work",
     description: "蛋白石"
+  },
+  {
+    image: umiinu_sleep,
+    fullImage: umiinu_sleep_full,
+    authorKey: "海犬"
   },
   {
     image: han_han,
