@@ -88,10 +88,16 @@ const LanguageSwitcher = () => {
           >
             日本語
           </button>
+          <button
+            className={`lang-btn ${locale === 'ko' ? 'active' : ''}`}
+            onClick={() => handleLanguageChange('ko')}
+          >
+            한국어
+          </button>
         </div>
       )}
     </div>
   );
 };
 
-export default LanguageSwitcher; 
+export default LanguageSwitcher;

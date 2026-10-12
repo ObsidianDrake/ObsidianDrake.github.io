@@ -40,6 +40,7 @@
   --main-font: 'Open Sans', sans-serif;
   --ja-font: 'Noto Sans JP', 'Noto Sans CJK JP', sans-serif;
   --zh-font: 'Noto Sans TC', 'Noto Sans CJK TC', sans-serif;
+  --ko-font: 'Noto Sans KR', 'Noto Sans CJK KR', sans-serif;
 }
 
 /* Fonts are now imported in index.html */
@@ -167,4 +168,22 @@ time, mark, audio, video {
 
 .zh .nav-button, .zh .lang-btn {
   font-family: var(--zh-font);
+}
+
+/* Korean-specific typography adjustments */
+.ko {
+  font-family: var(--ko-font);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+.ko h1, .ko h2, .ko h3, .ko h4, .ko h5, .ko h6 {
+  font-family: var(--ko-font);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.ko p, .ko span, .ko div, .ko button, .ko a, .ko strong {
+  font-family: var(--ko-font);
+  line-height: 1.7;
 }

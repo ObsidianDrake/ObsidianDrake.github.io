@@ -2,12 +2,14 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import en from './locales/en';
 import zh from './locales/zh';
 import ja from './locales/ja';
+import ko from './locales/ko';
 
 // Define available languages
 const languages = {
   en,
   zh,
-  ja
+  ja,
+  ko
 };
 
 // Create language context
@@ -29,6 +31,11 @@ export const LanguageProvider = ({ children }) => {
       return 'ja';
     }
     
+    // Use Korean for Korean browser locales, including ko-KR
+    if (userLanguage.startsWith('ko')) {
+      return 'ko';
+    }
+
     // For all other locales, use English
     return 'en';
   };
@@ -41,7 +48,7 @@ export const LanguageProvider = ({ children }) => {
     setTranslations(languages[locale]);
     
     // Apply language-specific font classes to the document body
-    document.body.classList.remove('en', 'zh', 'ja');
+    document.body.classList.remove('en', 'zh', 'ja', 'ko');
     document.body.classList.add(locale);
     
     // Set lang attribute for accessibility
@@ -77,4 +84,4 @@ export const useTranslation = () => {
   }
   
   return context;
-}; 
+};
