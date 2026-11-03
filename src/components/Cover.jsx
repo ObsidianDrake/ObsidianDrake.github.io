@@ -58,7 +58,7 @@ const Cover = () => {
                 </React.Fragment>
               ))}
             </h1>
-            <p className="subtitle">{t.cover.subtitle} <a className="subtitle" href='https://atoama.cn/'>Atelier Amanojaku</a></p>
+            <p className="subtitle">{t.cover.subtitle} <a className="subtitle" href='https://www.atoama.com/'>Atelier Amanojaku</a></p>
           </div>
           <button className="scroll-down-btn" onClick={scrollDown}>
             <span>{t.cover.scrollDown}</span>
