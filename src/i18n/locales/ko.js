@@ -1,4 +1,10 @@
 const ko = {
+  lightbox: {
+    close: "이미지 닫기",
+    loadError: "이미지를 불러오지 못했어요.",
+    viewOriginal: "원본 이미지 열기",
+  },
+
   nav: {
     cover: "홈",
     profile: "소개",

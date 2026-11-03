@@ -1,4 +1,10 @@
 const zh = {
+  lightbox: {
+    close: "關閉圖片",
+    loadError: "圖片載入失敗。",
+    viewOriginal: "開啟原始圖片",
+  },
+
   nav: {
     cover: "首頁",
     profile: "簡介",

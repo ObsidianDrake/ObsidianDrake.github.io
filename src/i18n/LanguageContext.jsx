@@ -3,6 +3,7 @@ import en from './locales/en';
 import zh from './locales/zh';
 import ja from './locales/ja';
 import ko from './locales/ko';
+import { isSupportedLocale, loadLocale, saveLocale } from './localePreference';
 
 // Define available languages
 const languages = {
@@ -17,48 +18,23 @@ const LanguageContext = createContext();
 
 // Language provider component
 export const LanguageProvider = ({ children }) => {
-  // Function to detect user's locale
-  const detectLocale = () => {
-    const userLanguage = navigator.language || navigator.userLanguage;
-    
-    // Check if user is from Taiwan or using zh-TW language
-    if (userLanguage.startsWith('zh-TW') || userLanguage === 'zh-HK' || userLanguage === 'zh-MO') {
-      return 'zh';
-    }
-    
-    // Check if user is from Japan or using Japanese language
-    if (userLanguage.startsWith('ja') || userLanguage === 'ja-JP') {
-      return 'ja';
-    }
-    
-    // Use Korean for Korean browser locales, including ko-KR
-    if (userLanguage.startsWith('ko')) {
-      return 'ko';
-    }
+  const [locale, setLocale] = useState(() => loadLocale(navigator.language || navigator.userLanguage || ''));
 
-    // For all other locales, use English
-    return 'en';
-  };
-  
-  const [locale, setLocale] = useState(detectLocale());
-  const [translations, setTranslations] = useState(languages[locale]);
-  
-  // Update translations when locale changes
+  // Apply the chosen language to typography and accessibility.
   useEffect(() => {
-    setTranslations(languages[locale]);
-    
     // Apply language-specific font classes to the document body
     document.body.classList.remove('en', 'zh', 'ja', 'ko');
     document.body.classList.add(locale);
     
     // Set lang attribute for accessibility
-    document.documentElement.lang = locale;
+    document.documentElement.lang = locale === 'zh' ? 'zh-Hant' : locale;
   }, [locale]);
   
   // Function to change language
   const changeLanguage = (newLocale) => {
-    if (languages[newLocale]) {
+    if (isSupportedLocale(newLocale)) {
       setLocale(newLocale);
+      saveLocale(newLocale);
     }
   };
   
@@ -66,7 +42,7 @@ export const LanguageProvider = ({ children }) => {
     <LanguageContext.Provider 
       value={{ 
         locale,
-        t: translations,
+        t: languages[locale],
         changeLanguage 
       }}
     >

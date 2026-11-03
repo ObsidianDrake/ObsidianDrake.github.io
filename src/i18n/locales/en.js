@@ -1,4 +1,10 @@
 const en = {
+  lightbox: {
+    close: "Close image",
+    loadError: "Unable to load this image.",
+    viewOriginal: "Open original image",
+  },
+
   nav: {
     cover: "Home",
     profile: "Profile",

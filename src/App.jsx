@@ -53,7 +53,7 @@ function HomePage() {
         <SocialLinks className="page" />
       </div>
       <div id="event" className="page-section odd">
-        <Events className="page" />
+        <Events className="page" onLightboxChange={setIsLightboxOpen} />
       </div>
       <div id="commission" className="page-section even">
         <Commission className="page" onLightboxChange={setIsLightboxOpen} />

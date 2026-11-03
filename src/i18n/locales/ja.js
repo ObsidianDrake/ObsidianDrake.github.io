@@ -1,4 +1,10 @@
 const ja = {
+  lightbox: {
+    close: "画像を閉じる",
+    loadError: "画像を読み込めませんでした。",
+    viewOriginal: "元の画像を開く",
+  },
+
   nav: {
     cover: "ホーム",
     profile: "プロフィール",

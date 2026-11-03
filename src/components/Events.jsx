@@ -1,4 +1,6 @@
-import React, { useState} from "react";
+import React from "react";
+import ImageLightbox from "./ImageLightbox";
+import { useImageLightbox } from "../hooks/useImageLightbox";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import SectionHead from "/src/components/SectionHead";
@@ -152,44 +154,9 @@ AOS.init({
   duration: 800, // Animation duration in ms
 });
 
-const Events = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [imageLoaded, setImageLoaded] = useState(false);
+const Events = ({ onLightboxChange }) => {
+  const { selectedImage, openLightbox, closeLightbox } = useImageLightbox(onLightboxChange);
   const { t } = useTranslation();
-
-  const openLightbox = (event) => {
-    setSelectedImage(event);
-    setImageLoaded(false);
-    document.body.style.overflow = "hidden"; // Prevent scrolling when lightbox is open
-  };
-
-  const closeLightbox = () => {
-    setSelectedImage(null);
-    document.body.style.overflow = "auto"; // Re-enable scrolling
-  };
-
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };
-
-  const handlePhotographerClick = (e, url) => {
-    e.stopPropagation(); // Prevent closing the lightbox when clicking photographer link
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
-
-  // Handle escape key to close lightbox
-  React.useEffect(() => {
-    const handleEscKey = (event) => {
-      if (event.key === "Escape" && selectedImage) {
-        closeLightbox();
-      }
-    };
-
-    window.addEventListener("keydown", handleEscKey);
-    return () => {
-      window.removeEventListener("keydown", handleEscKey);
-    };
-  }, [selectedImage]);
 
   return (
     <div className="events">
@@ -238,53 +205,13 @@ const Events = () => {
         </div>
       </div>
 
-      {/* Lightbox for enlarged view */}
       {selectedImage && (
-        <div className="lightbox" onClick={closeLightbox}>
-          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
-            <div className="lightbox-image-container">
-              <img 
-                src={selectedImage.fullImage} 
-                alt={selectedImage.title} 
-                className="lightbox-image"
-                onLoad={handleImageLoad}
-                style={{ opacity: imageLoaded ? 1 : 0, transition: 'opacity 0.3s ease' }}
-              />
-            </div>
-            <div className="lightbox-info">
-              <h3>{selectedImage.title}</h3>
-              <div className="lightbox-author">
-                <span className="author-label">{t.events.photographer}:</span>
-                <a 
-                  href={photographersMap[selectedImage.photographerKey].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="author-name"
-                  onClick={(e) => handlePhotographerClick(e, photographersMap[selectedImage.photographerKey].url)}
-                >
-                  {photographersMap[selectedImage.photographerKey].name}
-                </a>
-              </div>
-            </div>
-            <button className="lightbox-close" onClick={closeLightbox}>
-              <svg 
-                width="16" 
-                height="16" 
-                viewBox="0 0 16 16" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                style={{ display: 'block' }}
-              >
-                <path 
-                  d="M15 1L1 15M1 1L15 15" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
+        <ImageLightbox
+          image={selectedImage}
+          credit={photographersMap[selectedImage.photographerKey]}
+          creditLabel={t.events.photographer}
+          onClose={closeLightbox}
+        />
       )}
     </div>
   );

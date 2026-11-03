@@ -28,3 +28,18 @@ rules, allow deployments from `main`. The old `gh-pages` branch is no longer use
 by this workflow and does not need to be deleted.
 
 For local previews, use `npm run dev` or `npm run build && npm run preview`.
+
+## Content and shared UI
+
+- Add or update commission images, ordering, and artist credits in
+  `src/data/commissions.js`. The homepage preview and full gallery both use this
+  data source.
+- `src/components/ImageLightbox.jsx` and `src/styles/ImageLightbox.css` provide
+  the shared image viewer for event photos and both commission galleries.
+  `src/hooks/useImageLightbox.js` manages selection and navigation visibility.
+- Language choices are stored in local storage under `obsidian.locale`.
+  With no valid saved choice, the site uses the browser language. Storage failures
+  do not prevent switching languages for the current visit.
+
+Run regression checks with
+`node --test script/event-carousel.test.mjs script/locale-preference.test.mjs`.
