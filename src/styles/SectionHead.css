@@ -26,3 +26,15 @@
   height: 0;
   margin: 40px;
 }
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: clamp(30px, 8vw, 40px);
+    overflow-wrap: anywhere;
+  }
+
+  .section-lead {
+    font-size: var(--subtitle-size-mobile);
+    line-height: 1.7;
+  }
+}

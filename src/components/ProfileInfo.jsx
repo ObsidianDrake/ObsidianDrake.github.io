@@ -9,7 +9,7 @@ import { useTranslation } from '../i18n/LanguageContext';
 AOS.init()
 
 const ProfileInfo = () => {
-  const { t, locale } = useTranslation();
+  const { t } = useTranslation();
 
   const details = useMemo(() => ({
     [t.profile.details.name]: t.profile.values.name,
@@ -41,12 +41,11 @@ const ProfileInfo = () => {
                   data-aos-offset="100"
                 >
                   <strong className="key">{key}</strong>
-                  <div className="value">{value.split('\n').map((line, idx) => (
-                    <React.Fragment key={idx}>
-                      {line}
-                      <br />
-                    </React.Fragment>
-                  ))}</div>
+                  <div className="value">
+                    {value.split('\n').map((line, idx) => (
+                      <p key={idx}>{line}</p>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}

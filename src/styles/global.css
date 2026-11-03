@@ -187,3 +187,9 @@ time, mark, audio, video {
   font-family: var(--ko-font);
   line-height: 1.7;
 }
+
+@media (max-width: 768px) {
+  .home {
+    padding-bottom: calc(88px + env(safe-area-inset-bottom));
+  }
+}

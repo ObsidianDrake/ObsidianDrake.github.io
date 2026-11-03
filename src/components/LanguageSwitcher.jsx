@@ -6,6 +6,7 @@ const LanguageSwitcher = () => {
   const { locale, changeLanguage } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const langSwitcherRef = useRef(null);
+  const triggerRef = useRef(null);
   
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -19,9 +20,17 @@ const LanguageSwitcher = () => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    const handleEscape = (event) => {
+      if (event.key === 'Escape' && langSwitcherRef.current?.contains(event.target)) {
+        setIsOpen(false);
+        triggerRef.current?.focus();
+      }
+    };
+    document.addEventListener('keydown', handleEscape);
+    document.addEventListener('pointerdown', handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('pointerdown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
     };
   }, []);
 
@@ -29,12 +38,16 @@ const LanguageSwitcher = () => {
   const handleLanguageChange = (newLocale) => {
     changeLanguage(newLocale);
     setIsOpen(false); // 選擇語言後收起選項
+    triggerRef.current?.focus();
   };
 
   return (
     <div ref={langSwitcherRef} className={`language-switcher ${isOpen ? 'open' : 'collapsed'}`}>
       <button 
+        ref={triggerRef}
         className="globe-icon"
+        aria-expanded={isOpen}
+        aria-controls={isOpen ? "language-options" : undefined}
         onClick={toggleDropdown}
         aria-label="Toggle language menu"
       >
@@ -69,27 +82,35 @@ const LanguageSwitcher = () => {
       </button>
       
       {isOpen && (
-        <div className="language-options">
+        <div className="language-options" id="language-options">
           <button 
             className={`lang-btn ${locale === 'en' ? 'active' : ''}`} 
+            aria-pressed={locale === 'en'}
+            lang="en"
             onClick={() => handleLanguageChange('en')}
           >
-            EN
+            English
           </button>
           <button 
             className={`lang-btn ${locale === 'zh' ? 'active' : ''}`} 
+            aria-pressed={locale === 'zh'}
+            lang="zh-Hant"
             onClick={() => handleLanguageChange('zh')}
           >
             中文
           </button>
           <button 
             className={`lang-btn ${locale === 'ja' ? 'active' : ''}`} 
+            aria-pressed={locale === 'ja'}
+            lang="ja"
             onClick={() => handleLanguageChange('ja')}
           >
             日本語
           </button>
           <button
             className={`lang-btn ${locale === 'ko' ? 'active' : ''}`}
+            aria-pressed={locale === 'ko'}
+            lang="ko"
             onClick={() => handleLanguageChange('ko')}
           >
             한국어
