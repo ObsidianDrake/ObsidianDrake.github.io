@@ -1,158 +1,203 @@
 .img-container-cover {
+  position: relative;
   overflow: hidden;
+  background: #d7d2d3;
+  isolation: isolate;
 }
 
-.hero-content {
-  position: absolute;
-  top: 0;
-  left: 0;
+.cover-picture,
+.cover-image {
+  display: block;
   width: 100%;
-  height: 100%;
+}
+
+.cover-image {
+  height: auto;
+  aspect-ratio: 8 / 5;
+}
+
+.img-container-cover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(14, 19, 27, 0.72), rgba(14, 19, 27, 0.32) 42%, transparent 65%);
+  pointer-events: none;
+}
+
+.cover .hero-content {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 0 10%;
+  padding: 5% 7%;
   box-sizing: border-box;
 }
 
-.hero-text {
-  max-width: 600px;
+.cover .hero-text {
+  max-width: 48%;
 }
 
-.greeting {
-  font-size: 1.2rem;
-  color: #ffffff;
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 300;
-  opacity: 0;
-  animation: fadeSlideUp 1s ease-out forwards;
+.cover .greeting {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: #fff;
+  margin-bottom: 16px;
+  letter-spacing: 0.06em;
 }
 
-.title {
-  font-size: 5rem;
+.cover .title {
+  font-size: clamp(2.5rem, 5vw, 5rem);
   font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 1.5rem;
-  line-height: 1.1;
-  opacity: 0;
-  animation: fadeSlideUp 1s ease-out forwards;
-  animation-delay: 0.3s;
+  color: #fff;
+  margin-bottom: 24px;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
 }
 
-.highlight {
-  color: #ffffff;
-  background: linear-gradient(to right, #8ec5fc, #e0c3fc);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+.cover .subtitle {
+  font-size: clamp(1rem, 1.6vw, 1.5rem);
+  color: #fff;
+  line-height: 1.6;
 }
 
-.subtitle {
-  font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 300;
-  margin-bottom: 2rem;
-  opacity: 0;
-  animation: fadeSlideUp 1s ease-out forwards;
-  animation-delay: 0.6s;
+.cover p.subtitle {
+  margin-bottom: 28px;
 }
 
-.scroll-down-btn {
-  border: none;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+.cover a.subtitle {
+  text-underline-offset: 4px;
+}
+
+.cover .scroll-down-btn {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(15, 23, 42, 0.55);
+  color: #fff;
   font-size: 1rem;
+  min-height: 48px;
   padding: 12px 24px;
   border-radius: 30px;
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 10px;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  opacity: 0;
-  animation: fadeSlideUp 1s ease-out forwards;
-  animation-delay: 0.9s;
 }
 
-.scroll-down-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateY(-3px);
+.cover .scroll-down-btn span,
+.cover .arrow {
+  color: inherit;
 }
 
-.arrow {
-  animation: bounce 2s infinite;
+.cover .scroll-down-btn:hover {
+  background: #253449;
 }
 
-@keyframes fadeSlideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.cover .scroll-down-btn:focus-visible,
+.cover a:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 5px;
 }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
+/* Keep the introduction immediately after one visible desktop screen. */
+@media (min-width: 768px) {
+  .img-container-cover {
+    height: 100vh;
+    height: 100dvh;
   }
-  40% {
-    transform: translateY(-10px);
+
+  .cover-picture,
+  .cover-image {
+    height: 100%;
   }
-  60% {
-    transform: translateY(-5px);
+
+  .cover-image {
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: 65% center;
   }
 }
 
-/* Media Queries */
-@media (max-width: 1024px) {
-  .title {
-    font-size: 4rem;
+/* On ultrawide screens, keep the ears in frame and crop from the bottom. */
+@media (min-width: 768px) and (min-aspect-ratio: 2 / 1) {
+  .cover-image {
+    object-position: 65% top;
   }
 }
 
-@media (max-width: 768px) {
-  .hero-content {
+@media (min-width: 768px) and (max-width: 1199px) {
+  .cover .hero-text {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .img-container-cover::after {
+    background: linear-gradient(110deg, rgba(245, 243, 244, 0.35), transparent 55%);
+  }
+
+  .cover .hero-content {
     justify-content: flex-start;
-    padding-top: 15%;
+    width: 61%;
+    padding: 7% 4% 4% 7%;
   }
-  
-  .hero-text {
+
+  .cover .hero-text {
     max-width: 100%;
   }
-  
-  .title {
-    font-size: 3rem;
-  }
-  
-  .subtitle {
-    font-size: 1.25rem;
-  }
-}
 
-@media (max-width: 480px) {
-  .hero-content {
-    padding: 0 5%;
-    padding-top: 10%;
-    justify-content: flex-start;
+  .cover .greeting {
+    color: #34363f;
+    font-size: clamp(0.6875rem, 2.8vw, 1.125rem);
+    line-height: 1.4;
+    letter-spacing: 0;
+    margin-bottom: clamp(6px, 1.5vw, 12px);
   }
-  
-  .greeting {
-    font-size: 1rem;
+
+  .cover .title {
+    color: #202631;
+    font-size: clamp(1.25rem, 5.3vw, 2.5rem);
+    line-height: 1.2;
+    margin-bottom: clamp(8px, 2vw, 16px);
   }
-  
-  .title {
-    font-size: 2.5rem;
+
+  .cover .subtitle {
+    color: #34363f;
+    font-size: clamp(0.6875rem, 2.8vw, 1.125rem);
+    line-height: 1.4;
   }
-  
-  .subtitle {
-    font-size: 1.1rem;
+
+  .cover a.subtitle {
+    display: block;
+  }
+
+  .cover p.subtitle {
+    margin-bottom: clamp(8px, 2vw, 16px);
+  }
+
+  .cover .scroll-down-btn {
+    flex-shrink: 0;
+    max-width: 100%;
+    min-height: 44px;
+    padding: clamp(6px, 1.5vw, 12px) clamp(12px, 3vw, 24px);
+    gap: clamp(6px, 1.5vw, 12px);
+    font-size: clamp(0.75rem, 3vw, 1.125rem);
+    line-height: 1.3;
+    background: #253449;
+    border-color: #253449;
+  }
+
+  .cover .arrow {
+    flex-shrink: 0;
+    width: clamp(16px, 4vw, 24px);
+    height: clamp(16px, 4vw, 24px);
+  }
+
+  .cover a:focus-visible {
+    outline-color: #253449;
+  }
+
+  .cover-image {
+    aspect-ratio: 1 / 1;
   }
 }

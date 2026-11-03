@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Parallax } from 'react-parallax';
+import React from 'react';
+import ultrawideImage from '/src/assets/images/banner_ultrawide.webp';
 import wideImage from '/src/assets/images/banner_wide.webp';
 import desktopImage from '/src/assets/images/banner_ori.webp';
 import mobileImage from '/src/assets/images/banner_mobile.webp';
@@ -7,31 +7,7 @@ import '/src/styles/Cover.css';
 import { useTranslation } from '../i18n/LanguageContext';
 
 const Cover = () => {
-  const [bgImage, setBgImage] = useState(false);
-  const titleRef = useRef(null);
   const { t } = useTranslation();
-
-  const detectDevice = () => {
-    const width = document.documentElement.clientWidth;
-    const height = document.documentElement.clientHeight;
-    const ratio = width / height;
-
-    if (width <= 768) {
-      setBgImage(mobileImage);
-    } else if (ratio >= 2.5) {
-      setBgImage(wideImage);
-    } else {
-      setBgImage(desktopImage);
-    }
-  };
-
-  useEffect(() => {
-    detectDevice();
-    window.addEventListener('resize', detectDevice);
-    return () => {
-      window.removeEventListener('resize', detectDevice);
-    };
-  }, []);
 
   const scrollDown = () => {
     const profileElement = document.getElementById('profile');
@@ -63,19 +39,18 @@ const Cover = () => {
 
   return (
     <div className="cover">
-      <Parallax
-        bgImage={bgImage}
-        className="img-container-cover"
-        style={{ height: '100vh' }}
-        strength={200}
-        bgStyle={{ filter: 'brightness(0.9)' }}
-      >
-        {/* The inner div is needed to set the height */}
-        <div style={{ height: '100vh' }} />
+      <div className="img-container-cover">
+        <picture className="cover-picture">
+          <source media="(max-width: 767px)" srcSet={mobileImage} width="1200" height="1200" />
+          <source media="(min-width: 768px) and (min-aspect-ratio: 2 / 1)" srcSet={ultrawideImage} width="2048" height="878" />
+          <source media="(max-width: 1199px)" srcSet={desktopImage} width="1440" height="855" />
+          <img src={wideImage} width="1920" height="1200" alt=""
+            fetchPriority="high" className="cover-image" />
+        </picture>
         <div className="hero-content">
           <div className="hero-text">
             <p className="greeting">{t.cover.greeting}</p>
-            <h1 className="title" ref={titleRef}>
+            <h1 className="title">
               {t.cover.title.split('\n').map((line, idx) => (
                 <React.Fragment key={idx}>
                   {line}
@@ -93,7 +68,7 @@ const Cover = () => {
             </svg>
           </button>
         </div>
-      </Parallax>
+      </div>
     </div>
   );
 };
