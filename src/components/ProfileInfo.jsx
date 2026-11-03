@@ -30,6 +30,46 @@ const ProfileInfo = () => {
             </React.Fragment>
           ))}
         />
+        <div className="mobile-profile">
+          <header className="mobile-profile-header">
+            <img src={obsidianImage} alt="" width="104" height="120" loading="lazy" />
+            <div className="mobile-profile-identity">
+              <h2>{t.profile.values.name}</h2>
+              <p>{t.profile.values.location}</p>
+            </div>
+          </header>
+
+          <section className="mobile-profile-about" aria-labelledby="mobile-about-title">
+            <h3 id="mobile-about-title">{t.profile.aboutMe}</h3>
+            {t.profile.bio.split('\n\n').map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </section>
+
+          <section className="mobile-profile-interests" aria-labelledby="mobile-interests-title">
+            <h3 id="mobile-interests-title">{t.profile.details.interests}</h3>
+            <ul className="profile-interest-tags">
+              {t.profile.values.interests.split(/[,、]/).map((interest) => (
+                <li key={interest}>{interest.trim()}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="mobile-profile-languages" aria-labelledby="mobile-languages-title">
+            <h3 id="mobile-languages-title">{t.profile.details.languageLearning}</h3>
+            <dl className="profile-language-list">
+              {t.profile.values.languageLearning.split('\n').map((line) => {
+                const [language, ...level] = line.split(/[:：]/);
+                return (
+                  <div className="profile-language-row" key={language}>
+                    <dt>{language.trim()}</dt>
+                    <dd>{level.join(':').trim()}</dd>
+                  </div>
+                );
+              })}
+            </dl>
+          </section>
+        </div>
         <div className="profile-content">
           <div className="detail-container">
             {Object.entries(details).map(([key, value], index) => (

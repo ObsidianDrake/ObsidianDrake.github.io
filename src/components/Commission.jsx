@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import SectionHead from "/src/components/SectionHead";
 import AOS from "aos";
@@ -12,12 +12,25 @@ const Commission = ({ onLightboxChange }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [topCommissions, setTopCommissions] = useState([]);
   const { t } = useTranslation();
+  const gridRef = useRef(null);
+  const [previewCount, setPreviewCount] = useState(7);
+
+  useEffect(() => {
+    const grid = gridRef.current;
+    const updatePreviewCount = () => {
+      const columns = getComputedStyle(grid).gridTemplateColumns.trim().split(/\s+/).length;
+      setPreviewCount(columns === 3 ? 8 : 7);
+    };
+    const observer = new ResizeObserver(updatePreviewCount);
+    observer.observe(grid);
+    updatePreviewCount();
+    return () => observer.disconnect();
+  }, []);
   
   useEffect(() => {
-    // Randomly select 7 commissions
+    // Keep the same selection when resizing; three columns need one extra image.
     const shuffled = [...commissionData].sort(() => 0.5 - Math.random());
-    const randomSeven = shuffled.slice(0, 7);
-    setTopCommissions(randomSeven);
+    setTopCommissions(shuffled.slice(0, 8));
   }, []);
 
   const openLightbox = (commission) => {
@@ -60,9 +73,9 @@ const Commission = ({ onLightboxChange }) => {
     <div className="commission">
       <div className="container">
         <SectionHead title={t.commission.title} />
-        <div className="commission-grid" data-aos="fade-up">
-          {/* Top 7 commissions */}
-          {topCommissions.map((commission, index) => (
+        <div ref={gridRef} className="commission-grid" data-aos="fade-up">
+          {/* Fill three-column previews with eight images plus the Show More card. */}
+          {topCommissions.slice(0, previewCount).map((commission, index) => (
             <div 
               key={`commission-${index}-${commission.title}`} 
               className="commission-item"
