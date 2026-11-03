@@ -29,27 +29,14 @@
   margin: 0 auto;
 }
 
-.swiper-container {
-  overflow: hidden !important;
-}
-
-.swiper-wrapper {
+.events-swiper .swiper-wrapper {
   overflow: visible;
 }
 
-.swiper-slide {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.swiper-slide-visible {
-  opacity: 1;
-}
-
+/* Let Swiper manage slide transforms and visibility throughout loop rearrangement. */
 .event-slide {
   width: 300px;
   height: 350px;
-  transition: transform 0.3s;
 }
 
 .event-card {

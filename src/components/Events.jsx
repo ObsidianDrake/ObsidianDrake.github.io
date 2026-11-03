@@ -1,4 +1,4 @@
-import React, { useRef, useState} from "react";
+import React, { useState} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination } from "swiper/modules";
 import SectionHead from "/src/components/SectionHead";
@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import 'swiper/css/pagination';
 import "/src/styles/Events.css";
+import { handleEventSlideClick } from "../utils/eventCarousel";
 import { useTranslation } from '../i18n/LanguageContext';
 import event1  from "/src/assets/images/events/2024_FurryteaParty.webp";
 import event2  from "/src/assets/images/events/2024_Furry_train.webp";
@@ -152,28 +153,9 @@ AOS.init({
 });
 
 const Events = () => {
-  const swiperRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageLoaded, setImageLoaded] = useState(false);
   const { t } = useTranslation();
-
-  const handleSlideChange = (swiper) => {
-    setActiveIndex(swiper.realIndex);
-  };
-
-  const handleSlideClick = (index, event) => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      const currentIndex = swiperRef.current.swiper.realIndex;
-      
-      // 只有當中間的slide被點擊時才開啟lightbox
-      if (currentIndex === index) {
-        openLightbox(eventData[index]);
-      } else {
-        swiperRef.current?.swiper?.slideToLoop(index, 500);
-      }
-    }
-  };
 
   const openLightbox = (event) => {
     setSelectedImage(event);
@@ -215,14 +197,14 @@ const Events = () => {
         <SectionHead title={t.events.title} />
         <div className="events-content">
           <Swiper
-            ref={swiperRef}
             modules={[EffectCoverflow, Pagination]}
             effect={'coverflow'}
             grabCursor={true}
             centeredSlides={true}
             loop={true}
             slidesPerView={'auto'}
-            onSlideChange={handleSlideChange}
+            loopAdditionalSlides={2}
+            onClick={(swiper) => handleEventSlideClick(swiper, openLightbox, eventData)}
             watchSlidesProgress={true}
             pagination={{
               clickable: true
@@ -237,11 +219,10 @@ const Events = () => {
             className="events-swiper"
             data-aos="zoom-out"
           >
-            {eventData.map((event, index) => (
+            {eventData.map((event) => (
               <SwiperSlide
                 key={event.title}
                 className="event-slide"
-                onClick={() => handleSlideClick(index, event)}
               >
                 <div className="event-card">
                   <img
