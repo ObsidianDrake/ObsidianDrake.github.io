@@ -30,7 +30,7 @@ const en = {
       interests: "Interests",
       languageLearning: "Language"
     },
-    bio: "Hi, I'm Obsidian, a backend software engineer!\n\nEven before I had a fursona of my own, I often took part in all sorts of furry events. Then, through a fortunate connection, I had the chance to adopt the character “Obsidian.”\n\nI love this community and have so much fun being part of it. I hope to share that joy with you, too!\n\nFeel free to come say hi, give me some pats or a hug, and let's have fun together!\nLooking forward to getting to know you all!",
+    bio: "Hi, I'm Obsidian, a software engineer!\n\nEven before I had a fursona of my own, I often took part in all sorts of furry events. Then, through a fortunate connection, I had the chance to adopt the character “Obsidian.”\n\nI love this community and have so much fun being part of it. I hope to share that joy with you, too!\n\nFeel free to come say hi, give me some pats or a hug, and let's have fun together!\nLooking forward to getting to know you all!",
     values: {
       name: "Obsidian",
       location: "Hsinchu County, Taiwan",
